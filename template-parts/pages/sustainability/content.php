@@ -1,4 +1,4 @@
-<section class="section-sustainability-content bg-blue-shade-3 pt-8 xl:pt-0 pb-28 xl:pb-0">
+<section class="section-sustainability-content bg-brown-shade-3 pt-8 xl:pt-0 pb-28 xl:pb-0">
 	<div class="theme-container">
 		<div class="flex flex-col flex-wrap gap-6 h-auto xl:h-[2200px]">
 			<?php

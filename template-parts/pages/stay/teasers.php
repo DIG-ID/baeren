@@ -1,4 +1,4 @@
-<section class="section-teasers bg-blue-shade-5 text-blue-shade-1 py-20 lg:py-32">
+<section class="section-teasers bg-brown-shade-4 text-brown-shade-1 py-20 lg:py-32">
 	<div class="theme-container">
 		<div class="teasers-wrapper flex flex-col lg:flex-row lg:justify-between lg:items-center">
 			<div class="teaser w-full text-center flex flex-col justify-between items-center mb-28 lg:mb-0">

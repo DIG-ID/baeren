@@ -1,4 +1,4 @@
-<section class="section-offers bg-blue-shade-5 pt-16 lg:pt-20 lg:pb-28 relative overflow-hidden">
+<section class="section-offers bg-brown-shade-4 pt-16 lg:pt-20 lg:pb-28 relative overflow-hidden">
     <div class="theme-container grid grid-cols-2 lg:grid-cols-12 gap-x-6">
         <?php 
         if( have_rows('offers_list') ):
@@ -15,7 +15,7 @@
             }
 
             while( have_rows('offers_list') ) : the_row(); ?>
-                <div class="offers-box col-span-2 <?php echo $col_span_class; ?> rounded-[22px] bg-blue-shade-1 mb-16 lg:mb-0 fade-in">
+                <div class="offers-box col-span-2 <?php echo $col_span_class; ?> rounded-[22px] bg-brown-shade-1 mb-16 lg:mb-0 fade-in">
                     <?php 
                         $offer_img = get_sub_field('image');
                         $size = 'offer-image';
@@ -24,8 +24,8 @@
                         } 
                     ?>
                     <div class="px-9 lg:px-16 pb-12 lg:pb-9">
-                        <h3 class="text-bullets--primary text-blue-shade-5 my-7"><?php echo get_sub_field( 'title' ); ?></h3>
-                        <p class="text-body text-blue-shade-5 mb-9 lg:mb-9"><?php echo get_sub_field( 'text' ); ?></p>
+                        <h3 class="text-bullets--primary text-brown-shade-4 my-7"><?php echo get_sub_field( 'title' ); ?></h3>
+                        <p class="text-body text-brown-shade-4 mb-9 lg:mb-9"><?php echo get_sub_field( 'text' ); ?></p>
                         <?php 
                         $offers_btn = get_sub_field('button');
                         if( $offers_btn ): 

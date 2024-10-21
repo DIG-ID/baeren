@@ -1,4 +1,4 @@
-<section class="section-business-intro bg-blue-shade-4 pb-16 lg:pb-56">
+<section class="section-business-intro bg-brown-shade-3 pb-16 lg:pb-56">
 	<div class="theme-container">
 		<div class="theme-grid xl:grid-rows-2 lg:grid-flow-col gap-y-0">
 			<div class="col-span-2 lg:col-span-5 self-start mb-6 lg:mb-0">
@@ -10,12 +10,12 @@
 				?>
 			</div>
 			<div class="col-span-2 lg:col-span-5 py-12 xl:py-20 pl-9 pr-14 xl:px-28 bg-white rounded-[20px] self-start order-3 lg:order-2 lg:-mt-8  invisible fade-in--noscroll">
-				<p class="text-body--serif text-blue-shade-5 mb-16"><?php the_field( 'intro_small_box_description' ); ?></p>
+				<p class="text-body--serif text-brown-shade-4 mb-16"><?php the_field( 'intro_small_box_description' ); ?></p>
 				
 			</div>
 			<div class="col-span-2  lg:col-span-7 lg:row-span-2 pt-12 xl:py-20 pl-9 pr-14 xl:px-28 bg-white rounded-[20px] order-2 lg:order-3 mb-28 lg:mb-0 self-start invisible fade-in--noscroll">
-				<h2 class="text-title-h2 text-blue-shade-5 mb-12"><?php the_field( 'intro_big_box_title' ); ?></h2>
-				<p class="text-body text-blue-shade-5 lg:max-w-[410px]"><?php the_field( 'intro_big_box_description' ); ?></p>
+				<h2 class="text-title-h2 text-brown-shade-4 mb-12"><?php the_field( 'intro_big_box_title' ); ?></h2>
+				<p class="text-body text-brown-shade-4 lg:max-w-[410px]"><?php the_field( 'intro_big_box_description' ); ?></p>
 				<?php
 				$mlink = get_field( 'intro_small_box_link' );
 				if ( $mlink ) :

@@ -29,7 +29,7 @@
 				?>
 			</div>
 		</div>
-		<div class="menu-app px-6 md:px-8 xl:px-16 py-6 md:py-8 xl:py-3 border-y-[0.5px] border-blue-shade-2 border-opacity-80 hidden xl:block">
+		<div class="menu-app px-6 md:px-8 xl:px-16 py-6 md:py-8 xl:py-3 border-y-[0.5px] border-brown-shade-2 border-opacity-80 hidden xl:block">
 			<?php
 			wp_nav_menu(
 				array(
@@ -67,7 +67,7 @@
 					);
 					?>
 				</div>
-				<div class="col-span-12 px-0 py-0 xl:pl-8 xl:pt-12 bg-blue-shade-5 block xl:hidden mobile__nav">
+				<div class="col-span-12 px-0 py-0 xl:pl-8 xl:pt-12 bg-brown-shade-4 block xl:hidden mobile__nav">
 					<nav>
 						<?php
 						wp_nav_menu(
@@ -110,7 +110,7 @@
 					?>
 					</nav>
 				</div>
-				<div id="menu-secondary-col" class="col-span-4 bg-blue-shade-3 pt-44 text-center hidden xl:block">
+				<div id="menu-secondary-col" class="col-span-4 bg-brown-shade-3 pt-44 text-center hidden xl:block">
 					<div class="w-full mb-20">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/paper-boat.svg" class="mx-auto" alt="Paper boat" title="Paper boat" />
 					</div>

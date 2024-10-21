@@ -1,4 +1,4 @@
-<section class="section-zimmer-teaser bg-blue-shade-5 text-blue-shade-1 pb-20 lg:pb-40">
+<section class="section-zimmer-teaser bg-brown-shade-4 text-brown-shade-1 pb-20 lg:pb-40">
 	<div class="theme-container">
 		<h2 class="text-title text-center mb-6 lg:mb-20 invisible fade-in--noscroll"><?php the_field( 'zimmer_title' ); ?></h2>
 		<div class="theme-grid">

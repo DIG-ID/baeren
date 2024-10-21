@@ -7,17 +7,17 @@ function handleScroll() {
 
     if (window.innerWidth > 1280) {
         if (currentScroll > 100) {
-            header.removeClass('bg-transparent').addClass('bg-blue-shade-5 top-nav-fixed');
+            header.removeClass('bg-transparent').addClass('bg-brown-shade-4 top-nav-fixed');
             if (!header.hasClass('sticky')) {
                 header.addClass('sticky');
             }
             menuApp.slideUp(); 
         } else {
-            header.removeClass('bg-blue-shade-5 top-nav-fixed sticky').addClass('bg-transparent');
+            header.removeClass('bg-brown-shade-4 top-nav-fixed sticky').addClass('bg-transparent');
             menuApp.slideDown();  
         }
     } else {
-        header.removeClass('bg-transparent').addClass('bg-blue-shade-5 top-nav-fixed sticky');
+        header.removeClass('bg-transparent').addClass('bg-brown-shade-4 top-nav-fixed sticky');
         menuApp.slideUp();
     }
 

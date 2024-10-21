@@ -1,4 +1,4 @@
-<section class="section-gallery-content bg-blue-shade-3 py-28">
+<section class="section-gallery-content bg-brown-shade-3 py-28">
 	<div class="theme-container">
 		<div class="theme-grid">
 			<?php
@@ -9,7 +9,7 @@
 					?>
 					<div class="col-span-2 lg:col-span-12 grid grid-cols-3 lg:grid-cols-12 gap-3 lg:gap-6 mb-12 lg:mb-24 invisible fade-in--noscroll">
 						<div class="col-span-3 lg:col-span-12">
-							<h2 class="text-title-h2 text-blue-shade-2"> <?php the_sub_field( 'title' ); ?></h2>
+							<h2 class="text-title-h2 text-brown-shade-2"> <?php the_sub_field( 'title' ); ?></h2>
 						</div>
 						<?php
 						$gallery = get_sub_field( 'gallery' );

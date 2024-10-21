@@ -1,4 +1,4 @@
-<section class="section-langzeitaufenthalt-teaser bg-blue-shade-1 text-blue-shade-5 pt-0 pb-11 lg:py-40">
+<section class="section-langzeitaufenthalt-teaser bg-brown-shade-1 text-brown-shade-4 pt-0 pb-11 lg:py-40">
 	<div class="theme-container">
 		<h2 class="text-title text-center mb-6 lg:mb-20 fade-in"><?php the_field( 'langzeitaufenthalt_title' ); ?></h2>
 		<div class="theme-grid">
@@ -12,7 +12,7 @@
 					$link_title  = $zlink['title'];
 					$link_target = $zlink['target'] ? $zlink['target'] : '_self';
 					?>
-					<a class="btn-internal btn-internal--shade-1 !bg-blue-shade-1" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					<a class="btn-internal btn-internal--shade-1 !bg-brown-shade-1" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 					<?php
 				endif;
 				?>

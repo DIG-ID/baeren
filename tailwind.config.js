@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
-      miller: [ 'miller-headline', 'serif']
+      utopia: [ 'utopia-std-subhead', 'serif']
     },
 
     extend: {
@@ -22,13 +22,15 @@ module.exports = {
         //wider: '.06em',
       },
       colors: {
-        'blue-shade-5': '#0E324A',
-        'blue-shade-4': '#1D4763',
-        'blue-shade-3': '#3E6C8A',
-        'blue-shade-2': '#D2E9F7',
-        'blue-shade-1': '#F2FAFF',
-        'green-shade-1': '#0E434A',
-        'purple-shade-1': '#3B1C43'
+        'brown-shade-1': '#F5F0EF',
+        'brown-shade-2': '#E7DBD9',
+        'brown-shade-3': '#8E827B',
+        'brown-shade-4': '#34302D',
+        'brown-shade-1': '#F2F4F6',
+        'brown-shade-2': '#DDE3EA',
+        'red': '#B63939',
+        'green': '#95BE49',
+        'orange': '#D7903B',
       },
       transitionTimingFunction: {
         //'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',

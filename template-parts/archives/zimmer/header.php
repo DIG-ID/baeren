@@ -1,4 +1,4 @@
-<section class="page-header bg-blue-shade-5 text-blue-shade-1 pt-28 lg:pt-64 pb-20 lg:pb-40">
+<section class="page-header bg-brown-shade-4 text-brown-shade-1 pt-28 lg:pt-64 pb-20 lg:pb-40">
 	<div class="theme-container">
 		<div class="flex flex-col w-full text-center">
 			<div class="page-header--breadcrumbs invisible fade-in--noscroll">

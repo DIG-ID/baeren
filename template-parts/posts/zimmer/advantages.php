@@ -2,7 +2,7 @@
 	<div class="theme-container">
 		<div class="theme-grid  fade-in">
 			<div class="col-span-2 lg:col-span-12">
-				<h2 class="text-title text-blue-shade-5 text-center mb-24"><?php the_field( 'single_zimmer_value_title', 'options' ); ?></h2>
+				<h2 class="text-title text-brown-shade-4 text-center mb-24"><?php the_field( 'single_zimmer_value_title', 'options' ); ?></h2>
 			</div>
 			<div class="col-span-2 lg:col-span-12 block lg:flex justify-between items-center mb-24">
 				<?php
@@ -19,7 +19,7 @@
 								endif;
 								?>
 							</div>
-							<p class="text-body--serif text-blue-shade-5 !leading-8"><?php the_sub_field( 'description' ); ?></p>
+							<p class="text-body--serif text-brown-shade-4 !leading-8"><?php the_sub_field( 'description' ); ?></p>
 						</div>
 						<?php
 					endwhile;

@@ -1,4 +1,4 @@
-<section class="section-services-content bg-blue-shade-2 py-8 lg:py-16">
+<section class="section-services-content bg-brown-shade-2 py-8 lg:py-16">
 	<div class="theme-container">
 		<div class="theme-grid invisible fade-in--noscroll">
 			<?php

@@ -10,8 +10,8 @@ if ( have_rows( 'teasers_boxes' ) ) :
 				echo wp_get_attachment_image( $teasers_image, $size, false, array( 'class' => 'w-full rounded-[20px]' ) );
 			}
 			?>
-			<h3 class="text-title-h3 text-blue-shade-5 mt-10 mb-6"><?php echo get_sub_field( 'title' ); ?></h3>
-			<p class="text-body !leading-[26px] text-blue-shade-5 mb-8"><?php echo get_sub_field( 'text' ); ?></p>
+			<h3 class="text-title-h3 text-brown-shade-4 mt-10 mb-6"><?php echo get_sub_field( 'title' ); ?></h3>
+			<p class="text-body !leading-[26px] text-brown-shade-4 mb-8"><?php echo get_sub_field( 'text' ); ?></p>
 			<?php 
 			$teasers_btn = get_sub_field( 'button' );
 			if ( $teasers_btn ) :

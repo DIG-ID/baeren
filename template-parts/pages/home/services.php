@@ -1,7 +1,7 @@
-<section class="section-services bg-blue-shade-3 pt-24 pb-28 relative overflow-hidden">
+<section class="section-services bg-brown-shade-3 pt-24 pb-28 relative overflow-hidden">
     <div class="theme-container grid grid-cols-2 xl:grid-cols-12 gap-x-6 fade-in">
         <div class="col-span-2 xl:col-span-12">
-            <h2 class="section-services--title font-miller font-light text-2xl xl:text-5xl leading-7 w-[40%] xl:w-full mx-auto xl:mx-0 text-blue-shade-2 text-center"><?php echo get_field( 'services_title' ); ?></h2>
+            <h2 class="section-services--title font-utopia font-light text-2xl xl:text-5xl leading-7 w-[40%] xl:w-full mx-auto xl:mx-0 text-brown-shade-2 text-center"><?php echo get_field( 'services_title' ); ?></h2>
         </div>
         <div class="col-span-2 xl:col-span-12 block xl:flex items-center mt-4 mb-5 xl:mt-24 xl:mb-12">
         <?php if( have_rows('services_services_list') ):
@@ -14,7 +14,7 @@
                         echo wp_get_attachment_image( $services_icon, $size, false, array( 'class' => 'w-full max-w-[36px] xl:max-w-[50px] h-[25px] xl:h-[50px] mb-4 xl:mb-0 xl:mr-4' ) );
                     } 
                 ?>
-                <p class="text-bullets--primary text-blue-shade-2 text-center xl:text-left"><?php echo get_sub_field( 'text' ); ?></p>
+                <p class="text-bullets--primary text-brown-shade-2 text-center xl:text-left"><?php echo get_sub_field( 'text' ); ?></p>
             </div>
         <?php endwhile;
         endif; ?>

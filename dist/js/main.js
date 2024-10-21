@@ -33,17 +33,17 @@ function handleScroll() {
   var currentScroll = window.pageYOffset;
   if (window.innerWidth > 1280) {
     if (currentScroll > 100) {
-      header.removeClass('bg-transparent').addClass('bg-blue-shade-5 top-nav-fixed');
+      header.removeClass('bg-transparent').addClass('bg-brown-shade-4 top-nav-fixed');
       if (!header.hasClass('sticky')) {
         header.addClass('sticky');
       }
       menuApp.slideUp();
     } else {
-      header.removeClass('bg-blue-shade-5 top-nav-fixed sticky').addClass('bg-transparent');
+      header.removeClass('bg-brown-shade-4 top-nav-fixed sticky').addClass('bg-transparent');
       menuApp.slideDown();
     }
   } else {
-    header.removeClass('bg-transparent').addClass('bg-blue-shade-5 top-nav-fixed sticky');
+    header.removeClass('bg-transparent').addClass('bg-brown-shade-4 top-nav-fixed sticky');
     menuApp.slideUp();
   }
   lastScroll = currentScroll;
@@ -32359,7 +32359,7 @@ _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__.S.use(modules);
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkaare"] = self["webpackChunkaare"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkbaeren"] = self["webpackChunkbaeren"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

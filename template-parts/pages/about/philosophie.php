@@ -1,4 +1,4 @@
-<section class="section-philosophie bg-blue-shade-5 text-blue-shade-1 pb-20 lg:pb-40">
+<section class="section-philosophie bg-brown-shade-4 text-brown-shade-1 pb-20 lg:pb-40">
 	<div class="theme-container">
 		<div class="theme-grid">
 			<div class="col-span-2 lg:col-span-4 lg:col-start-2 order-2 lg:order-1  invisible fade-in--noscroll">

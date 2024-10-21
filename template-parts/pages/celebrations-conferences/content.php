@@ -20,12 +20,12 @@
 				
 					<div class="card-cs-content py-7 lg:py-20 px-9 lg:px-28 grid grid-cols-2 lg:grid-cols-12">
 						<div class="col-span-2 lg:col-span-4 lg:col-start-2 mb-14 lg:mb-0">
-							<h2 class="text-title-h3 text-blue-shade-5 mb-4 lg:mb-7"><?php the_field( 'intro_title_1' ); ?></h2>
-							<div class="text-body text-blue-shade-5"><?php the_field( 'intro_description_1' ); ?></div>
+							<h2 class="text-title-h3 text-brown-shade-4 mb-4 lg:mb-7"><?php the_field( 'intro_title_1' ); ?></h2>
+							<div class="text-body text-brown-shade-4"><?php the_field( 'intro_description_1' ); ?></div>
 						</div>
 						<div class="col-span-2 lg:col-span-4 lg:col-start-8 mb-14 lg:mb-0">
-							<h2 class="text-title-h3 text-blue-shade-5 mb-4 lg:mb-7"><?php the_field( 'intro_title_2' ); ?></h2>
-							<div class="text-body text-blue-shade-5 mb-9"><?php the_field( 'intro_description_2' ); ?></div>
+							<h2 class="text-title-h3 text-brown-shade-4 mb-4 lg:mb-7"><?php the_field( 'intro_title_2' ); ?></h2>
+							<div class="text-body text-brown-shade-4 mb-9"><?php the_field( 'intro_description_2' ); ?></div>
 							<?php
 							$ilink = get_field( 'intro_link' );
 							if ( $ilink ) :
