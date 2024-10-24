@@ -160,6 +160,7 @@ require get_template_directory() . '/inc/theme-admin-settings.php';
 // The theme custom menu walker settings.
 require get_template_directory() . '/inc/theme-custom-menu-walker.php';
 
+
 function my_console_log(...$data) {
 	$json = json_encode($data);
 	add_action('shutdown', function() use ($json) {

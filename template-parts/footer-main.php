@@ -1,8 +1,7 @@
-<footer class="footer-main bg-brown-shade-2 ">
+<footer class="footer-main bg-blue-shade-1">
 	<section class="grid grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 lg:max-w-2xl mx-auto pt-12 pb-24 xl:py-36 px-6">
 		<div class="col-span-2 lg:col-span-3 flex justify-center items-center mb-14">
 			<div class="site-branding">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/paper-boat.svg" class="w-[66px] mb-5 mx-auto" alt="paper boat" title="paper boat" />
 				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url" class="navbar-brand custom-logo-link"><?php do_action( 'theme_logo_dark' ); ?></a>
 			</div>
 		</div>
@@ -30,7 +29,7 @@
 			?>
 		</div>
 	</section>
-	<section class="footer-bunchen bg-brown-shade-4 text-brown-shade-1 pt-16 pb-32 lg:py-32">
+	<section class="footer-bunchen bg-blue-shade-2 text-brown-shade-1 pt-16 pb-32 lg:py-32">
 		<div class="theme-container">
 			<div class="theme-grid">
 				<div class="col-span-2 lg:col-span-12 xl:col-span-6 xl:col-start-4 flex flex-col justify-center items-center gap-x-6">
@@ -48,7 +47,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="footer-copyright bg-brown-shade-3 z-10">
+	<section class="footer-copyright bg-blue-shade-2 z-10">
 		<div class="flex flex-col lg:flex-row justify-center lg:justify-between items-center py-4 max-w-7xl mx-auto px-6">
 			<p class="text-body text-brown-shade-1 mb-6 lg:mb-0">
 			<?php

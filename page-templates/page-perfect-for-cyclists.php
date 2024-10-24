@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Stay - Long Term Template
+ * Template Name: Perfect For - Cyclists Template
  */
 
 get_header();
@@ -9,8 +9,8 @@ if ( have_posts() ) :
 		the_post();
 		do_action( 'before_main_content' );
 			get_template_part( 'template-parts/pages/page-header' );
-			get_template_part( 'template-parts/pages/stay/long-term/loop' );
-			get_template_part( 'template-parts/pages/stay/long-term/informations' );
+			get_template_part( 'template-parts/pages/perfect-for/cyclists/intro' );
+			get_template_part( 'template-parts/pages/perfect-for/cyclists/blocks' );
 		do_action( 'after_main_content' );
 	endwhile;
 endif;
