@@ -6,34 +6,20 @@
 			</div>
 			<div class="page-header--title invisible fade-in--noscroll">
 				<?php
-				$page_header_title = '';
-				if ( is_home() ) :
-					$page_header_title = get_field( 'archive_news_header_title', 'options' );
-				else :
-					$page_header_title = get_field( 'page_header_title' );
-				endif;
-				if ( $page_header_title ) :
-					?>
-					<h1 class="text-title py-5 lg:py-10"><?php echo $page_header_title; ?></h1>
-					<?php
-				else :
-					?>
-					<h1 class="text-title py-5 lg:py-10"><?php the_title(); ?></h1>
-					<?php
-				endif;
-				?>
+				$page_header_title = get_field( 'intro_title' );
+				if( $page_header_title ) : ?>
+					<h1 class="page-header--title max-w-[840px] mx-auto py-4"><?php echo $page_header_title; ?></h1>
+				<?php endif; ?>
 			</div>
-			<div class="page-header--description w-3/4 lg:w-[40%] mx-auto invisible fade-in--noscroll">
+			<div class="page-header--separator mx-auto">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/page-header-separator.svg" alt="decorative separator">
+			</div>
+			<div class="page-header--description w-3/4 mx-auto invisible fade-in--noscroll pt-4">
 				<?php
-				$page_header_desc = '';
-				if ( is_home() ) :
-					$page_header_desc = get_field( 'archive_news_header_description', 'options' );
-				else :
-					$page_header_desc = get_field( 'page_header_description' );
-				endif;
+				$page_header_desc = get_field( 'intro_subtitle' );
 				if ( $page_header_desc ) :
 					?>
-					<p class="text-description"><?php echo $page_header_desc; ?></p>
+					<p class="page-header--subtitle"><?php echo $page_header_desc; ?></p>
 					<?php
 				endif;
 				?>
