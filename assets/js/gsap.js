@@ -99,6 +99,20 @@ if ( $(".page-template-page-home")[0] ) {
 			
 		},
 	});*/
+	var introtl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".purple",
+      scrub: true,
+      pin: true,
+      start: "top top",
+      end: "+=100%"
+    }
+  });
+
+	introtl.from(".purple p", {scale: 0.3, rotation:45, autoAlpha: 0, ease: "power2"})
+		.from(".line-3", {scaleX: 0, transformOrigin: "left center", ease: "none"}, 0)
+		.to(".purple", {backgroundColor: "#28a92b"}, 0);
+
 }
 if ( $(".fade-in")[0] ) {
 	var fadeInItems = gsap.utils.toArray('.fade-in');
