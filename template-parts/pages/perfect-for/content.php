@@ -16,7 +16,7 @@
 					endif;
 					?>
 					<div
-						class="card-perfect-for bg-slate-500 grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 pb-14 lg:pb-0 <?php echo esc_attr($fade_class); ?>">
+						class="card-perfect-for grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 pb-14 lg:pb-0 <?php echo esc_attr($fade_class); ?>">
 						<div
 							class="card-perfect-for-content col-span-2 lg:col-span-5 py-7 lg:pb-14 px-9 lg:px-28 self-end order-2 <?php echo ($i === 1) ? 'lg:order-2' : 'lg:order-1'; ?>">
 							<h2 class="text-title-h2 mb-4 lg:mb-7"><?php the_sub_field('title'); ?></h2>
@@ -29,7 +29,7 @@
 								$link_title = $ilink['title'];
 								$link_target = $ilink['target'] ? $ilink['target'] : '_self';
 								?>
-								<a class="btn-internal btn-internal--shade-transperant font-light" href="<?php echo esc_url($link_url); ?>"
+								<a class="btn-custom--double-arrows font-light w-[180px]" href="<?php echo esc_url($link_url); ?>"
 									target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
 								<?php
 							endif;
@@ -40,7 +40,7 @@
 							<?php
 							$offer_image = get_sub_field('image');
 							if ($offer_image):
-								echo wp_get_attachment_image($offer_image, 'full', false, array('class' => 'relative lg:mt-0 lg:-top-2 px-6 lg:px-0 min-h-[217px] lg:min-h-[432px]'));
+								echo wp_get_attachment_image($offer_image, 'full', false, array('class' => 'relative min-h-[217px] lg:min-h-[432px] w-full'));
 							endif;
 							?>
 						</div>
