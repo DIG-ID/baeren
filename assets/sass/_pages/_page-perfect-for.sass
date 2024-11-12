@@ -1,15 +1,19 @@
 .page-template-page-perfect-for
   .section-perfect-for-content
-    background: linear-gradient(180deg, $brown-shade-4 0%, $brown-shade-4 5%, $brown-shade-2 5%)
     .card-perfect-for
       &:nth-child(1)
-        background-color: $brown-shade-3
+        background-color: transparent
+        border: 1px solid black
+        @apply mx-6 lg:mx-14
       &:nth-child(2)
-        background-color: $green-shade-1
+        background-color: $brown-shade-1
+        border: 1px solid black
+        @apply mx-6
       &:nth-child(3)
-        background-color: $purple-shade-1
+        background-color: transparent
+        border: 1px solid black
+        @apply mx-6 lg:mx-14
 
 @media (max-width: 1023px)
   .page-template-page-perfect-for
     .section-perfect-for-content
-      background: $brown-shade-3
