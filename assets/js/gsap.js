@@ -101,17 +101,30 @@ if ( $(".page-template-page-home")[0] ) {
 	});*/
 	var introtl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".purple",
+      trigger: ".section-intro",
       scrub: true,
       pin: true,
       start: "top top",
-      end: "+=100%"
+      end: "+=200%"
     }
   });
 
-	introtl.from(".purple p", {scale: 0.3, rotation:45, autoAlpha: 0, ease: "power2"})
-		.from(".line-3", {scaleX: 0, transformOrigin: "left center", ease: "none"}, 0)
-		.to(".purple", {backgroundColor: "#28a92b"}, 0);
+	introtl.to(".section-intro .intro-image-1", {x:-100, autoAlpha: 0})
+
+		.from(".section-intro .intro-image-2", {x:'50%', ease: "power2"}, '<')
+		.to(".section-intro .intro-image-2", {x:-100, autoAlpha: 0, ease: "power2"})
+
+		.from(".section-intro .intro-image-3", {x:'100%', ease: "power2"}, '<0.25')
+		.to(".section-intro .intro-image-3", {x:-100, autoAlpha: 0, ease: "power2"})
+
+		.from(".section-intro .intro-image-4", {x:'150%', ease: "power2"}, '<0.5')
+		.to(".section-intro .intro-image-4", {x:-100, autoAlpha: 0, ease: "power2"})
+
+		.from(".section-intro .intro-image-5", {x:'200%', ease: "power2"}, '<1')
+		.to(".section-intro .intro-image-5", {x:-100, autoAlpha: 0, ease: "power2"})
+
+		.from(".line-3", {scaleX: 0, transformOrigin: "left center", ease: "none"})
+		.to(".section-intro", {backgroundColor: "#28a92b"});
 
 }
 if ( $(".fade-in")[0] ) {
