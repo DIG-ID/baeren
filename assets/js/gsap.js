@@ -101,17 +101,51 @@ if ( $(".page-template-page-home")[0] ) {
 	});*/
 	var introtl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".purple",
+      trigger: ".section-intro",
       scrub: true,
       pin: true,
       start: "top top",
-      end: "+=100%"
-    }
+      end: "+=150%"
+    },
+		defaults: {
+			ease: "power2",
+		}
   });
 
-	introtl.from(".purple p", {scale: 0.3, rotation:45, autoAlpha: 0, ease: "power2"})
-		.from(".line-3", {scaleX: 0, transformOrigin: "left center", ease: "none"}, 0)
-		.to(".purple", {backgroundColor: "#28a92b"}, 0);
+	introtl
+		.add("image1Fade")
+		.to(".section-intro .intro-image-1", {x:-100, autoAlpha: 0})
+
+		.add("image2Enter")
+		.to(".section-intro .intro-image-2", {x:0, onComplete: () => {
+			document.querySelector(".highlights-items li:nth-child(1)").classList.remove("active");
+			document.querySelector(".highlights-items li:nth-child(2)").classList.add("active");
+		}}, "image1Fade")
+
+		.to(".section-intro .intro-image-3", {x:'50%'}, "<")
+		.to(".section-intro .intro-image-4", {x:'100%'}, "<")
+		.to(".section-intro .intro-image-5", {x:'150%'}, "<")
+
+		
+
+		.add("image2Fade")
+		.to(".section-intro .intro-image-2", {x:-100, autoAlpha: 0})
+
+		.to(".section-intro .intro-image-3", {x:0}, "image2Fade")
+		.to(".section-intro .intro-image-4", {x:'50%'}, "<")
+		.to(".section-intro .intro-image-5", {x:'100%'}, "<")
+		
+		.add("image3Fade")
+		.to(".section-intro .intro-image-3", {x:-100, autoAlpha: 0})
+
+		.to(".section-intro .intro-image-4", {x:0}, "image3Fade")
+		.to(".section-intro .intro-image-5", {x:'50%'}, "<")
+		
+		.add("image4Fade")
+		.to(".section-intro .intro-image-4", {x:-100, autoAlpha: 0})
+
+		.to(".section-intro .intro-image-5", {x:0}, "image4Fade");
+
 
 }
 if ( $(".fade-in")[0] ) {
