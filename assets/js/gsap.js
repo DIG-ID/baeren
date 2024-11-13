@@ -105,26 +105,47 @@ if ( $(".page-template-page-home")[0] ) {
       scrub: true,
       pin: true,
       start: "top top",
-      end: "+=200%"
-    }
+      end: "+=150%"
+    },
+		defaults: {
+			ease: "power2",
+		}
   });
 
-	introtl.to(".section-intro .intro-image-1", {x:-100, autoAlpha: 0})
+	introtl
+		.add("image1Fade")
+		.to(".section-intro .intro-image-1", {x:-100, autoAlpha: 0})
 
-		.from(".section-intro .intro-image-2", {x:'50%', ease: "power2"}, '<')
-		.to(".section-intro .intro-image-2", {x:-100, autoAlpha: 0, ease: "power2"})
+		.add("image2Enter")
+		.to(".section-intro .intro-image-2", {x:0, onComplete: () => {
+			document.querySelector(".highlights-items li:nth-child(1)").classList.remove("active");
+			document.querySelector(".highlights-items li:nth-child(2)").classList.add("active");
+		}}, "image1Fade")
 
-		.from(".section-intro .intro-image-3", {x:'100%', ease: "power2"}, '<0.25')
-		.to(".section-intro .intro-image-3", {x:-100, autoAlpha: 0, ease: "power2"})
+		.to(".section-intro .intro-image-3", {x:'50%'}, "<")
+		.to(".section-intro .intro-image-4", {x:'100%'}, "<")
+		.to(".section-intro .intro-image-5", {x:'150%'}, "<")
 
-		.from(".section-intro .intro-image-4", {x:'150%', ease: "power2"}, '<0.5')
-		.to(".section-intro .intro-image-4", {x:-100, autoAlpha: 0, ease: "power2"})
+		
 
-		.from(".section-intro .intro-image-5", {x:'200%', ease: "power2"}, '<1')
-		.to(".section-intro .intro-image-5", {x:-100, autoAlpha: 0, ease: "power2"})
+		.add("image2Fade")
+		.to(".section-intro .intro-image-2", {x:-100, autoAlpha: 0})
 
-		.from(".line-3", {scaleX: 0, transformOrigin: "left center", ease: "none"})
-		.to(".section-intro", {backgroundColor: "#28a92b"});
+		.to(".section-intro .intro-image-3", {x:0}, "image2Fade")
+		.to(".section-intro .intro-image-4", {x:'50%'}, "<")
+		.to(".section-intro .intro-image-5", {x:'100%'}, "<")
+		
+		.add("image3Fade")
+		.to(".section-intro .intro-image-3", {x:-100, autoAlpha: 0})
+
+		.to(".section-intro .intro-image-4", {x:0}, "image3Fade")
+		.to(".section-intro .intro-image-5", {x:'50%'}, "<")
+		
+		.add("image4Fade")
+		.to(".section-intro .intro-image-4", {x:-100, autoAlpha: 0})
+
+		.to(".section-intro .intro-image-5", {x:0}, "image4Fade");
+
 
 }
 if ( $(".fade-in")[0] ) {
