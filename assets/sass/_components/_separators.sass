@@ -1,2 +1,28 @@
 .diamond
   @apply block w-6 h-6 bg-brown-shade-3 rotate-45 relative -top-3 mx-auto
+  &--top
+    top: -0.75rem
+    @apply block w-6 h-6 bg-brown-shade-2 rotate-45 absolute mx-auto left-1/2 transform -translate-x-1/2
+  &--bottom
+    bottom: -0.75rem
+    @apply block w-6 h-6 bg-brown-shade-2 rotate-45 absolute mx-auto left-1/2 transform -translate-x-1/2
+  &--transparent
+    z-index: 3
+    @apply block w-6 h-6 bg-white border border-brown-shade-4 rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+
+
+.diamond-container
+  position: absolute
+  left: -1.35rem
+  bottom: 50%
+  width: 4rem
+  height: 4rem
+  background-color: white
+  transform: translateY(50%)
+  z-index: 2
+
+@media (max-width: 1023px)
+  .diamond-container
+    left: 50%
+    bottom: -1.35rem
+    transform: translateX(-50%)
