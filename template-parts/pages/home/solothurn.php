@@ -1,4 +1,4 @@
-<section class="section-services bg-brown-shade-3 pt-24 pb-28 relative overflow-hidden">
+<section class="section-solothurn bg-white pt-24 pb-28 relative overflow-hidden">
 	<h2>Services</h2>
 	<div class="services-teaser">
 		<div class="teaser-box">
