@@ -14,8 +14,8 @@
 
 			<?php if ($i === 1): ?>
 				<div class="relative bg-brown-shade-1 py-10">
-					<span class="diamond--top"></span>
-					<span class="diamond--bottom"></span>
+					<span class="diamond--light-brown -top-[0.75rem] absolute left-1/2 transform -translate-x-1/2"></span>
+					<span class="diamond--light-brown -bottom-[0.75rem] absolute left-1/2 transform -translate-x-1/2"></span>
 				<?php endif; ?>
 
 				<div class="theme-container !px-0 mx-auto">

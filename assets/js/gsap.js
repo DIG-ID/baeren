@@ -108,42 +108,42 @@ if ( $(".page-template-page-home")[0] ) {
       end: "+=150%"
     },
 		defaults: {
-			ease: "power2",
+			//ease: "power2",
 		}
   });
 
 	introtl
+		.set(".highlights-items li:nth-child(1)", {fontSize: '1.2rem', color:'#34302D'})
 		.add("image1Fade")
-		.to(".section-intro .intro-image-1", {x:-100, autoAlpha: 0})
+		.to(".section-intro .intro-image-1", {x:-200, autoAlpha: 0})
 
 		.add("image2Enter")
-		.to(".section-intro .intro-image-2", {x:0, onComplete: () => {
-			document.querySelector(".highlights-items li:nth-child(1)").classList.remove("active");
-			document.querySelector(".highlights-items li:nth-child(2)").classList.add("active");
-		}}, "image1Fade")
-
+		.to(".section-intro .intro-image-2", {x:0}, "image1Fade")
+		.to(".highlights-items li:nth-child(1)", {fontSize: '1rem', color:'#8E827B'}, '<')
+		.to(".highlights-items li:nth-child(2)", {fontSize: '1.2rem', color:'#34302D'}, '<')
 		.to(".section-intro .intro-image-3", {x:'50%'}, "<")
 		.to(".section-intro .intro-image-4", {x:'100%'}, "<")
 		.to(".section-intro .intro-image-5", {x:'150%'}, "<")
 
-		
-
 		.add("image2Fade")
-		.to(".section-intro .intro-image-2", {x:-100, autoAlpha: 0})
-
+		.to(".section-intro .intro-image-2", {x:-200, autoAlpha: 0})
+		.to(".highlights-items li:nth-child(2)", {fontSize: '1rem', color:'#8E827B'}, '<')
+		.to(".highlights-items li:nth-child(3)", {fontSize: '1.2rem', color:'#34302D'}, '<')
 		.to(".section-intro .intro-image-3", {x:0}, "image2Fade")
 		.to(".section-intro .intro-image-4", {x:'50%'}, "<")
 		.to(".section-intro .intro-image-5", {x:'100%'}, "<")
 		
 		.add("image3Fade")
-		.to(".section-intro .intro-image-3", {x:-100, autoAlpha: 0})
-
+		.to(".section-intro .intro-image-3", {x:-200, autoAlpha: 0})
+		.to(".highlights-items li:nth-child(3)", {fontSize: '1rem', color:'#8E827B'}, '<')
+		.to(".highlights-items li:nth-child(4)", {fontSize: '1.2rem', color:'#34302D'}, '<')
 		.to(".section-intro .intro-image-4", {x:0}, "image3Fade")
 		.to(".section-intro .intro-image-5", {x:'50%'}, "<")
 		
 		.add("image4Fade")
-		.to(".section-intro .intro-image-4", {x:-100, autoAlpha: 0})
-
+		.to(".section-intro .intro-image-4", {x:-200, autoAlpha: 0})
+		.to(".highlights-items li:nth-child(4)", {fontSize: '1rem', color:'#8E827B'}, '<')
+		.to(".highlights-items li:nth-child(5)", {fontSize: '1.2rem', color:'#34302D'}, '<')
 		.to(".section-intro .intro-image-5", {x:0}, "image4Fade");
 
 
