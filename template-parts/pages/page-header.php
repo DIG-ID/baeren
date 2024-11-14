@@ -52,4 +52,13 @@
 		
 	</script>
 </section>
-<span class="diamond"></span>
+<span 
+    class="diamond<?php 
+    if (is_page_template('page-templates/page-stay.php')):
+        echo ' diamond--red';
+    elseif (is_page_template('page-templates/page-perfect-for.php')):
+        echo ' diamond--orange';
+    endif;
+    ?>">
+</span>
+
