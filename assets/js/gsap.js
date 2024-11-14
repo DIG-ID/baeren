@@ -102,7 +102,7 @@ if ( $(".page-template-page-home")[0] ) {
 	var introtl = gsap.timeline({
     scrollTrigger: {
       trigger: ".section-intro",
-      scrub: true,
+      scrub: 1.2,
       pin: true,
       start: "top top",
       end: "+=150%"
@@ -146,6 +146,18 @@ if ( $(".page-template-page-home")[0] ) {
 		.to(".highlights-items li:nth-child(5)", {fontSize: '1.2rem', color:'#34302D'}, '<')
 		.to(".section-intro .intro-image-5", {x:0}, "image4Fade");
 
+
+		gsap.to(".room-text-overlay", { 
+			scrollTrigger: {
+				trigger: '.section-room-teaser',
+				scrub: 2,
+				start: "20% 50%",
+				end: "bottom+=100% 80%",
+			},
+			x: '-100%',
+			ease: "power2"
+		});
+	
 
 }
 if ( $(".fade-in")[0] ) {
