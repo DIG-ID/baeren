@@ -53,11 +53,13 @@
 	</script>
 </section>
 <span 
-    class="diamond<?php 
+    class="diamond -top-3 relative<?php 
     if (is_page_template('page-templates/page-stay.php')):
         echo ' diamond--red';
     elseif (is_page_template('page-templates/page-perfect-for.php')):
         echo ' diamond--orange';
+    elseif (is_page_template('page-templates/page-solothurn.php')):
+        echo ' diamond--green z-10';
     endif;
     ?>">
 </span>

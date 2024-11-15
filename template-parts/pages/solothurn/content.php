@@ -1,4 +1,4 @@
-<section class="section-solothurn-content pb-0 flex flex-col gap-28 mb-24">
+<section class="section-solothurn-content pb-0 flex flex-col gap-28 mb-24 -mt-6 ">
 	<?php
 	if (have_rows('child_pages')):
 		$i = 1;
@@ -14,8 +14,7 @@
 
 			<?php if ($i % 2 !== 0): ?>
 				<div class="relative bg-brown-shade-1 py-10">
-				<span class="diamond--green absolute -top-[0.75rem] left-1/2 transform -translate-x-1/2"></span>
-				<span class="diamond--brown absolute -bottom-[0.75rem] left-1/2 transform -translate-x-1/2"></span>
+				<span class="diamond diamond--brown absolute left-1/2 bottom-[-0.75rem] z-10"></span>
 				<?php endif; ?>
 
 				<div class="theme-container !px-0 mx-auto">
@@ -43,7 +42,7 @@
 							endif;
 							if ($i % 2 === 0): ?>
 								<div class="diamond-container ">
-									<span class="diamond--white"></span>
+									<span class="diamond diamond--white w-4 h-4 absolute top-1/2 -translate-y-1/2"></span>
 								</div>
 							<?php endif; ?>
 						</div>

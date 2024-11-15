@@ -1,22 +1,17 @@
 .diamond
-  @apply block w-6 h-6 bg-brown-shade-3 rotate-45 relative -top-3 mx-auto
+  @apply block w-6 h-6 bg-brown-shade-3 rotate-45 mx-auto
   &--red
     @apply bg-red
   &--green
-    @apply bg-green block w-6 h-6 rotate-45
+    @apply bg-green
   &--orange
     @apply bg-orange
   &--light-brown
-    @apply bg-brown-shade-1 block w-4 h-4 rotate-45 border border-brown-shade-4 
+    @apply bg-brown-shade-1 border border-brown-shade-4 
   &--brown
-    @apply bg-brown-shade-2 block w-6 h-6 rotate-45
+    @apply bg-brown-shade-2
   &--white
-    z-index: 3
-    @apply block w-4 h-4 bg-white border border-brown-shade-4 rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-  &--transparent
-    z-index: 3
-    @apply block w-4 h-4 bg-transparent border border-brown-shade-4 rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-
+    @apply  bg-white border border-brown-shade-4 
 
 .diamond-container
   position: absolute
