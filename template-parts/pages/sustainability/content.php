@@ -12,15 +12,15 @@
 
 			<?php if ($i % 2 === 0): ?>
 				<div class="relative bg-brown-shade-1 lg:py-10">
-					<span class="diamond--brown -top-[0.75rem] absolute left-1/2 transform -translate-x-1/2 z-10"></span>
-					<span class="diamond--brown -bottom-[0.75rem] absolute left-1/2 transform -translate-x-1/2 z-10"></span>
+					<span class="diamond diamond--brown -top-[0.75rem] absolute left-1/2 transform -translate-x-1/2 z-10"></span>
+					<span class="diamond diamond--brown -bottom-[0.75rem] absolute left-1/2 transform -translate-x-1/2 z-10"></span>
 				<?php endif; ?>
 
 				<div class="theme-container !px-0 mx-auto">
 					<div class="block lg:hidden min-h-60 -mt-1"></div>
 					<div class="theme-grid"></div>
 					<div
-						class="relative card-sustainability grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 lg:pb-0 lg:mx-16 <?php echo esc_attr($fade_class); ?>">
+						class="relative card-sustainability grid grid-cols-2 mx-8 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 lg:pb-0 lg:mx-16 <?php echo esc_attr($fade_class); ?>">
 
 						<div
 							class="card-sustainability-content col-span-2 py-28 px-9 lg:col-span-6 order-2 <?php echo $is_odd ? 'lg:order-2 lg:pl-40' : 'lg:order-1 lg:pr-40'; ?>">
@@ -45,7 +45,7 @@
 							class="card-sustainability-image lg:my-8 col-span-2 lg:col-span-6 relative order-1 mb-[-2rem] <?php echo $order_image_class ?>">
 							<div
 								class="absolute lg:w-8 lg:h-16 w-16 h-8 flex justify-center items-center  bg-brown-shade-1 z-10 bottom-[-2rem] lg:bottom-1/2 left-1/2 translate-y-1/2 -translate-x-1/2 <?php echo $is_odd ? 'lg:!right-[-2rem] lg:left-full lg:translate-x-1/2' : 'lg:!left-[-2rem] lg:-translate-x-1/2' ?>">
-								<span class="diamond--light-brown"></span>
+								<span class="diamond--light-brown block h-4 w-4 rotate-45"></span>
 							</div>
 
 							<?php
