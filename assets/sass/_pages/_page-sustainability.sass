@@ -1,8 +1,32 @@
 .page-template-page-sustainability
-  .section-sustainability-content
-    background: linear-gradient(180deg, $brown-shade-4 0%, $brown-shade-4 5%, $brown-shade-3 5%)
+  .card-sustainability-content
+    @apply bg-brown-shade-1 self-end my-auto
+    .list
+      list-style-type: none
+  .card-sustainability-image
+    position: relative
+    display: flex
+    align-items: center
+    &:after
+      content: ''
+      position: absolute
+      top: 10px
+      bottom: 10px
+      border: 1px solid $brown-shade-3
+      z-index: 1
+      pointer-events: none
 
 @media (max-width: 1024px)
   .page-template-page-sustainability
     .section-sustainability-content
-      background: $brown-shade-3
+      .card-sustainability-image
+        &:after
+          content: ''
+          position: absolute
+          left: 10px
+          right: 10px
+          top: 1rem
+          bottom: -2rem
+          border: 1px solid $brown-shade-3
+          z-index: 1
+          pointer-events: none

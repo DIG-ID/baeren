@@ -1,4 +1,4 @@
-<section class="section-solothurn-content pb-0 flex flex-col gap-40">
+<section class="section-solothurn-content pb-0 flex flex-col gap-28 mb-24">
 	<?php
 	if (have_rows('child_pages')):
 		$i = 1;
@@ -15,7 +15,7 @@
 			<?php if ($i % 2 !== 0): ?>
 				<div class="relative bg-brown-shade-1 py-10">
 				<span class="diamond--green absolute -top-[0.75rem] left-1/2 transform -translate-x-1/2"></span>
-				<span class="diamond--light-brown absolute -bottom-[0.75rem] left-1/2 transform -translate-x-1/2"></span>
+				<span class="diamond--brown absolute -bottom-[0.75rem] left-1/2 transform -translate-x-1/2"></span>
 				<?php endif; ?>
 
 				<div class="theme-container !px-0 mx-auto">
@@ -43,7 +43,7 @@
 							endif;
 							if ($i % 2 === 0): ?>
 								<div class="diamond-container ">
-									<span class="diamond--transparent"></span>
+									<span class="diamond--white"></span>
 								</div>
 							<?php endif; ?>
 						</div>
@@ -53,7 +53,7 @@
 							<?php
 							$offer_image = get_sub_field('image');
 							if ($offer_image):
-								echo wp_get_attachment_image($offer_image, 'full', false, array('class' => 'relative min-h-[217px] lg:min-h-[432px] w-full'));
+								echo wp_get_attachment_image($offer_image, 'full', false, array('class' => 'min-h-[217px] lg:min-h-[432px] h-full w-full'));
 							endif;
 							?>
 						</div>

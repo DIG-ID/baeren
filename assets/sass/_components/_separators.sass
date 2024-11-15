@@ -5,10 +5,15 @@
   &--orange
     @apply bg-orange
   &--light-brown
+    @apply bg-brown-shade-1 block w-4 h-4 rotate-45 border border-brown-shade-4 
+  &--brown
     @apply bg-brown-shade-2 block w-6 h-6 rotate-45
-  &--transparent
+  &--white
     z-index: 3
     @apply block w-4 h-4 bg-white border border-brown-shade-4 rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+  &--transparent
+    z-index: 3
+    @apply block w-4 h-4 bg-transparent border border-brown-shade-4 rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
 
 
 .diamond-container
