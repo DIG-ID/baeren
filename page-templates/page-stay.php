@@ -10,9 +10,8 @@ if ( have_posts() ) :
 		do_action( 'before_main_content' );
 			get_template_part( 'template-parts/pages/page-header' );
 			get_template_part( 'template-parts/pages/stay/zimmer' );
+			get_template_part( 'template-parts/pages/stay/services' );
 			get_template_part( 'template-parts/components/teaser-default' );
-			get_template_part( 'template-parts/pages/stay/langzeitaufenthalt' );
-			get_template_part( 'template-parts/pages/stay/teasers' );
 		do_action( 'after_main_content' );
 	endwhile;
 endif;
