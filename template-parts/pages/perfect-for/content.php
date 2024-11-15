@@ -53,7 +53,7 @@
 							<?php
 							$offer_image = get_sub_field('image');
 							if ($offer_image):
-								echo wp_get_attachment_image($offer_image, 'full', false, array('class' => 'relative min-h-[217px] lg:min-h-[432px] w-full'));
+								echo wp_get_attachment_image($offer_image, 'full', false, array('class' => 'relative min-h-[217px] lg:min-h-[432px] w-full h-full'));
 							endif;
 							?>
 						</div>
