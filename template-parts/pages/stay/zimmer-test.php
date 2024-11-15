@@ -7,11 +7,19 @@
 		?>
 			<li class="zimmer__item">
     			<div class="zimmer__item--body section-container">
-        			<div class="zimmer__item--wrapper py-12 theme-grid">
+        			<div class="zimmer__item--wrapper py-12 px-11 theme-grid">
             			<div class="col-span-2 md:col-span-6 xl:col-span-8">
-							<h3 class="zimmer__item--title text-title-h3 uppercase">
+                            <h3 class="zimmer__item--title text-title-h3 uppercase">
 								<?php the_sub_field( 'title' ); ?>
 							</h3>
+							<div class="zimmer__item--info !block text-body pt-3 pb-6">
+								<ul>
+									<?php do_action( 'stay_room_features' ); ?>
+								</ul>
+							</div>
+							<div class="zimmer__item--description !block text-body pt-2 max-w-[530px]">
+								<?php the_sub_field( 'description' ); ?>
+							</div>
 						</div>
 						<div class="col-span-2 md:col-span-6 xl:col-span-4 flex justify-end">
 							<?php
@@ -40,17 +48,17 @@
 						</picture>
 					</div>
 		
-					<div class="zimmer__item--wrapper py-14 px-11 theme-grid">
+					<div class="zimmer__item--wrapper py-12 px-11 theme-grid">
 						<div class="col-span-2 md:col-span-6 xl:col-span-8">
 							<h3 class="zimmer__item--title text-title-h3 uppercase">
 								<?php the_sub_field( 'title' ); ?>
 							</h3>
-							<div class="zimmer__item--info text-body pt-3 pb-6">
+							<div class="zimmer__item--info !block text-body pt-3 pb-6">
 								<ul>
 									<?php do_action( 'stay_room_features' ); ?>
 								</ul>
 							</div>
-							<div class="zimmer__item--description text-body pt-2 max-w-[530px]">
+							<div class="zimmer__item--description !block text-body pt-2 max-w-[530px]">
 								<?php the_sub_field( 'description' ); ?>
 							</div>
 						</div>

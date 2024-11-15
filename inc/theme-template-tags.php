@@ -82,6 +82,41 @@ function theme_room_features() {
 add_action( 'room_features', 'theme_room_features' );
 
 /**
+ * This function gest the rooms features from the Stay page.
+ */
+function theme_stay_room_features() {
+	if ( have_rows( 'features' ) ) :
+		echo '<ul class="features">';
+		while ( have_rows( 'features' ) ) :
+			the_row();
+			?>
+			<li id="feature-item" class="font-poppins font-normal text-sm text-brown-shade-4">
+				<?php
+				$fields = [
+					'bed'      => __( 'Bett:', 'baeren' ),
+					'size'     => __( 'Fläche:', 'baeren' ),
+					'capacity' => __( 'Belegung:', 'baeren' ),
+					'view'     => __( 'Aussicht:', 'baeren' ),
+				];
+				foreach ( $fields as $field_key => $label ) :
+					$field_value = get_sub_field( $field_key );
+					if ( $field_value ) :
+						?>
+						<span class="font-bold"><?php echo $label; ?></span> <?php echo esc_html( $field_value ); ?>
+						<?php
+					endif;
+				endforeach;
+				?>
+			</li>
+			<?php
+		endwhile;
+		echo '</ul>';
+	endif;
+}
+
+add_action( 'stay_room_features', 'theme_stay_room_features' );
+
+/**
  * This theme logo.
  */
 function theme_logo() {

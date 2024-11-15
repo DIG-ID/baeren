@@ -1,7 +1,13 @@
 <section 
-    class="page-header flex items-center bg-brown-shade-4 text-brown-shade-1 min-h-[100vh] relative" 
-    style="<?php 
-        $intro_image_id = get_field( 'intro_image' );
+    class="page-header flex items-center bg-brown-shade-4 text-brown-shade-1 relative <?php
+    $intro_image_id = get_field( 'intro_image' );
+    if( $intro_image_id ) : 
+        echo 'min-h-[100vh]';
+    else :
+        echo 'pt-28 lg:pt-64 pb-20 lg:pb-40';
+    endif; 
+    ?>" 
+    style="<?php
         if( $intro_image_id ) : 
             echo 'background-image: url(' . wp_get_attachment_image_url( $intro_image_id, 'full' ) . '); background-size: cover; background-position: center;';
         endif; 
@@ -39,9 +45,20 @@
             </div>
         </div>
     </div>
-	<a href="javascript:void(0);" id="scroll-down-link" class="scroll-down-arrows absolute left-1/2 -translate-x-1/2 bottom-20"></a>
-
+    <?php if( $intro_image_id ) : ?>
+	    <a href="javascript:void(0);" id="scroll-down-link" class="scroll-down-arrows absolute left-1/2 -translate-x-1/2 bottom-20"></a>
+    <?php endif; ?>
 	<script>
 		
 	</script>
 </section>
+<span 
+    class="diamond<?php 
+    if (is_page_template('page-templates/page-stay.php')):
+        echo ' diamond--red';
+    elseif (is_page_template('page-templates/page-perfect-for.php')):
+        echo ' diamond--orange';
+    endif;
+    ?>">
+</span>
+

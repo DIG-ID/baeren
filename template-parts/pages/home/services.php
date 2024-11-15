@@ -1,34 +1,24 @@
-<section class="section-services bg-brown-shade-3 pt-24 pb-28 relative overflow-hidden">
-    <div class="theme-container grid grid-cols-2 xl:grid-cols-12 gap-x-6 fade-in">
-        <div class="col-span-2 xl:col-span-12">
-            <h2 class="section-services--title font-utopia font-light text-2xl xl:text-5xl leading-7 w-[40%] xl:w-full mx-auto xl:mx-0 text-brown-shade-2 text-center"><?php echo get_field( 'services_title' ); ?></h2>
-        </div>
-        <div class="col-span-2 xl:col-span-12 block xl:flex items-center mt-4 mb-5 xl:mt-24 xl:mb-12">
-        <?php if( have_rows('services_services_list') ):
-        while( have_rows('services_services_list') ) : the_row(); ?>
-            <div class="section-services--item w-1/2 xl:w-1/4 flex flex-col xl:flex-row items-center float-left xl:float-none mb-11 min-h-16 xl:min-h-0">
-                <?php 
-                    $services_icon = get_sub_field('icon');
-                    $size = 'full';
-                    if( $services_icon ) {
-                        echo wp_get_attachment_image( $services_icon, $size, false, array( 'class' => 'w-full max-w-[36px] xl:max-w-[50px] h-[25px] xl:h-[50px] mb-4 xl:mb-0 xl:mr-4' ) );
-                    } 
-                ?>
-                <p class="text-bullets--primary text-brown-shade-2 text-center xl:text-left"><?php echo get_sub_field( 'text' ); ?></p>
-            </div>
-        <?php endwhile;
-        endif; ?>
-        </div>
-        <div class="col-span-2 xl:col-span-12 text-center">
-            <?php 
-            $services_btn = get_field('services_button');
-            if( $services_btn ): 
-                $services_btn_url = $services_btn['url'];
-                $services_btn_title = $services_btn['title'];
-                $services_btn_target = $services_btn['target'] ? $services_btn['target'] : '_self';
-                ?>
-                <a class="section-services--button btn-internal btn-internal--shade-2 text-center" href="<?php echo esc_url( $services_btn_url ); ?>" target="<?php echo esc_attr( $services_btn_target ); ?>"><?php echo esc_html( $services_btn_title ); ?></a>
-            <?php endif; ?>
-        </div>
-    </div>
+<span class="diamond diamond--light-brown"></span>
+<section class="section-services bg-brown-shade-3 relative overflow-hidden">
+	<h2 class="text-subtitle text-brown-shade-1 absolute top-16 left-1/2 -translate-x-1/2 z-20">Services</h2>
+	<div class="services-teaser flex">
+		<div class="service-box bg-[url(https://picsum.photos/700/800?random=1)] bg-cover bg-no-repeat bg-center">
+			<div class="z-10">
+				<h2 class="font-poppins font-normal text-3xl text-white tracking-[2.56px] uppercase text-center mb-8">Best<span class="font-bold">Preis</span><br> Garantie</h2>
+				<p class="font-poppins font-normal text-base text-white leading-7 tracking-[0.96px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga error labore sed officiis omnis, ab ut. Vero non eaque dignissimos animi, nostrum explicabo illum, excepturi reiciendis aspernatur voluptatum minus possimus!</p>
+			</div>
+		</div>
+		<div class="service-box bg-[url(https://picsum.photos/700/800?random=2)] bg-cover bg-no-repeat bg-center">
+			<div class="z-10">
+				<h2 class="font-poppins font-normal text-3xl text-white tracking-[2.56px] uppercase text-center mb-8">Kostenloser<br> <span class="font-bold">Internetzugang</span></h2>
+				<p class="font-poppins font-normal text-base text-white leading-7 tracking-[0.96px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga error labore sed officiis omnis, ab ut. Vero non eaque dignissimos animi, nostrum explicabo illum, excepturi reiciendis aspernatur voluptatum minus possimus!</p>
+			</div>
+		</div>
+		<div class="service-box bg-[url(https://picsum.photos/700/800?random=3)] bg-cover bg-no-repeat bg-center">
+			<div class="z-10">
+				<h2 class="font-poppins font-normal text-3xl text-white tracking-[2.56px] uppercase text-center mb-8">Kostenlose<br> <span class="font-bold">Parkplätze</span></h2>
+				<p class="font-poppins font-normal text-base text-white leading-7 tracking-[0.96px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga error labore sed officiis omnis, ab ut. Vero non eaque dignissimos animi, nostrum explicabo illum, excepturi reiciendis aspernatur voluptatum minus possimus!</p>
+			</div>
+		</div>
+	</div>
 </section>

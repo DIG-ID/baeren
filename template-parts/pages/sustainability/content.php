@@ -24,8 +24,8 @@
 
 						<div
 							class="card-sustainability-content col-span-2 py-28 px-9 lg:col-span-6 order-2 <?php echo $is_odd ? 'lg:order-2 lg:pl-40' : 'lg:order-1 lg:pr-40'; ?>">
-							<h2 class="text-title-h2 text-left mb-4"><?php the_sub_field('title'); ?></h2>
-							<h3 class="text-title-h3 mb-4 lg:mb-7"><strong><?php the_sub_field('subtitle'); ?></strong></h3>
+							<h2 class="text-title-h2 lg:text-2xl text-left mb-4"><?php the_sub_field('title'); ?></h2>
+							<h3 class="text-title-h3 lg:text-base mb-4 lg:mb-7"><strong><?php the_sub_field('subtitle'); ?></strong></h3>
 
 							<?php
 							$list = get_sub_field('list');
