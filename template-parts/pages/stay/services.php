@@ -1,4 +1,4 @@
-<span class="diamond diamond--light-brown"></span>
+<span class="diamond diamond--light-brown -mb-3 relative z-10"></span>
 <section class="section-services bg-brown-shade-3 relative overflow-hidden">
 	<h2 class="text-subtitle text-brown-shade-1 absolute top-16 left-1/2 -translate-x-1/2 z-20">Services</h2>
 	<div class="services-teaser flex">

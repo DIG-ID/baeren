@@ -11,6 +11,7 @@ if ( have_posts() ) :
 			get_template_part( 'template-parts/pages/page-header' );
 			get_template_part( 'template-parts/pages/stay/zimmer' );
 			get_template_part( 'template-parts/pages/stay/services' );
+			get_template_part( 'template-parts/pages/stay/info' );
 			get_template_part( 'template-parts/components/teaser-default' );
 		do_action( 'after_main_content' );
 	endwhile;
