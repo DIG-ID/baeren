@@ -40,7 +40,7 @@
 						</picture>
 					</div>
 		
-					<div class="zimmer__item--wrapper py-14 px-11 theme-grid">
+					<div class="zimmer__item--wrapper py-14 pl-11 pr-0 theme-grid">
 						<div class="col-span-2 md:col-span-6 xl:col-span-8">
 							<h3 class="zimmer__item--title text-title-h3 uppercase">
 								<?php the_sub_field( 'title' ); ?>
@@ -77,3 +77,37 @@
 		</ul>
 	</div>
 </section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.zimmer__item').forEach(item => {
+        const originalBody = item.querySelector('.zimmer__item--body.section-container');
+        const cloneBody = item.querySelector('.zimmer__item--body._clone');
+
+        let originalHeight = originalBody.offsetHeight;
+
+        item.addEventListener('mouseenter', () => {
+            cloneBody.classList.add('open');
+            
+            const cloneHeight = cloneBody.offsetHeight;
+
+            originalBody.style.transition = 'height 0.7s ease-in-out';
+            originalBody.style.height = `${cloneHeight}px`;
+        });
+
+        item.addEventListener('mouseleave', () => {
+            cloneBody.classList.remove('open');
+
+
+            originalBody.style.transition = 'height 0.7s ease-in-out';
+            originalBody.style.height = `${originalHeight}px`;
+
+
+            setTimeout(() => {
+                originalBody.style.height = 'auto';
+            }, 700);
+        });
+    });
+});
+
+
+</script>

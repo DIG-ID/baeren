@@ -1,27 +1,49 @@
+.btn
+    &__moreinfo
+        @apply relative pr-8
+        &::after
+            @apply absolute top-1/2 -translate-y-1/2 right-0
+            content: ''
+            width: 20px
+            height: 10px
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2210%22%20viewBox%3D%220%200%2020%2010%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1%200.785156L8.37584%204.99992L1%209.21469M11.5369%200.785156L18.9128%204.99992L11.5369%209.21469%22%20stroke%3D%22%2334302D%22%2F%3E%3C%2Fsvg%3E")
+            background-repeat: no-repeat
+            background-size: contain
+        &::hover
+            color: #FFF
+            &::after
+                background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2210%22%20viewBox%3D%220%200%2020%2010%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1%200.785156L8.37584%204.99992L1%209.21469M11.5369%200.785156L18.9128%204.99992L11.5369%209.21469%22%20stroke%3D%22%23FFFFFF%22%2F%3E%3C%2Fsvg%3E")
+
 .page-template-page-stay
+    .zimmer__list
+        @apply relative
+    
     .zimmer__item
-        @apply relative grid border-b border-brown-shade-3
-        padding-top: 1px
-        margin-top: -1px
+        @apply relative grid border-b border-brown-shade-3 overflow-hidden
+        //clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
+        transition: clip-path 0.7s ease-in-out
+
         &:hover
+            cursor: pointer
             .zimmer__item--body.section-container
-                clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%)
-                transition: clip-path 0.7s ease-in-out
-            .zimmer__item--body.section-container._clone
-                position: relative
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
-                transition: clip-path 0.7s ease-in-out
-            .zimmer__item--description, .zimmer__item--info
-                display: block
+            
+            .zimmer__item--body._clone
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+            
+
         &--body
             @apply relative
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
-        &--body.section-container
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
-            transition: clip-path 0.7s ease-in-out
+            padding: 1rem
+            transition: padding 0.5s ease-in-out
+
+            &:first-child
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+                visibility: visible
+
         &--wrapper
             @apply items-center
+
         &>*
             -ms-grid-row: 1
             -ms-grid-column: 1
@@ -29,37 +51,61 @@
         &--info ul
             display: flex
             flex-wrap: wrap
-        &--description, &--info
-            display: none
-        &--body._clone
-            @apply w-full bottom-0 left-0
+
+        &--info ul, &--description
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out
+            opacity: 0
+            visibility: hidden
+
+        .zimmer__item--body._clone
+            @apply w-full top-0 left-0
             position: absolute
             z-index: 2
             user-select: none
-            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%)
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
             transition: clip-path 0.7s ease-in-out
-        &--bg
-            @apply absolute h-full w-full left-0 top-0
-            z-index: -1
-            user-select: none
-            -moz-user-select: none
-            -ms-user-select: none
-            -webkit-user-select: none
-            pointer-events: none
-        &--bg::after
-            content: ""
-            position: absolute
-            left: 0
-            top: 0
-            width: 100%
-            height: 100%
-            background: #AF9B90
-            mix-blend-mode: multiply
-        &--bg img
-            @apply w-full h-full
-            -o-object-fit: cover
-            object-fit: cover
-        &--btn
+            opacity: 0
+            visibility: hidden
+            transition: clip-path 0.7s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out
+
+            &.open
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+                opacity: 1
+                visibility: visible
+
+                .zimmer__item
+                    &--info ul, &--description
+                        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out
+                        opacity: 1
+                        visibility: visible
+
+            .zimmer__item--bg
+                @apply absolute h-full w-full left-0 top-0
+                z-index: -1
+                user-select: none
+                pointer-events: none
+
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    background: #AF9B90
+                    mix-blend-mode: multiply
+
+                img
+                    @apply w-full h-full
+                    object-fit: cover
+
+            .zimmer__item--title, .zimmer__item--info li, .zimmer__item--description
+                color: #FFF
+            
+            .zimmer__item--btn
+                color: #FFF
+
+        .zimmer__item--btn
             @apply relative pr-8
             &::after
                 @apply absolute top-1/2 -translate-y-1/2 right-0
@@ -69,16 +115,16 @@
                 background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2210%22%20viewBox%3D%220%200%2020%2010%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1%200.785156L8.37584%204.99992L1%209.21469M11.5369%200.785156L18.9128%204.99992L11.5369%209.21469%22%20stroke%3D%22%2334302D%22%2F%3E%3C%2Fsvg%3E")
                 background-repeat: no-repeat
                 background-size: contain
-    .zimmer__item--body._clone 
-        .zimmer__item
-            &--title
-                color: #FFF
-            &--info
-                li
+        .zimmer__item--body._clone 
+            .zimmer__item
+                &--title
                     color: #FFF
-            &--description
-                color: #FFF
-            &--btn
-                color: #FFF
-                &::after
-                    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2210%22%20viewBox%3D%220%200%2020%2010%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1%200.785156L8.37584%204.99992L1%209.21469M11.5369%200.785156L18.9128%204.99992L11.5369%209.21469%22%20stroke%3D%22%23FFFFFF%22%2F%3E%3C%2Fsvg%3E")
+                &--info
+                    li
+                        color: #FFF
+                &--description
+                    color: #FFF
+                &--btn
+                    color: #FFF
+                    &::after
+                        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2210%22%20viewBox%3D%220%200%2020%2010%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1%200.785156L8.37584%204.99992L1%209.21469M11.5369%200.785156L18.9128%204.99992L11.5369%209.21469%22%20stroke%3D%22%23FFFFFF%22%2F%3E%3C%2Fsvg%3E")
