@@ -1,22 +1,31 @@
 .wpcf7
   .wpcf7-form-control-wrap
     @apply block mb-4 md:mb-6
+  .wpcf7-form
+    @apply flex flex-col gap-6
+    .wpcf7-submit
+      @apply relative w-full flex justify-center items-center gap-5 transition-all bg-brown-shade-4 duration-150 font-utopia font-normal text-xl text-white text-center tracking-[0.2px] py-3.5 px-5 border border-brown-shade-4 self-end lg:max-w-[10rem]
   .wpcf7-form-control
     &.wpcf7-text,
     &.wpcf7-textarea
-      @apply w-full rounded-[50px] py-4 px-6 text-sm text-brown-shade-4 font-poppins font-normal tracking-[0.14px]  opacity-100 border border-brown-shade-4
+      @apply w-full py-4 px-6 text-sm text-brown-shade-4 font-poppins font-normal tracking-[0.14px]  opacity-100 border border-brown-shade-3
       &::placeholder
         @apply font-poppins font-normal text-sm tracking-[0.14px] opacity-100 text-brown-shade-3
-    &.wpcf7-textarea
-      @apply rounded-[20px]
     &.wpcf7-number
       @apply w-full rounded-[50px] py-4 px-6 text-sm text-brown-shade-4 font-poppins font-normal tracking-[0.14px]  opacity-100 border border-brown-shade-4
       &::placeholder
         @apply font-poppins font-normal text-sm tracking-[0.14px] opacity-100 text-brown-shade-3
     &.wpcf7-date
-      @apply w-full rounded-[50px] py-4 px-6 text-sm text-brown-shade-4 font-poppins font-normal tracking-[0.14px]  opacity-100 border border-brown-shade-4
+      @apply w-full py-4 px-6 text-sm text-brown-shade-4 font-poppins font-normal tracking-[0.14px]  opacity-100 border border-brown-shade-4
     &.wpcf7-submit
-      @apply inline-block transition-all duration-150 font-utopia font-normal text-xl text-brown-shade-4 text-center tracking-[0.2px] py-3 px-28 relative border border-brown-shade-4 rounded-[48px]
+      @apply relative w-full lg:max-w-[6.6rem] flex transition-all bg-brown-shade-4 duration-150 font-utopia font-normal text-xl text-white text-center tracking-[0.2px] py-3.5 px-5 border border-brown-shade-4 self-end
+      &::after
+        content: url("data:image/svg+xml,%3Csvg width='19' height='10' viewBox='0 0 19 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8 5L1 9M11 1L18 5L11 9' stroke='%2334302D'/%3E%3C/svg%3E")
+        display: inline-block
+        width: 20px
+        height: 20px
+        z-index: 10
+        
   .wpcf7-spinner
     @apply bg-brown-shade-3
   .wpcf7-not-valid-tip

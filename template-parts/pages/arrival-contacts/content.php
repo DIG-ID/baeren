@@ -1,94 +1,133 @@
-<section class="section-arrival-contact-content pb-28 lg:pb-16">
-	<div class="theme-container">
-		<div class="flex flex-col flex-wrap lg:h-[1900px] gap-6">
-			<div class="address w-full lg:w-1/2 bg-white px-8 lg:px-28 pt-9 lg:pt-14 pb-14 lg:pb-28 rounded-[20px] overflow-hidden order-1 lg:order-1 invisible fade-in--noscroll">
-				<img class="mb-8 lg:mb-16" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/boat.png' ) ); ?>" alt="boat">
-				<p class="text-body--serif text-brown-shade-4 mb-4 lg:mb-8"><?php the_field( 'address_address' ); ?></p>
-				<?php
-				$phone = get_field( 'address_phone' );
-				if ( $phone ) :
-					?>
-					<p class="text-body--serif text-brown-shade-4 mb-4 lg:mb-8">
-						<?php esc_html_e( 'Telefon:', 'baeren' ); ?> <a class="inline-block" href="tel:<?php echo esc_url( $phone ); ?>"><?php echo esc_html( $phone ); ?></a>
-					</p>
-					<?php
-				endif;
-				$email = get_field( 'address_email' );
-				if ( $email ) :
-					?>
-					<p class="text-body--serif text-brown-shade-4">
-						<?php esc_html_e( 'Email:', 'baeren' ); ?> <a class="inline-block" href="mailto:<?php echo esc_url( $email ); ?>"><?php echo esc_html( $email ); ?></a>
-					</p>
-					<?php
-				endif;
-				?>
+<section class="section-arrival-contact-content py-28 lg:pb-16 -mt-6">
+	<div class="theme-container lg:!px-48">
+		<div class="relative text-title-h3 text-center mx-auto border-b border-brown-shade-3 max-w-[15.8rem] pb-7">
+			<h3 class="uppercase"><?php the_field('title') ?></h3>
+			<div class="flex justify-center items-center z-10 bg-brown-shade-1 absolute bottom-0 right-1/2 w-12 h-6 translate-y-1/2 translate-x-1/2">
+				<span
+					class="diamond diamond--light-brown !w-2 !h-2"></span>
 			</div>
-			<div class="arrival-by-auto w-full lg:w-1/2 bg-white rounded-[20px] overflow-hidden order-4 lg:order-2 fade-in">
-				<?php
-				$bycar = get_field( 'arrival_by_auto_image' );
-				if ( $bycar ) :
-					echo wp_get_attachment_image( $bycar, 'full', false, array( 'class' => 'w-full object-cover rounded-b-[20px] min-h-[225px]' ) );
-				endif;
-				?>
-				<div class="px-8 lg:px-28 pt-9 lg:pt-14 pb-14 lg:pb-28">
-					<h2 class="text-title-h3 text-brown-shade-4 mb-6"><?php the_field( 'arrival_by_auto_title' ); ?></h2>
+		</div>
+		<div class="grid grid-cols-3 gap-6 pt-12">
+			<div class="arrival-by-auto grid grid-cols-3 col-span-3 overflow-hidden fade-in">
+				<div class="col-span-6 lg:col-span-1">
 					<?php
-					if ( have_rows( 'arrival_by_auto_list' ) ) :
-						echo '<ul class="list text-brown-shade-4">';
-						while ( have_rows( 'arrival_by_auto_list' ) ) :
-							the_row();
-							echo '<li>' . get_sub_field( 'text' ) . '</li>';
-						endwhile;
-						echo '</ul>';
+					$bycar = get_field('arrival_by_auto_image');
+					if ($bycar):
+						echo wp_get_attachment_image($bycar, 'full', false, array('class' => 'w-full object-fit'));
 					endif;
 					?>
 				</div>
-			</div>
-			<div class="arrival-by-zug w-full lg:w-1/2 bg-white rounded-[20px] overflow-hidden order-5 lg:order-3 fade-in">
-				<?php
-				$byzug = get_field( 'arrival_by_zug_image' );
-				if ( $byzug ) :
-					echo wp_get_attachment_image( $byzug, 'full', false, array( 'class' => 'w-full object-cover rounded-b-[20px] min-h-[225px]' ) );
-				endif;
-				?>
-				<div class="px-8 lg:px-28 pt-9 lg:pt-14 pb-14 lg:pb-28 ">
-					<h2 class="text-title-h3 text-brown-shade-4 mb-6"><?php the_field( 'arrival_by_zug_title' ); ?></h2>
-					<p class="text-body text-brown-shade-4"><?php the_field( 'arrival_by_zug_description' ); ?></p>
+				<div class="col-span-6 lg:col-span-2 py-10 lg:px-10">
+					<h2 class="text-title-h3  text-brown-shade-4 mb-6 uppercase">
+						<?php the_field('arrival_by_auto_title'); ?>
+					</h2>
+					<p class="text-body text-brown-shade-4"><?php the_field('arrival_by_auto_description'); ?></p>
 				</div>
 			</div>
-			<div class="contact-form w-full lg:w-1/2 bg-white px-8 lg:px-20 pt-12 lg:pt-14 pb-14 lg:pb-28 rounded-[20px] overflow-hidden order-2 lg:order-4 invisible fade-in--noscroll">
-				<h2 class="text-title-h3 text-brown-shade-4 mb-8"><?php the_field( 'contact_form_title' ); ?></h2>
+
+			<div class="arrival-by-zug col-span-3 lg:col-span-1 overflow-hidden fade-in">
 				<?php
-				$form_sc = get_field( 'contact_form_form' );
-				if ( $form_sc ) :
-					echo do_shortcode( $form_sc );
+				$byzug = get_field('arrival_by_zug_image');
+				if ($byzug):
+					echo wp_get_attachment_image($byzug, 'full', false, array('class' => 'w-full object-fit'));
 				endif;
 				?>
-			</div>
-			<div class="map w-full lg:w-1/2 bg-white rounded-[20px] overflow-hidden order-3 lg:order-5 min-h-[614px] fade-in">
-				<?php
-				$location = get_field( 'map' );
-				if ( $location ) :
-					?>
-					<div class="acf-map w-full h-full !static" data-zoom="14">
-						<div class="marker" data-lat="<?php echo esc_attr( $location['lat'] ); ?>" data-lng="<?php echo esc_attr( $location['lng'] ); ?>"></div>
-					</div>
-					<?php
-				endif;
-				?>
-			</div>
-			<div class="arrival-by-bus w-full lg:w-1/2 bg-white rounded-[20px] overflow-hidden order-6 lg:order-6 fade-in">
-				<?php
-				$bybus = get_field( 'arrival_by_bus_image' );
-				if ( $bybus ) :
-					echo wp_get_attachment_image( $bybus, 'full', false, array( 'class' => 'w-full object-cover rounded-b-[20px] min-h-[225px]' ) );
-				endif;
-				?>
-				<div class="px-8 lg:px-28 pt-9 lg:pt-14 pb-14 lg:pb-28 ">
-					<h2 class="text-title-h3 text-brown-shade-4 mb-6"><?php the_field( 'arrival_by_bus_title' ); ?></h2>
-					<p class="text-body text-brown-shade-4"><?php the_field( 'arrival_by_bus_description' ); ?></p>
+				<div class="py-10">
+					<h2 class="text-title-h3 text-brown-shade-4 mb-6 uppercase">
+						<?php the_field('arrival_by_zug_title'); ?>
+					</h2>
+					<p class="text-body text-brown-shade-4"><?php the_field('arrival_by_zug_description'); ?></p>
 				</div>
 			</div>
+
+			<div class="arrival-by-bus col-span-3 lg:col-span-1 overflow-hidden fade-in">
+				<?php
+				$bybus = get_field('arrival_by_bus_image');
+				if ($bybus):
+					echo wp_get_attachment_image($bybus, 'full', false, array('class' => 'w-full object-fit'));
+				endif;
+				?>
+				<div class="py-10">
+					<h2 class="text-title-h3 text-brown-shade-4 mb-6 uppercase">
+						<?php the_field('arrival_by_bus_title'); ?>
+					</h2>
+					<p class="text-body text-brown-shade-4"><?php the_field('arrival_by_bus_description'); ?></p>
+				</div>
+			</div>
+
+			<div class="arrival-by-velo col-span-3 lg:col-span-1 overflow-hidden fade-in">
+				<?php
+				$bybus = get_field('arrival_by_velo_image');
+				if ($bybus):
+					echo wp_get_attachment_image($bybus, 'full', false, array('class' => 'w-full object-cover min-h-[225px]'));
+				endif;
+				?>
+				<div class="py-10">
+					<h2 class="text-title-h3 text-brown-shade-4 mb-6 uppercase">
+						<?php the_field('arrival_by_velo_title'); ?>
+					</h2>
+					<p class="text-body text-brown-shade-4"><?php the_field('arrival_by_velo_description'); ?></p>
+				</div>
+			</div>
+
 		</div>
 	</div>
+
+	<div class="map w-full overflow-hidden min-h-[35rem] fade-in mt-32">
+		<?php
+		$location = get_field('map');
+		if ($location):
+			?>
+			<div class="acf-map w-full h-full !static" data-zoom="14">
+				<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>"
+					data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
+			</div>
+			<?php
+		endif;
+		?>
+	</div>
+
+	<div class="flex flex-col lg:flex-row bg-white overflow-hidden py-40 px-4 lg:px-44">
+		<div
+			class="address my-auto border border-brown-shade-3 px-10 lg:px-28 pt-9 lg:pt-14 pb-14 lg:pb-28 text-xl invisible fade-in--noscroll">
+			<img class="mb-8 lg:mb-16" src="<?php echo esc_url(get_theme_file_uri('/assets/images/logo.png')); ?>"
+				alt="logo">
+			<p class="text-body--serif text-brown-shade-4 mb-4 lg:mb-8"><?php the_field('address_address'); ?></p>
+			<?php
+			$phone = get_field('address_phone');
+			if ($phone):
+				?>
+				<p class="text-body--serif text-brown-shade-4 mb-4 lg:mb-8">
+					<?php esc_html_e('Telefon:', 'baeren'); ?> <a class="inline-block"
+						href="tel:<?php echo esc_url($phone); ?>"><?php echo esc_html($phone); ?></a>
+				</p>
+				<?php
+			endif;
+			$email = get_field('address_email');
+			if ($email):
+				?>
+				<p class="text-body--serif text-brown-shade-4">
+					<?php esc_html_e('Email:', 'baeren'); ?> <a class="inline-block"
+						href="mailto:<?php echo esc_url($email); ?>"><?php echo esc_html($email); ?></a>
+				</p>
+				<?php
+			endif;
+			?>
+			<div class="absolute flex items-center justify-center z-10 w-12 h-12 bg-white bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 lg:right-0 lg:bottom-1/2 ">
+				<span
+					class="diamond diamond--white !w-4 !h-4">
+				</span>
+			</div>
+		</div>
+		<div class="contact-form invisible fade-in--noscroll pt-14 mx-auto">
+			<h2 class="text-title-h3 text-2xl text-brown-shade-4 mb-8"><?php the_field('contact_form_title'); ?></h2>
+			<?php
+			$form_sc = get_field('contact_form_form');
+			if ($form_sc):
+				echo do_shortcode($form_sc);
+			endif;
+			?>
+		</div>
+	</div>
+
 </section>

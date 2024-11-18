@@ -8,6 +8,7 @@
 			$is_odd = $i % 2 === 0;
 			$fade_class = ($i === 1) ? 'invisible fade-in--noscroll' : 'invisible fade-in';
 			$order_image_class = $is_odd ? 'lg:order-1 lg:after:left-[0.62rem] lg:after:right-[-2rem] lg:mr-[-6rem]' : 'lg:order-2 lg:after:left-[-2rem] lg:after:right-[0.62rem] lg:ml-[-6rem]';
+			$ibex_class = $i === 2 ? 'my-40' : '';
 			?>
 
 			<?php if ($i % 2 === 0): ?>
@@ -42,7 +43,7 @@
 						</div>
 
 						<div
-							class="card-sustainability-image lg:my-8 col-span-2 lg:col-span-6 relative order-1 mb-[-2rem] <?php echo $order_image_class ?>">
+							class="card-sustainability-image col-span-2 lg:col-span-6 relative order-1 mb-[-2rem] bg-white <?php echo $order_image_class ?>">
 							<div
 								class="absolute lg:w-8 lg:h-16 w-16 h-8 flex justify-center items-center  bg-brown-shade-1 z-10 bottom-[-2rem] lg:bottom-1/2 left-1/2 translate-y-1/2 -translate-x-1/2 <?php echo $is_odd ? 'lg:!right-[-2rem] lg:left-full lg:translate-x-1/2' : 'lg:!left-[-2rem] lg:-translate-x-1/2' ?>">
 								<span class="diamond--light-brown block h-4 w-4 rotate-45"></span>
@@ -50,9 +51,8 @@
 
 							<?php
 							$offer_image = get_sub_field('image');
-							$image_class = $is_odd ? 'w-full h-full' : 'w-full h-full';
 							if ($offer_image):
-								echo wp_get_attachment_image($offer_image, 'full', false, array('class' => $image_class));
+								echo wp_get_attachment_image($offer_image, 'full', false, array('class' => 'w-full object-cover'));
 							endif;
 							?>
 						</div>

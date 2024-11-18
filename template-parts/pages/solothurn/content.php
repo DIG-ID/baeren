@@ -42,7 +42,7 @@
 							endif;
 							if ($i % 2 === 0): ?>
 								<div class="diamond-container ">
-									<span class="diamond diamond--white w-4 h-4 absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2"></span>
+									<span class="diamond diamond--white !w-4 !h-4 absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2"></span>
 								</div>
 							<?php endif; ?>
 						</div>
