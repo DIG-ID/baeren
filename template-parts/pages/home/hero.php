@@ -31,4 +31,4 @@
 	</div>
 
 </section>
-<span class="diamond"></span>
+<span class="diamond -mt-3"></span>

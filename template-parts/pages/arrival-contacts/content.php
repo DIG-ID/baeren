@@ -87,7 +87,7 @@
 		?>
 	</div>
 
-	<div class="flex flex-col gap-14 lg:flex-row bg-white overflow-hidden py-40 px-4 lg:px-44">
+	<div class="flex flex-col items-center gap-14 lg:flex-row bg-white overflow-hidden py-40 px-4 lg:px-44">
 		<div
 			class="address my-auto border border-brown-shade-3 px-10 lg:px-28 pt-9 lg:pt-14 pb-14 lg:pb-28 text-xl invisible fade-in--noscroll">
 			<img class="mb-8 lg:mb-16" src="<?php echo esc_url(get_theme_file_uri('/assets/images/logo.png')); ?>"

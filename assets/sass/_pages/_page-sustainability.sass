@@ -4,14 +4,12 @@
     .list
       list-style-type: none
   .card-sustainability-image
-    position: relative
-    display: flex
-    align-items: center
+    @apply relative flex justify-center items-center 
     &:after
       content: ''
       position: absolute
-      top: 10px
-      bottom: 10px
+      top: 20px
+      bottom: 20px
       border: 1px solid $brown-shade-3
       z-index: 1
       pointer-events: none
