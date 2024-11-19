@@ -14,9 +14,9 @@
 		<div class="section-hero--content text-brown-shade-1 flex flex-col justify-center items-center">
 
 				<div class="flex flex-col items-center justify-center">
-					<p class="section-hero--title font-utopia font-normal text-base xl:text-2xl tracking-[3.84px] invisible"><?php the_field( 'hero_section_before_title' ); ?></p>
-					<h1 class="section-hero--title font-poppins font-light text-5xl xl:text-8xl tracking-[7.68px] uppercase invisible"><?php the_field( 'hero_section_title' ); ?></h1>
-					<p class="section-hero--title font-utopia font-normal text-base xl:text-2xl tracking-[3.84px] invisible"><?php the_field( 'hero_section_after_title' ); ?></p>
+					<p class="section-hero--title font-utopia font-normal text-base xl:text-2xl tracking-[0.24rem] invisible mb-8"><?php the_field( 'hero_section_before_title' ); ?></p>
+					<h1 class="section-hero--title font-poppins font-light text-5xl xl:text-8xl tracking-[0.48rem] uppercase invisible"><?php the_field( 'hero_section_title' ); ?></h1>
+					<p class="section-hero--title font-utopia font-normal text-base xl:text-2xl tracking-[0.24rem] invisible mt-4"><?php the_field( 'hero_section_after_title' ); ?></p>
 				</div>
 
 				<div class="w-full text-center pt-7">
@@ -31,4 +31,7 @@
 	</div>
 
 </section>
-<span class="diamond -mt-3"></span>
+<div class="separator">
+	<span class="separator__diamond separator__diamond--brown-shade-3"></span>
+</div>
+
