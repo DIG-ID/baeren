@@ -3,10 +3,18 @@
     @apply pb-8
     &--title
       @apply hidden invisible
-  .section-what-to-see-content
-    background: linear-gradient(180deg, $brown-shade-4 0%, $brown-shade-4 45%, $brown-shade-3 45%)
-
-@media (max-width: 1024px)
-  .page-template-page-solothurn-what-to-see
-    .section-what-to-see-content
-      background: linear-gradient(180deg, $brown-shade-4 0%, $brown-shade-4 45%, $brown-shade-3 45%)
+  .section-what-do-see--attractions-list
+    background: linear-gradient(to bottom, $brown-shade-1, $blue-shade-1)
+    
+.activity-img-container,
+.attraction-img-container
+  &::after
+    content: ''
+    position: absolute
+    top: 10px
+    left: 10px
+    right: 10px
+    bottom: 10px
+    border: 1px solid white
+    z-index: 1
+    pointer-events: none

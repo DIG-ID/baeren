@@ -25,7 +25,7 @@
 						<div
 							class="card-solothurn-content col-span-2 lg:col-span-5 py-7 my-auto lg:pb-14 px-9 lg:px-28 self-end order-2 <?php echo ($i === 1) ? 'lg:order-2' : 'lg:order-1'; ?>">
 
-							<h2 class="text-title-h2 mb-4 lg:mb-7"><?php the_sub_field('title'); ?></h2>
+							<h2 class="text-title-h2 !text-2xl mb-4 lg:mb-7"><?php the_sub_field('title'); ?></h2>
 							<h3 class="text-title-h3 mb-4 lg:mb-7"><?php the_sub_field('subtitle'); ?></h3>
 							<div class="text-body mb-12"><?php the_sub_field('description'); ?></div>
 
