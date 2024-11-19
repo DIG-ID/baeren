@@ -1,4 +1,4 @@
-<section class="section-what-to-see-content bg-brown-shade-1">
+<section class="section-what-to-see-content">
 	<div class="theme-container">
 		<div class="theme-grid pb-12">
 			<?php
@@ -7,8 +7,8 @@
 				?>
 				<div
 					class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in--noscroll -mt-8 lg:-mt-18 h-[60vh] lg:h-auto">
+					<span class="diamond diamond--green !w-4 !h-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"></span>
 					<div class="bg-brown-shade-4 h-full">
-						<span class="diamond diamond--green !w-4 !h-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"></span>
 						<?php
 						$attractions_image = get_field('attractions_hero_image');
 						if ($attractions_image):

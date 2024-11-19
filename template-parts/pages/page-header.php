@@ -54,8 +54,8 @@ endif;
 </section>
 
 <?php 
-$is_hidden = !is_page_template('page-templates/page-solothurn-what-to-see.php');
-if ($is_hidden): ?>
+$is_hidden = is_page_template('page-templates/page-solothurn-what-to-see.php');
+if (!$is_hidden): ?>
     <span class="diamond -top-3 relative<?php
     if (is_page_template('page-templates/page-stay.php')):
         echo ' diamond--red';
