@@ -29,13 +29,13 @@
 			?>
 		</div>
 	</section>
-	<section class="footer-bunchen bg-blue-shade-2 text-brown-shade-1 pt-16 pb-32 lg:py-32">
+	<section class="footer-bunchen bg-blue-shade-2 text-brown-shade-4 pt-16 pb-32 lg:py-32">
 		<div class="theme-container">
 			<div class="theme-grid">
 				<div class="col-span-2 lg:col-span-12 xl:col-span-6 xl:col-start-4 flex flex-col justify-center items-center gap-x-6">
-					<h4 class="text-title text-brown-shade-2 mb-8 text-center"><?php the_field( 'footer_call_to_action_title', 'options' ); ?></h4>
+					<h4 class="text-title text-brown-shade-4 mb-8 text-center"><?php the_field( 'footer_call_to_action_title', 'options' ); ?></h4>
 					<div class="flex flex-col xl:flex-row justify-center xl:justify-between items-center xl:max-w-[589px] gap-x-6">
-						<p class="text-body text-brown-shade-2 mb-8 xl:mb-0 text-center xl:text-left w-3/5 xl:w-full"><?php the_field( 'footer_call_to_action_description', 'options' ); ?></p>
+						<p class="text-body text-brown-shade-4 mb-8 xl:mb-0 text-center xl:text-left w-3/5 xl:w-full"><?php the_field( 'footer_call_to_action_description', 'options' ); ?></p>
 						<?php
 						$booking_url = get_field( 'booking_url', 'options' );
 						if ( $booking_url ) :
@@ -49,7 +49,7 @@
 	</section>
 	<section class="footer-copyright bg-blue-shade-2 z-10">
 		<div class="flex flex-col lg:flex-row justify-center lg:justify-between items-center py-4 max-w-7xl mx-auto px-6">
-			<p class="text-body text-brown-shade-1 mb-6 lg:mb-0">
+			<p class="text-body text-brown-shade-4 mb-6 lg:mb-0">
 			<?php
 				$y = date( 'Y' );
 				printf(
@@ -58,10 +58,10 @@
 				);
 				?>
 			</p>
-			<a href="#header-main" id="back-to-top" class="text-body text-brown-shade-1 flex mb-6 lg:mb-0">
+			<a href="#header-main" id="back-to-top" class="text-body text-brown-shade-4 flex mb-6 lg:mb-0">
 				<?php esc_html_e( 'Zurück nach oben', 'baeren' ); ?>
 				<svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
-					<path d="M5.5 1L1 6M5.5 1L10 6M5.5 1V13.5" stroke="#F2FAFF"/>
+					<path d="M5.5 1L1 6M5.5 1L10 6M5.5 1V13.5" stroke="#34302D"/>
 				</svg>
 			</a>
 		</div>
