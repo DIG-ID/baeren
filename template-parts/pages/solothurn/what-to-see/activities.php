@@ -5,7 +5,9 @@
 			$activities = get_field('activities');
 			if ($activities):
 				?>
-				<div class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in h-[60vh] lg:h-auto">
+				<div class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in h-[60vh]">
+					<span
+						class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
 					<div class=" bg-brown-shade-4 h-full">
 						<span
 							class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"></span>

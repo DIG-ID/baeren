@@ -6,7 +6,8 @@
 			if ($attractions):
 				?>
 				<div
-					class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in--noscroll -mt-8 lg:-mt-18 h-[60vh] lg:h-auto">
+					class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in--noscroll -mt-20 lg:-mt-28 h-[60vh] lg:h-auto">
+					<span class="diamond diamond--green !w-4 !h-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"></span>
 					<div class="bg-brown-shade-4 h-full">
 						<span class="diamond diamond--green !w-4 !h-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"></span>
 						<?php
