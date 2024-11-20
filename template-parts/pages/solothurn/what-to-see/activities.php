@@ -9,8 +9,6 @@
 					<span
 						class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
 					<div class=" bg-brown-shade-4 h-full">
-						<span
-							class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"></span>
 						<?php
 						$activities_image = get_field('activities_hero_image');
 						if ($activities_image):

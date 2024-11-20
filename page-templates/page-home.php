@@ -11,7 +11,7 @@ if ( have_posts() ) :
 			get_template_part( 'template-parts/pages/home/hero' );
 			get_template_part( 'template-parts/pages/home/intro' );
 			get_template_part( 'template-parts/pages/home/rooms' );
-			get_template_part( 'template-parts/pages/home/services' );
+			get_template_part( 'template-parts/components/services' );
 			get_template_part( 'template-parts/components/teaser-default' );
 			get_template_part( 'template-parts/pages/home/solothurn' );
 			get_template_part( 'template-parts/pages/home/cta' );
