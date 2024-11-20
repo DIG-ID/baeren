@@ -24,7 +24,13 @@
 				<?php
 				$booking_url = get_field( 'booking_url', 'options' );
 				if ( $booking_url ) :
-					?><a href="<?php echo esc_url( $booking_url ); ?>" target="_blank" class="btn-header btn-header--booking uppercase"><?php esc_html_e( 'Jetzt Buchen', 'baeren' ); ?></a><?php
+					?>
+					<a href="<?php echo esc_url( $booking_url ); ?>" target="_blank" class="btn-header btn-header--booking uppercase">
+					<?php esc_html_e( 'Jetzt Buchen', 'baeren' ); ?> 
+					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13" fill="none">
+						<path d="M1 12.25L18 0.75M18 0.75L15 11.25M18 0.75H7.5" stroke="#34302D"/>
+					</svg></a>
+					<?php
 				endif;
 				?>
 			</div>
