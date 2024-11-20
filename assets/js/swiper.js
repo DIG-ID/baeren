@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
 		});
 	}
 	if ( $(".page-template-page-solothurn-what-to-do")[0] ) {
-		var activitiesSwiper = new Swiper(".activitesSwiper", {
+		var activitiesSwiper = new Swiper(".activitiesSwiper", {
 			slidesPerView: 1.2,
 			spaceBetween: 24,
 			grabCursor: true,
