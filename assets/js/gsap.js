@@ -56,24 +56,35 @@ if (scrollContainer) {
 	});
 }
 
-// Horizontal Scroll for .history-building
-const scrollContainerBuilding = document.querySelector('.history-building div');
-	if (scrollContainerBuilding) {
-	const scrollWidthBuilding = scrollContainerBuilding.scrollWidth;
-	const viewportWidthBuilding = window.innerWidth;
+// Horizontal Scroll for .history-container 
+let historyContainer = gsap.utils.toArray(".history-container");
 
-	gsap.to(scrollContainerBuilding, {
-		x: -(scrollWidthBuilding - viewportWidthBuilding),
-		ease: 'none',
-		scrollTrigger: {
-			trigger: '.history-building',
-			start: 'bottom bottom', // Start horizontal scroll when the bottom of the section hits the bottom of the viewport
-			pin: true,
-			scrub: 1,
-			end: () => "+=" + scrollWidthBuilding // Sets the scrolling distance
-		}
-	});
-}
+historyContainer.forEach((container) => {
+ let panels = container.querySelectorAll(".history-panel");
+
+  gsap.to(panels, {
+    xPercent: -100 * (panels.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: container,
+      start: "top top",
+      pin: true,
+      scrub: true,
+      // base vertical scrolling on how wide the container is so it feels more natural.
+      end: () => "+=" + container.offsetWidth,
+      invalidateOnRefresh: true,
+    }
+  });
+});
+
+/* gsap.utils.toArray(".history-panel div").forEach((panel, i) => {
+	ScrollTrigger.create({
+		trigger: panel,
+		start: 'bottom bottom',
+		pin: true,
+	})
+})  */
+
 
 if ( $(".page-template-page-home")[0] ) {
 

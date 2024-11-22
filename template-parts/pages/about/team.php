@@ -1,33 +1,49 @@
-<section class="section-team bg-brown-shade-4 text-brown-shade-1 pb-20 xl:pb-40">
+<section class="section-team py-20 lg:py-40">
 	<div class="theme-container">
-		<h2 class="text-title text-center mb-6 lg:mb-20 fade-in"><?php the_field( 'team_title' ); ?></h2>
-		<div class="theme-grid">
-			<div class="col-span-2 lg:col-span-10 lg:col-start-2 bg-brown-shade-1 rounded-[20px] px-8 py-7 xl:px-28 xl:py-16 fade-in">
+		<h2 class="text-title text-center mb-6 fade-in uppercase"><?php the_field('team_title'); ?></h2>
+		<div class="mt-6 mb-12 mx-auto">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/solothurn-what-to-do-separator.svg"
+				alt="decorative separator">
+		</div>
+		<div class="w-full relative">
+			<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
+			<?php
+			$img = get_field('team_image');
+			if ($img):
+				echo wp_get_attachment_image($img, 'full', false, array('class' => 'w-full object-fit max-h-[704px] lg:h-full'));
+			else:
+				?>
+				<span class="flex items-center justify-center w-full h-full bg-brown-shade-5 min-h-[704px]">
+				</span>
 				<?php
-				if( have_rows('team_list') ):
-					// Counter to track the index of each item
+			endif;
+			?>
+			<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
+		</div>
+		<div class="theme-grid">
+			<div class="col-span-2 lg:col-span-10 lg:col-start-2 px-8 py-7 xl:px-28 xl:py-16 fade-in">
+				<?php
+				if (have_rows('team_list')):
 					$counter = 0;
 					?>
-					<div class="grid grid-cols-2 lg:grid-cols-3 gap-8">
-						<div>
+					<div class="flex justify-center flex-wrap gap-7">
 						<?php
-						// Loop through the repeater field items
-						while( have_rows('team_list') ) : the_row();
+						while (have_rows('team_list')):
+							the_row();
 							$counter++;
 							?>
-							<h3 class="text-title-h3 text-brown-shade-4 mb-0"><?php the_sub_field( 'name' ); ?></h3>
-							<p class="text-body text-brown-shade-4 mb-8 lg:mb-20 last:mb-0"><?php the_sub_field( 'position' ); ?></p>
+							<div class="flex flex-col items-center mb-7">
+								<h3 class="text-title-h3 mb-0"><?php the_sub_field('name'); ?></h3>
+								<p class="text-body mb-8 lg:mb-20 last:mb-0">
+									<?php the_sub_field('position'); ?>
+								</p>
+							</div>
 							<?php
-							// Check if 4 items have been added to the first column or 3 items for the other columns
-							if (($counter == 4) || ($counter == 7)) {
-								// Close the current column and start a new one
-								echo '</div><div>';
-							}
 						endwhile;
 						?>
-						</div>
+
 					</div>
-				<?php
+					<?php
 				endif;
 				?>
 			</div>
