@@ -72,10 +72,5 @@
 	?>
 
 </section>
-<section class="section-page-teasers py-8 lg:py-32 xl:pt-36 bg-brown-shade-1">
-	<div class="theme-container">
-		<div class="theme-grid">
-			<?php get_template_part('template-parts/components/teaser-default'); ?>
-		</div>
-	</div>
-</section>
+
+<?php get_template_part( 'template-parts/components/teaser-default' ); ?>

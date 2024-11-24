@@ -6,11 +6,11 @@
     .menu-toggle
         @apply flex items-center gap-x-4
         &__text
-            @apply text-brown-shade-1 font-poppins text-[16px] uppercase font-[500] leading-none tracking-[0.32px] transition-all duration-500 ease-out hidden invisible xl:block xl:visible
+            @apply text-white font-poppins text-[16px] uppercase font-[500] leading-none tracking-[0.32px] transition-all duration-500 ease-out hidden invisible xl:block xl:visible
         &__bars
             @apply relative flex flex-col justify-center items-center overflow-hidden w-6 xl:w-8 h-6 xl:h-8
             .bar
-                @apply block w-6 h-[3px] bg-brown-shade-1 relative opacity-100 rounded-full transition-all duration-500 ease-out
+                @apply block w-6 h-[3px] bg-white relative opacity-100 rounded-full transition-all duration-500 ease-out
                 &:nth-child(1)
                     @apply left-0 mb-[6px]
                     transition: transform 0.5s ease, opacity 0.5s ease
@@ -40,10 +40,10 @@
                     .wpml-ls-link
                         font-weight: 700 !important
                 .wpml-ls-first-item
-                    @apply border-l-2 border-brown-shade-2 pl-[10px]
+                    @apply border-l-2 border-white pl-[10px]
                 .wpml-ls-item
                     .wpml-ls-link
-                        @apply font-poppins font-normal text-[16px] text-brown-shade-2 leading-[16px] uppercase transition-all duration-500 ease-out xl:flex
+                        @apply font-poppins font-normal text-[16px] text-white leading-[16px] uppercase transition-all duration-500 ease-out xl:flex
     .menu-wrapper
         .wpml-ls-legacy-list-horizontal
             a
@@ -55,10 +55,10 @@
                     .wpml-ls-link
                         font-weight: 700 !important
                 .wpml-ls-item:not(.wpml-ls-first-item):not(.wpml-ls-last-item)
-                    @apply border-x-2 border-brown-shade-2
+                    @apply border-x-2 border-white
                 .wpml-ls-item
                     .wpml-ls-link
-                        @apply font-utopia font-light text-[20px] text-brown-shade-2 tracking-[0.4px] leading-[20px] uppercase transition-all duration-500 ease-out xl:flex
+                        @apply font-utopia font-light text-[20px] text-white tracking-[0.4px] leading-[20px] uppercase transition-all duration-500 ease-out xl:flex
         
     .menu-bg
         clip-path: rect(0% at 4% 4%)
@@ -73,11 +73,11 @@
     .menu-item
         @apply min-w-36 text-center
         a
-            @apply font-poppins font-normal text-[16px] text-brown-shade-2 uppercase hover:text-brown-shade-1 hover:tracking-[0.07rem]
+            @apply font-poppins font-normal text-[16px] text-white uppercase hover:text-brown-shade-2 hover:tracking-[0.07rem]
             transition: color .2s, letter-spacing .4s ease-out
     .current-menu-item
         a
-            @apply text-brown-shade-1 tracking-[0.07rem]
+            @apply text-brown-shade-2 tracking-[0.07rem]
     &.main-menu-top-level > .menu-item > a
         @apply inline-block min-w-[185px] 
     &.main-menu-top-level
@@ -92,23 +92,23 @@
         .menu-item
             @apply text-left mt-6
             a
-                @apply font-utopia text-[20px] xl:text-[30px] tracking-[0.3px] font-light text-brown-shade-2 normal-case hover:text-brown-shade-1 hover:tracking-[0.07rem]
+                @apply font-utopia text-[20px] xl:text-[30px] tracking-[0.3px] font-light text-brown-shade-4 normal-case hover:text-brown-shade-3 hover:tracking-[0.07rem]
                 transition: color .2s, letter-spacing .4s ease-out
             .sub-menu
-                @apply invisible opacity-0 absolute left-[165%] top-0 mt-0 ml-5 xl:min-w-72 transition-all ease-out translate-x-16 duration-500
+                @apply invisible opacity-0 absolute left-[165%] top-0 mt-0 ml-5 xl:min-w-72 transition-all ease-out translate-x-16 duration-500 
                 .menu-item:nth-child(1)
                         @apply mt-2 text-nowrap 
                 .menu-item:not(.menu-label)
                     @apply text-left mt-3
                     a
-                        @apply font-poppins text-[16px] tracking-[0.32px] font-light text-brown-shade-2 normal-case hover:text-brown-shade-1 hover:tracking-[0.07rem]
+                        @apply font-poppins text-[16px] tracking-[0.32px] font-light text-brown-shade-4 normal-case hover:text-brown-shade-3 hover:tracking-[0.07rem]
                         transition: color .2s, letter-spacing .4s ease-out
                         &::after
                             @apply absolute transition-all duration-500 ease-out -translate-x-8 top-1/2 -translate-y-1/2 opacity-0
                             content: ""
                             width: 29px
                             height: 8px
-                            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="29" height="8" viewBox="0 0 29 8" fill="none"><path d="M28.3536 4.35355C28.5488 4.15829 28.5488 3.84171 28.3536 3.64645L25.1716 0.464466C24.9763 0.269204 24.6597 0.269204 24.4645 0.464466C24.2692 0.659728 24.2692 0.976311 24.4645 1.17157L27.2929 4L24.4645 6.82843C24.2692 7.02369 24.2692 7.34027 24.4645 7.53553C24.6597 7.7308 24.9763 7.7308 25.1716 7.53553L28.3536 4.35355ZM0 4.5H28V3.5H0V4.5Z" fill="%2380A8C4"/></svg>')
+                            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="29" height="8" viewBox="0 0 29 8" fill="none"><path d="M28.3536 4.35355C28.5488 4.15829 28.5488 3.84171 28.3536 3.64645L25.1716 0.464466C24.9763 0.269204 24.6597 0.269204 24.4645 0.464466C24.2692 0.659728 24.2692 0.976311 24.4645 1.17157L27.2929 4L24.4645 6.82843C24.2692 7.02369 24.2692 7.34027 24.4645 7.53553C24.6597 7.7308 24.9763 7.7308 25.1716 7.53553L28.3536 4.35355ZM0 4.5H28V3.5H0V4.5Z" fill="%2334302D"/></svg>')
                             background-repeat: no-repeat
                             background-size: contain
                             margin-left: 10px
@@ -119,14 +119,14 @@
                 .menu-label
                     @apply text-left mt-3
                     a
-                        @apply font-poppins text-[22px] tracking-[0.22px] font-normal text-brown-shade-2 normal-case hover:text-brown-shade-1 hover:tracking-[0.07rem]
+                        @apply font-poppins text-[22px] tracking-[0.22px] font-normal text-brown-shade-4 normal-case hover:text-brown-shade-3 hover:tracking-[0.07rem]
                         transition: color .2s, letter-spacing .4s ease-out
                         &::after
                             @apply absolute transition-all duration-500 ease-out -translate-x-8 top-1/2 -translate-y-1/2 opacity-0
                             content: ""
                             width: 29px
                             height: 8px
-                            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="29" height="8" viewBox="0 0 29 8" fill="none"><path d="M28.3536 4.35355C28.5488 4.15829 28.5488 3.84171 28.3536 3.64645L25.1716 0.464466C24.9763 0.269204 24.6597 0.269204 24.4645 0.464466C24.2692 0.659728 24.2692 0.976311 24.4645 1.17157L27.2929 4L24.4645 6.82843C24.2692 7.02369 24.2692 7.34027 24.4645 7.53553C24.6597 7.7308 24.9763 7.7308 25.1716 7.53553L28.3536 4.35355ZM0 4.5H28V3.5H0V4.5Z" fill="%2380A8C4"/></svg>')
+                            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="29" height="8" viewBox="0 0 29 8" fill="none"><path d="M28.3536 4.35355C28.5488 4.15829 28.5488 3.84171 28.3536 3.64645L25.1716 0.464466C24.9763 0.269204 24.6597 0.269204 24.4645 0.464466C24.2692 0.659728 24.2692 0.976311 24.4645 1.17157L27.2929 4L24.4645 6.82843C24.2692 7.02369 24.2692 7.34027 24.4645 7.53553C24.6597 7.7308 24.9763 7.7308 25.1716 7.53553L28.3536 4.35355ZM0 4.5H28V3.5H0V4.5Z" fill="%2334302D"/></svg>')
                             background-repeat: no-repeat
                             background-size: contain
                             margin-left: 10px
@@ -174,7 +174,7 @@
             &:not(:nth-child(1))
                 @apply mt-5
             a
-                @apply font-utopia font-light text-[20px] text-brown-shade-2 tracking-[0.4px] hover:text-brown-shade-1 hover:tracking-[0.07rem]
+                @apply font-utopia font-light text-[20px] text-brown-shade-4 tracking-[0.4px] hover:text-brown-shade-3 hover:tracking-[0.07rem]
                 transition: color .2s, letter-spacing .4s ease-out
 
 @media ( min-width: 1280px )

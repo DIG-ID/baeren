@@ -22,6 +22,19 @@
     @apply flex flex-col gap-y-4
     li
       @apply font-poppins font-normal text-base text-brown-shade-3 tracking-[2.56px] uppercase
+  .intro-images-wrapper
+    .intro-image
+      &:nth-child(1)
+        @apply z-40
+      &:nth-child(2)
+        @apply z-30 translate-x-1/2
+      &:nth-child(3)
+        @apply z-20 translate-x-full
+      &:nth-child(4)
+        @apply z-10 translate-x-[150%]
+      &:nth-child(5)
+        @apply z-0 translate-x-[200%]
+        
 
 .section-room-teaser
   &--wrapper
