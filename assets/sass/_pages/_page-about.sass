@@ -1,45 +1,30 @@
 .page-template-page-about
-    @apply bg-brown-shade-4
-.history-hospital
-    background: linear-gradient(to bottom, #0E324A 25%, #1D4763 25%)
-
-//Line with both dots
-.line-with-dots
-    position: relative
-    border-bottom: 1px solid #3E6C8A
-    height: 1px
-    width: 100%
-
-.line-with-dots::before, .line-with-dots::after
-    content: ''
-    position: absolute
-    background-color: #3E6C8A
-    border-radius: 50%
-    width: 6px
-    height: 6px
-    top: -3px
-
-.line-with-dots::before
-    left: 0
-
-.line-with-dots::after
-    right: 0
-
-//line with a single dot to fit the line with both dots
-.line-single-dot
-    position: relative
-    border-bottom: 1px solid #3E6C8A
-    height: 1px
-    width: 100%
-
-.line-single-dot::after
-    content: ''
-    position: absolute
-    background-color: #3E6C8A
-    border-radius: 50%
-    width: 6px
-    height: 6px
-    top: -3px
-
-.line-single-dot::after
-    right: 0
+    .history-container
+        @apply flex flex-nowrap overscroll-none w-[300%] h-dvh overflow-x-hidden
+        .history-panel
+            @apply flex justify-center items-center w-dvw h-full
+    .theme-container
+        @apply flex flex-col
+        .aboutSwiper
+            @apply relative
+            .swiper-pagination
+                @apply absolute bottom-0
+    .section-architecture
+        .swiper
+            @apply w-full px-6 lg:px-12
+            .swiper-wrapper
+                @apply h-full relative flex items-end 
+                .swiper-slide-prev
+                    @apply h-[28rem]
+                .swiper-slide-next
+                    @apply h-[28rem]
+    .swiper-pagination-bullet
+        background-color: transparent
+        border: 1px solid $brown-shade-3
+        border-radius: 50%
+        width: 14px
+        height: 14px
+        margin: 0 5px
+        opacity: 0.5
+    .swiper-pagination-bullet-active
+        background-color: $brown-shade-3

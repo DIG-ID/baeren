@@ -1,19 +1,14 @@
-<section class="section-philosophie bg-brown-shade-4 text-brown-shade-1 pb-20 lg:pb-40">
+<section class="section-philosophie py-20 lg:py-40">
 	<div class="theme-container">
-		<div class="theme-grid">
-			<div class="col-span-2 lg:col-span-4 lg:col-start-2 order-2 lg:order-1  invisible fade-in--noscroll">
-				<h3 class="text-title-h3 mb-12"><?php the_field( 'philosophie_title' ); ?></h3>
-				<p class="text-body mb-16"><?php the_field( 'philosophie_description' ); ?></p>
+		<div class="flex flex-col items-center justify-center invisible fade-in--noscroll md:mx-32 lg:mx-64">
+			<h2 class="text-title-h2"><?php the_field('philosophie_title'); ?></h2>
+			<div class="mt-6 mb-12 mx-auto">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/solothurn-what-to-do-separator.svg"
+					alt="decorative separator">
 			</div>
-			<div class="col-span-2 lg:col-start-7 lg:col-span-5 order-1 lg:order-2  invisible fade-in--noscroll">
-				<?php
-				$pimage = get_field( 'philosophie_image' );
-				if ( $pimage ) :
-					echo wp_get_attachment_image( $pimage, 'full', false, array( 'class' => 'w-full object-cover rounded-[20px] mb-10 lg:mb-0' ) );
-					else:
-						echo '<img src="https://placehold.co/520x350/3E6C8A/FFF" class="w-full object-cover rounded-[20px] mb-10 lg:mb-0">';
-					endif;
-				?>
+			<div class="flex flex-col lg:flex-row justify-center gap-8 text-center lg:text-left">
+				<p class="text-body mb-16 max-w-[404px]"><?php the_field('philosophie_text_left'); ?></p>
+				<p class="text-body mb-16"><?php the_field('philosophie_text_right'); ?></p>
 			</div>
 		</div>
 	</div>

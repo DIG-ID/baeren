@@ -26,6 +26,7 @@ module.exports = {
         'brown-shade-2': '#E7DBD9',
         'brown-shade-3': '#8E827B',
         'brown-shade-4': '#34302D',
+        'brown-shade-5': '#453D3B',
         'blue-shade-1': '#F2F4F6',
         'blue-shade-2': '#DDE3EA',
         'gray-shade-1': '#EAEAEA',
