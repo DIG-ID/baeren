@@ -21,14 +21,16 @@
 			<div class="col-span-6 flex justify-end">
 				<?php
 				if ( have_rows( 'intro_highlights' ) ) :
-					echo '<div class="images-wrapper relative w-[578px] h-[578px]">';
-					while ( have_rows( 'intro_highlights ' ) ) :
+					$i = 1;
+					echo '<div class="intro-images-wrapper relative w-[578px] h-[578px]">';
+					while ( have_rows( 'intro_highlights' ) ) :
 						the_row();
 						?>
-						<figure class="intro-image intro-image-1 bg-brown-shade-2 w-[578px] h-[578px] rounded-full flex justify-center items-center overflow-hidden absolute left-0 top-0 z-40">
+						<figure class="intro-image intro-image-<?php echo esc_attr( $i ); ?> bg-brown-shade-2 w-[578px] h-[578px] rounded-full flex justify-center items-center overflow-hidden absolute left-0 top-0 z-40">
 							<?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'full', false, array( 'class' => 'max-w-full w-full h-full object-cover' ) ); ?>
 						</figure>
 						<?php
+						$i++;
 					endwhile;
 					echo '</div>';
 				else :

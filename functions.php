@@ -27,7 +27,7 @@ function baeren_theme_setup() {
 
 	add_image_size( 'long-term-image', 975, 650, array( 'center', 'center' ) );
 
-	add_image_size( 'offer-image', 625, 345, array( 'center', 'center' ) );
+	add_image_size( 'teaser-image-thumbnail-vertical', 406, 860, array( 'center', 'center' ) );
 
 }
 
@@ -164,6 +164,6 @@ require get_template_directory() . '/inc/theme-custom-menu-walker.php';
 function my_console_log(...$data) {
 	$json = json_encode($data);
 	add_action('shutdown', function() use ($json) {
-		 echo "<script>console.log({$json})</script>";
+		echo "<script>console.log({$json})</script>";
 	});
 }
