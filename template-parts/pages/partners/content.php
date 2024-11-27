@@ -7,11 +7,11 @@
 					the_row();
 					?>
 					<div
-						class="bg-blue-shade-1 col-span-2 lg:col-span-6 overflow-hidden mb-8 lg:mb-16 invisible fade-in--noscroll">
+						class="flex flex-col bg-blue-shade-1 col-span-2 lg:col-span-6 overflow-hidden mb-8 lg:mb-16 invisible fade-in--noscroll">
 						<div class="partner-card-img">
 							<?php
 							if (get_sub_field('image')):
-								echo wp_get_attachment_image(get_sub_field('image'), 'full', false, array('class' => 'w-full h-full object-cover h-[225px]'));
+								echo wp_get_attachment_image(get_sub_field('image'), 'full', false, array('class' => 'w-full h-full object-cover lg:h-[225px]'));
 							endif;
 							?>
 						</div>

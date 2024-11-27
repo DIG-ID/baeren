@@ -1,6 +1,5 @@
 <?php
-// Determine if the header is light based on the page template
-global $is_light_header; // Declare it as global
+global $is_light_header;
 $is_light_header = is_page_template([
     'page-templates/page-impressum.php',
     'page-templates/page-conditions.php',

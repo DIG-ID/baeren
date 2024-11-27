@@ -8,11 +8,11 @@
 				<div class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in h-[60vh]">
 					<span
 						class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
-					<div class=" bg-brown-shade-4 h-full">
+					<div class=" bg-brown-shade-4 h-full overflow-hidden">
 						<?php
 						$activities_image = get_field('activities_hero_image');
 						if ($activities_image):
-							echo wp_get_attachment_image($activities_image, 'full', false, array('class' => 'w-full opacity-20 object-cover '));
+							echo wp_get_attachment_image($activities_image, 'full', false, array('class' => 'w-full h-full opacity-20 object-cover '));
 						endif;
 						?>
 					</div>
@@ -47,7 +47,7 @@
 							<?php
 							$img = get_sub_field('image');
 							if ($img):
-								echo wp_get_attachment_image($img, 'full', false, array('class' => 'activity-img w-full object-cover min-h-[274px] lg:h-auto lg:min-w-[542px]'));
+								echo wp_get_attachment_image($img, 'full', false, array('class' => 'activity-img w-full object-cover min-h-[274px] lg:h-[300px] lg:w-[542px]'));
 							else:
 								?>
 								<span class="flex items-center justify-center bg-gray-shade-1 w-full lg:w-[542px] h-[300px]">

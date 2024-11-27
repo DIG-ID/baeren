@@ -6,9 +6,9 @@
 			if ($attractions):
 				?>
 				<div
-					class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in--noscroll -mt-20 lg:-mt-28 h-[60vh] lg:h-auto">
+					class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in--noscroll mt-20 lg:-mt-28 h-[60vh]">
 					<span class="diamond diamond--green !w-4 !h-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"></span>
-					<div class="bg-brown-shade-4 h-full">
+					<div class="bg-brown-shade-4 h-full overflow-hidden">
 						<?php
 						$attractions_image = get_field('attractions_hero_image');
 						if ($attractions_image):
@@ -48,7 +48,7 @@
 							<?php
 							$img = get_sub_field('image');
 							if ($img):
-								echo wp_get_attachment_image($img, 'full', false, array('class' => 'w-full object-cover min-h-[274px] lg:h-auto lg:min-w-[542px]'));
+								echo wp_get_attachment_image($img, 'full', false, array('class' => 'w-full object-cover lg:w-[542px] h-[300px] '));
 							else:
 								?>
 								<span class="flex items-center justify-center w-full bg-gray-shade-1 lg:w-[542px] h-[300px] ">

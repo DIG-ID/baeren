@@ -1,10 +1,12 @@
 <?php
-$is_light_header = is_page_template('page-templates/page-impressum.php')
-	|| is_page_template('page-templates/page-conditions.php')
-	|| is_page_template('page-templates/page-data-policy.php')
-	|| is_page_template('page-templates/page-360-tour.php')
-	|| is_page_template('page-templates/page-partners.php')
-	|| is_page_template('page-templates/page-jobs.php');
+$is_light_header = is_page_template([
+    'page-templates/page-impressum.php',
+    'page-templates/page-conditions.php',
+    'page-templates/page-data-policy.php',
+    'page-templates/page-360-tour.php',
+    'page-templates/page-partners.php',
+    'page-templates/page-jobs.php',
+]);
 ?>
 
 <header id="header-main"
