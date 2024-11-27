@@ -10,7 +10,7 @@
         &__bars
             @apply relative flex flex-col justify-center items-center overflow-hidden w-6 xl:w-8 h-6 xl:h-8
             .bar
-                @apply block w-6 h-[3px] bg-white relative opacity-100 rounded-full transition-all duration-500 ease-out
+                @apply block w-6 h-[3px] relative opacity-100 rounded-full transition-all duration-500 ease-out
                 &:nth-child(1)
                     @apply left-0 mb-[6px]
                     transition: transform 0.5s ease, opacity 0.5s ease
@@ -162,9 +162,7 @@
     .menu-toggle
         &__text
             @apply text-brown-shade-4
-        &__bars
-            .bar
-                @apply bg-brown-shade-4
+
 
 #menu-wrapper
     #secondary-menu, #copyright-menu
@@ -351,4 +349,4 @@
 
     #header-main.menu-open
         .header-wrapper
-            @apply bg-brown-shade-4
+

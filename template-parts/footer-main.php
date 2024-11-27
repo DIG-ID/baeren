@@ -2,7 +2,7 @@
 	<section class="grid grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 lg:max-w-2xl mx-auto pt-12 pb-24 xl:py-36 px-6">
 		<div class="col-span-2 lg:col-span-3 flex justify-center items-center mb-14">
 			<div class="site-branding">
-				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url" class="navbar-brand custom-logo-link"><?php do_action( 'theme_logo_dark' ); ?></a>
+				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url" class="navbar-brand custom-logo-link"><?php do_action( 'footer_theme_logo' ); ?></a>
 			</div>
 		</div>
 		<div class="col-span-1 lg:col-span-1 block md:flex md:flex-col lg:block md:items-center address">

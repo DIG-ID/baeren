@@ -1,6 +1,6 @@
-<section class="section-conditions-content p-16 lg:p-28">
+<section class="section-conditions-content mt-32">
 <?php if (have_rows('conditions_sections')): ?>
-    <div class="theme-container">
+    <div class="theme-container md:mx-8">
         <?php
         while (have_rows('conditions_sections')):
             the_row();
@@ -8,7 +8,7 @@
             $conditionSubTitle = get_sub_field('subtitle');
             $conditionDescription = get_sub_field('description');
         ?>
-            <div class="lg:mr-48 invisible fade-in--noscroll pb-8">
+            <div class="lg:max-w-[1042px] md:mr-32 invisible fade-in--noscroll pb-8">
                 <?php if ($conditionTitle): ?>
                     <h3 class="text-title-h3 pb-4"><?php echo esc_html($conditionTitle); ?></h3>
                 <?php endif; ?>

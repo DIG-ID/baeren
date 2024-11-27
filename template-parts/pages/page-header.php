@@ -1,5 +1,14 @@
-<section class="page-header flex items-center bg-brown-shade-4 text-brown-shade-1 relative <?php
+<?php
+	$is_light_header = is_page_template('page-templates/page-impressum.php') 
+		|| is_page_template('page-templates/page-conditions.php')
+		|| is_page_template('page-templates/page-data-policy.php')
+		|| is_page_template('page-templates/page-360-tour.php')
+		|| is_page_template('page-templates/page-partners.php')
+		|| is_page_template('page-templates/page-jobs.php');
+?>
+<section class="page-header flex items-center <?php echo $is_light_header ? "bg-brown-shade-1 text-brown-shade-4" : "bg-brown-shade-4 text-brown-shade-1"?> relative <?php
 $intro_image_id = get_field('intro_image');
+
 if ($intro_image_id):
     echo 'min-h-[100vh]';
 else:
@@ -63,6 +72,8 @@ if (!$is_hidden): ?>
         echo ' diamond--orange';
     elseif (is_page_template('page-templates/page-solothurn.php')):
         echo ' diamond--green z-10';
+    elseif ($is_light_header):
+        echo ' diamond--brown z-10';
     endif;
     ?>">
     </span>
