@@ -2,7 +2,7 @@
 	<div class="theme-container">
 		<h2 class="text-title text-center mb-6 fade-in uppercase"><?php the_field('team_title'); ?></h2>
 		<div class="mt-6 mb-12 mx-auto">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/solothurn-what-to-do-separator.svg"
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/dark-separator.svg"
 				alt="decorative separator">
 		</div>
 		<div class="w-full relative">
