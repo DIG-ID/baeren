@@ -1,5 +1,5 @@
 <?php
-$is_light_header = is_page_template([
+$is_secondary_header = is_page_template([
     'page-templates/page-impressum.php',
     'page-templates/page-conditions.php',
     'page-templates/page-data-policy.php',
@@ -10,20 +10,20 @@ $is_light_header = is_page_template([
 ?>
 
 <header id="header-main"
-	class="header-main absolute top-0 left-0 w-full z-[999] overflow-hidden <?php echo $is_light_header ? "!bg-brown-shade-1" : "bg-brown-shade-4" ?>"
+	class="header-main absolute top-0 left-0 w-full z-[999] overflow-hidden <?php echo $is_secondary_header ? "bg-brown-shade-1 text-brown-shade-4" : "bg-brown-shade-4 text-white" ?>"
 	itemscope itemtype="http://schema.org/WebSite">
 
 	<nav class="navbar relative overflow-hidden" role="navigation"
 		aria-label="<?php esc_attr_e('Main menu', 'baeren'); ?>">
 		<div
-			class="header-wrapper <?php echo $is_light_header ? "" : "bg-brown-shade-4" ?> relative grid grid-cols-3 px-6 md:px-8 xl:px-16 py-6 md:py-8 xl:py-6 z-40 xl:z-auto">
+			class="header-wrapper <?php echo $is_secondary_header ? "" : "bg-brown-shade-4" ?> relative grid grid-cols-3 px-6 md:px-8 xl:px-16 py-6 md:py-8 xl:py-6 z-40 xl:z-auto">
 			<div class="col-span-1 flex justify-end xl:justify-start items-center order-3 xl:order-1 xl:z-50">
 				<div class="menu-toggle-wrapper ">
 					<button class="menu-toggle">
 						<span class="menu-toggle__bars">
-							<span class="bar <?php echo $is_light_header ? "bg-brown-shade-4" : "bg-white" ?>"></span>
-							<span class="bar <?php echo $is_light_header ? "bg-brown-shade-4" : "bg-white" ?>"></span>
-							<span class="bar <?php echo $is_light_header ? "bg-brown-shade-4" : "bg-white" ?>"></span>
+							<span class="bar <?php echo $is_secondary_header ? "bg-brown-shade-4" : "bg-white" ?>"></span>
+							<span class="bar <?php echo $is_secondary_header ? "bg-brown-shade-4" : "bg-white" ?>"></span>
+							<span class="bar <?php echo $is_secondary_header ? "bg-brown-shade-4" : "bg-white" ?>"></span>
 						</span>
 						<span class="menu-toggle__text"><?php esc_html_e('Menu', 'baeren'); ?></span>
 					</button>
@@ -34,7 +34,7 @@ $is_light_header = is_page_template([
 				<div class="site-branding">
 					<a rel="home" href="<?php echo esc_url(home_url('/')); ?>"
 						title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"
-						class="navbar-brand custom-logo-link"><?php $is_light_header ? do_action('dark_theme_logo') : do_action('theme_logo'); ?></a>
+						class="navbar-brand custom-logo-link"><?php $is_secondary_header ? do_action('dark_theme_logo') : do_action('theme_logo'); ?></a>
 				</div>
 			</div>
 			<div class="col-span-1 hidden xl:flex justify-end items-center gap-x-8 order-3">
@@ -54,7 +54,7 @@ $is_light_header = is_page_template([
 			</div>
 		</div>
 		<div
-			class="menu-app px-6 md:px-8 xl:px-16 py-6 md:py-8 xl:py-3 border-y-[0.5px] border-brown-shade-1 border-opacity-80 hidden xl:block">
+			class="menu-app px-6 md:px-8 xl:px-16 py-6 md:py-8 xl:py-3 border-y-[0.5px] border-opacity-80  hidden xl:block <?php $is_secondary_header ? 'border-brown-shade-4' : 'border-brown-shade-1' ?>">
 			<?php
 			wp_nav_menu(
 				array(

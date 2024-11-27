@@ -1,6 +1,6 @@
 <?php
-global $is_light_header;
-$is_light_header = is_page_template([
+global $is_secondary_header;
+$is_secondary_header = is_page_template([
     'page-templates/page-impressum.php',
     'page-templates/page-conditions.php',
     'page-templates/page-data-policy.php',
@@ -16,7 +16,7 @@ $page_header_classes = [
     'flex',
     'items-center',
     'relative',
-    $is_light_header ? 'bg-brown-shade-1 text-brown-shade-4' : 'bg-brown-shade-4 text-brown-shade-1',
+    $is_secondary_header ? 'bg-brown-shade-1 text-brown-shade-4' : 'bg-brown-shade-4 text-brown-shade-1',
     $intro_image_id ? 'min-h-[100vh]' : 'pt-28 lg:pt-64 pb-20 lg:pb-40',
 ];
 $page_header_classes = implode(' ', $page_header_classes);
@@ -40,7 +40,7 @@ if (is_page_template('page-templates/page-stay.php')) {
     $diamond_class = 'diamond--orange';
 } elseif (is_page_template('page-templates/page-solothurn.php')) {
     $diamond_class = 'diamond--green z-10';
-} elseif ($is_light_header) {
+} elseif ($is_secondary_header) {
     $diamond_class = 'diamond--brown z-10';
 }
 ?>
@@ -68,7 +68,7 @@ if (is_page_template('page-templates/page-stay.php')) {
             <!-- Subtitle -->
             <?php if ($intro_subtitle = get_field('intro_subtitle')): ?>
                 <div class="page-header--separator mx-auto">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/<?php echo $is_light_header ? 'dark-separator.svg' : 'page-header-separator.svg'; ?>"
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/<?php echo $is_secondary_header ? 'dark-separator.svg' : 'page-header-separator.svg'; ?>"
                          alt="decorative separator">
                 </div>
                 <div class="page-header--description w-3/4 mx-auto invisible fade-in--noscroll pt-4">
