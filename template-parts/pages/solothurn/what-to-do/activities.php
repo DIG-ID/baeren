@@ -4,7 +4,7 @@
 			<div class="col-span-2 lg:col-span-12 flex flex-col justify-center items-center mx-20">
 				<h2 class="text-title-h2 text-center mb-6 fade-in"><?php the_field('activities_title'); ?></h2>
 				<div class="my-6 mx-auto">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/solothurn-what-to-do-separator.svg"
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/dark-separator.svg"
 						alt="decorative separator">
 				</div>
 				<p class="text-description text-center max-w-[635px] fade-in">

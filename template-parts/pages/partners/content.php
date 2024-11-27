@@ -11,7 +11,7 @@
 						<div class="partner-card-img">
 							<?php
 							if (get_sub_field('image')):
-								echo wp_get_attachment_image(get_sub_field('image'), 'full', false, array('class' => 'w-full object-cover min-h-[225px]'));
+								echo wp_get_attachment_image(get_sub_field('image'), 'full', false, array('class' => 'w-full h-full object-cover min-h-[225px]'));
 							endif;
 							?>
 						</div>
