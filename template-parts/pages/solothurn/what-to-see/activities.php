@@ -6,8 +6,7 @@
 			if ($activities):
 				?>
 				<div class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in h-[60vh]">
-					<span
-						class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
+					<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
 					<div class=" bg-brown-shade-4 h-full overflow-hidden">
 						<?php
 						$activities_image = get_field('activities_hero_image');
@@ -20,13 +19,14 @@
 						<div
 							class="lg:w-[840px] text-white flex flex-col justify-center items-center py-9 px-9 lg:py-20 lg:px-9">
 							<h2 class="text-title-h2 !text-2xl text-center mb-9 lg:max-w-[645px]">
-								<?php the_field('activities_hero_title'); ?></h2>
+								<?php the_field('activities_hero_title'); ?>
+							</h2>
 							<p class="text-body text-blu-shade-5 text-center lg:max-w-[410px]">
-								<?php the_field('activities_hero_description'); ?></p>
+								<?php the_field('activities_hero_description'); ?>
+							</p>
 						</div>
 					</div>
-					<span
-					class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"></span>
+					<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"></span>
 				</div>
 				<?php
 			endif;
@@ -63,22 +63,7 @@
 						</div>
 						<div class="flex flex-col justify-center lg:ml-28 px-8 pt-6 pb-14 lg:px-0 lg:py-0">
 							<h2 class="text-title-h3 text-brown-shade-4 mb-6"><?php the_sub_field('title'); ?></h2>
-							<p class="text-body text-brown-shade-4 lg:max-w-[433px]"><?php the_sub_field('description'); ?>
-							</p>
-							<?php
-							$link = get_sub_field('link');
-							if ($link):
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="btn-external btn-external--shade-1 mt-6 w-full flex items-center justify-between lg:justify-start"
-									href="<?php echo esc_url($link_url); ?>"
-									target="<?php echo esc_attr($link_target); ?>"><span
-										class="whitespace-normal"><?php echo esc_html($link_title); ?></span></a>
-								<?php
-							endif;
-							?>
+							<p class="text-body text-brown-shade-4 lg:max-w-[433px]"><?php the_sub_field('description'); ?></p>
 						</div>
 					</div>
 					<?php

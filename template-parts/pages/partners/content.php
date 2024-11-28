@@ -1,4 +1,4 @@
-<section class="section-partner-content pb-16 lg:pb-24">
+<section class="section-partners-content pb-16 lg:pb-24">
 	<div class="theme-container">
 		<div class="theme-grid mt-28">
 			<?php

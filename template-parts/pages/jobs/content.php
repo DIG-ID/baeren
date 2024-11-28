@@ -1,4 +1,4 @@
-<section class="section-306-touur-content p-16 lg:p-28">
+<section class="section-jobs-content p-16 lg:p-28">
     <?php
     if (have_rows('jobs')):
         $i = 0;

@@ -1,4 +1,4 @@
-<section class="section-306-touur-content pb-16 lg:pb-28">
+<section class="section-306-tour-content pb-16 lg:pb-28">
 	<div class="theme-container">
 		<div class="theme-grid">
 			<div class="col-span-2 lg:col-span-8 lg:col-start-3 invisible fade-in--noscroll">

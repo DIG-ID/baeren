@@ -1,4 +1,4 @@
-<section class="section-306-touur-content p-16 lg:p-28">
+<section class="section-data-policy-content p-16 lg:p-28">
     <div class="theme-container">
         <div
             class="flex flex-col lg:flex-row gap-8 invisible fade-in--noscroll">
