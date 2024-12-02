@@ -22,19 +22,6 @@
 						<div
 							class="card-services-content col-span-2 py-28 px-4 lg:px-12 lg:col-span-6 order-2 <?php echo $is_even ? 'lg:order-2 lg:pl-40 lg:py-48' : 'lg:order-1 lg:pr-40 lg:py-44'; ?>">
 							<h2 class="text-title-h2 lg:text-2xl text-center lg:text-left mb-10 mx-auto max-w-[355px]"><?php the_sub_field('title'); ?></h2>
-							<h3 class="text-title-h3 lg:text-base mb-4 lg:mb-7"><strong><?php the_sub_field('subtitle'); ?></strong></h3>
-
-							<?php
-							$list = get_sub_field('list');
-							if ($list):
-								echo '<ul class="list-none">';
-								foreach ($list as $list_item):
-									echo '<li class="mt-6" ><span class="inline-block mr-2 w-2 h-2 rotate-45 bg-brown-shade-2"></span> ' . esc_html($list_item['text']) . '</li>';
-								endforeach;
-								echo '</ul>';
-							endif;
-							?>
-
 							<div class="text-body mb-12 text-center lg:text-left mx-auto max-w-[355px]"><?php the_sub_field('description'); ?></div>
 						</div>
 
