@@ -18,7 +18,7 @@
 				</div>
 				<?php
 			endif;
-			$checkIn = get_field('check-in');
+			$checkIn = get_field('check_in');
 			if ($checkIn):
 				?>
 				<div class="informations-card border-b border-[#636363] py-7 pr-14 order-1 lg:mx-36">
@@ -27,7 +27,7 @@
 				</div>
 				<?php
 			endif;
-			$checkOut = get_field('check-out');
+			$checkOut = get_field('check_out');
 			if ($checkOut):
 				?>
 				<div class="informations-card border-b border-[#636363] py-7 pr-14 order-1 lg:mx-36">
