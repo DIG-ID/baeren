@@ -1,0 +1,32 @@
+.page-template-page-stay-services
+  .card-services-content
+    @apply bg-brown-shade-1 self-end my-auto
+    .list
+      list-style-type: none
+  .card-services-image
+    @apply relative flex justify-center items-center 
+    &:after
+      content: ''
+      position: absolute
+      top: 20px
+      bottom: 20px
+      border: 1px solid $brown-shade-3
+      z-index: 1
+      pointer-events: none
+
+@media (max-width: 1024px)
+  .page-template-page-stay-services
+    .section-services-content
+      .card-services-content
+        background-color: transparent
+      .card-services-image
+        &:after
+          content: ''
+          position: absolute
+          left: 10px
+          right: 10px
+          top: 1rem
+          bottom: -2rem
+          border: 1px solid $brown-shade-3
+          z-index: 1
+          pointer-events: none
