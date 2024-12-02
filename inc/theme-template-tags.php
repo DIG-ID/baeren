@@ -202,12 +202,9 @@ add_action( 'theme_logo_mobile', 'theme_logo_mobile' );
  * Implement and customize Yoast Breadcrumbs.
  */
 function theme_breadcrumbs() {
-    if (function_exists('yoast_breadcrumb')) :
-        global $is_secondary_header; // Access the global variable
-        $breadcrumbs_class = $is_secondary_header ? 'text-brown-shade-4' : 'text-brown-shade-2';
-        
-        yoast_breadcrumb('<p id="breadcrumbs" class="' . $breadcrumbs_class . '">', '</p>');
-    endif;
+	if ( function_exists( 'yoast_breadcrumb' ) ) :
+		yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
+	endif;
 }
 
 add_action( 'breadcrumbs', 'theme_breadcrumbs' );

@@ -22,7 +22,7 @@ function handleScroll() {
 
     if (window.innerWidth > 1280) {
         if (currentScroll > 100) {
-            header.removeClass('bg-transparent').addClass('bg-brown-shade-4 top-nav-fixed');
+            header.addClass('top-nav-fixed');
             if (!header.hasClass('sticky')) {
                 header.addClass('sticky');
             }
