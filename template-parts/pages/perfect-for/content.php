@@ -41,11 +41,17 @@
 									target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
 								<?php
 							endif;
-							if ($i !== 1): ?>
+							if ($i % 2 == 0): ?>
 								<div
 									class="absolute bg-white w-12 h-12 bottom-[0.65rem] lg:bottom-1/2 translate-x-1/2 lg:translate-x-0 translate-y-1/2 right-1/2 lg:left-[-0.85rem] z-10">
 									<span
 										class="diamond diamond--white !w-4 !h-4 absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2"></span>
+								</div>
+							<?php else: ?>
+								<div
+									class="absolute bg-brown-shade-1 w-12 h-12 bottom-[0.65rem] lg:bottom-1/2 translate-x-1/2 lg:translate-x-0 translate-y-1/2 right-1/2 lg:right-[-0.85rem] z-10">
+									<span
+										class="diamond diamond--light-brown !w-4 !h-4 absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2"></span>
 								</div>
 							<?php endif; ?>
 						</div>
