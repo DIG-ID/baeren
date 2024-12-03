@@ -42,8 +42,10 @@
 								<?php
 							endif;
 							if ($i !== 1): ?>
-								<div class="diamond-container">
-									<span class="diamond diamond--white !w-4 !h-4 absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2"></span>
+								<div
+									class="absolute bg-white w-12 h-12 bottom-[0.65rem] lg:bottom-1/2 translate-x-1/2 lg:translate-x-0 translate-y-1/2 right-1/2 lg:left-[-0.85rem] z-10">
+									<span
+										class="diamond diamond--white !w-4 !h-4 absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2"></span>
 								</div>
 							<?php endif; ?>
 						</div>
@@ -73,4 +75,4 @@
 
 </section>
 
-<?php get_template_part( 'template-parts/components/teaser-default' ); ?>
+<?php get_template_part('template-parts/components/teaser-default'); ?>
