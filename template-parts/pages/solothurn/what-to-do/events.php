@@ -1,6 +1,6 @@
 <section class="section-what-to-do-events">
 	<span class="diamond diamond--green !w-4 !h-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 invisible fade-in--noscroll z-10"></span>
-	<div class="overflow-hidden ml-6 lg:ml-20 -mt-60">
+	<div class="overflow-hidden ml-6 lg:ml-20 -mt-40">
 		<?php
 		if (have_rows('events')):
 			?>
