@@ -7,7 +7,7 @@
 			<?php
 			$is_even = $i % 2 === 0;
 			$fade_class = ($i === 1) ? 'invisible fade-in--noscroll' : 'invisible fade-in';
-			$order_image_class = $is_even ? ' lg:order-1 lg:after:left-[0.62rem] lg:after:right-[-2rem] lg:mr-[-6rem] mt-[-6rem] lg:mt-[3rem]' : ' lg:order-2 lg:after:left-[-2rem] lg:after:right-[0.62rem] lg:ml-[-6rem]';
+			$order_image_class = $is_even ? ' lg:order-1 lg:after:left-[0.62rem] lg:after:right-[-2rem] lg:mr-[-6rem] mt-[-5rem] lg:mt-[3rem]' : ' lg:order-2 lg:after:left-[-2rem] lg:after:right-[0.62rem] lg:ml-[-6rem]';
 			?>
 
 			<?php if ($is_even): ?>
@@ -17,10 +17,10 @@
 				<div class="theme-container !px-0 mx-auto">
 					<div class="theme-grid"></div>
 					<div
-						class="relative card-services items-center grid grid-cols-2 mx-8 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 lg:pb-0 lg:mx-16 <?php echo esc_attr($fade_class); ?>">
+						class="relative card-services items-center grid grid-cols-2 mx-8 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 lg:mx-16 <?php echo esc_attr($fade_class); ?>">
 
 						<div
-							class="card-services-content col-span-2 py-16 px-4 lg:px-12 lg:col-span-6 order-2 <?php echo $is_even ? 'lg:order-2 lg:pl-40 lg:py-48' : 'lg:order-1 lg:pr-40 lg:py-44'; ?>">
+							class="card-services-content col-span-2 pt-16 px-4 lg:px-12 lg:col-span-6 order-2 <?php echo $is_even ? 'lg:order-2 lg:pl-40 lg:py-48' : 'lg:order-1 lg:pr-40 lg:py-44'; ?>">
 							<h2 class="text-title-h2 lg:text-2xl text-center lg:text-left mb-10 mx-auto max-w-[355px]"><?php the_sub_field('title'); ?></h2>
 							<div class="text-body mb-12 text-center lg:text-left mx-auto max-w-[355px]"><?php the_sub_field('description'); ?></div>
 						</div>
