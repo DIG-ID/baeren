@@ -1,4 +1,4 @@
-<section class="section-solothurn-content pb-0 flex flex-col gap-28 mb-24 -mt-6 ">
+<section class="section-solothurn-content pb-0 flex flex-col gap-12 mb-24 -mt-6 ">
 	<?php
 	if (have_rows('child_pages')):
 		$i = 1;
@@ -14,11 +14,10 @@
 
 			<?php if ($i % 2 !== 0): ?>
 				<div class="relative bg-brown-shade-1 py-10">
-				<span class="diamond diamond--brown absolute left-1/2 bottom-[-0.75rem] z-10"></span>
+				<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 bottom-[-0.75rem] z-10"></span>
 				<?php endif; ?>
 
 				<div class="theme-container !px-0 mx-auto">
-					<div class="block lg:hidden min-h-60 -mt-1"></div>
 					<div class="theme-grid"></div>
 					<div
 						class="relative card-solothurn grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 pb-14 lg:pb-0 <?php echo esc_attr($fade_class); ?>">

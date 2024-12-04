@@ -1,4 +1,4 @@
-<section class="section-families-blocks relative -mt-12 pb-16">
+<section class="section-families-blocks relative -mt-12 py-12">
 	<div class="bg-white absolute left-0 top-0 w-full h-full -z-[1]">
 		<svg width="1438" height="1359" viewBox="0 0 1438 1359" fill="none" xmlns="http://www.w3.org/2000/svg"
 			class="h-full">
@@ -18,7 +18,7 @@
 				$families_image_class = $i === 1 ? 'lg:order-1 after:left-[10px] after:right-[-30px]' : 'lg:order-2 after:right-[10px] after:left-[-30px]';
 				?>
 				<div
-					class="card-perfect-for--families relative grid grid-cols-2 lg:grid-cols-12 row-span-1 gap-x-6 pb-32 lg:pb-28 <?php echo $fade_in_class; ?>">
+					class="card-perfect-for--families relative grid grid-cols-2 lg:grid-cols-12 row-span-1 gap-x-6 py-12  <?php echo $fade_in_class; ?>">
 					<div
 						class="card-perfect-for--families-content flex flex-col justify-center col-span-2 lg:col-span-6 relative z-20 order-2 px-4 lg:px-24 <?php echo ($i === 1) ? 'lg:order-2' : 'lg:order-1'; ?>">
 						<h2 class="text-title-h2 lg:!text-4xl my-8 lg:mb-7 lg:max-w-[450px]"><?php the_sub_field('title'); ?>

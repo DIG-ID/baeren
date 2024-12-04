@@ -43,7 +43,7 @@
 					the_row();
 					?>
 					<div class="col-span-2 lg:col-span-12 flex flex-col lg:flex-row  mb-6 lg:mb-20 bg-white fade-in">
-						<div class="activity-img-container relative">
+						<div class="activity-img-container">
 							<?php
 							$img = get_sub_field('image');
 							if ($img):

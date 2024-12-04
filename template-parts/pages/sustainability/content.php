@@ -1,4 +1,4 @@
-<section class="section-sustainability-content pb-0 flex flex-col gap-52 lg:gap-40 my-20">
+<section class="section-sustainability-content pb-0 flex flex-col gap-12 lg:gap-24 my-8">
 	<?php if (have_rows('child_pages')): ?>
 		<?php $i = 1; ?>
 		<?php while (have_rows('child_pages')):
@@ -16,13 +16,13 @@
 					<span class="diamond diamond--brown -bottom-[0.75rem] absolute left-1/2 transform -translate-x-1/2 z-10"></span>
 				<?php endif; ?>
 
-				<div class="theme-container !px-0 mx-auto">
+				<div class="theme-container !px-0 mx-auto my-12">
 					<div class="theme-grid"></div>
 					<div
 						class="relative card-sustainability items-center grid grid-cols-2 mx-8 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 lg:pb-0 lg:mx-16 <?php echo esc_attr($fade_class); ?>">
 
 						<div
-							class="card-sustainability-content col-span-2 py-28 px-9 lg:col-span-6 order-2 <?php echo $is_even ? 'lg:order-2 lg:pl-40' : 'lg:order-1 lg:pr-40'; ?>">
+							class="card-sustainability-content col-span-2 pt-20 lg:py-28 px-9 mx-1 lg:col-span-6 order-2 <?php echo $is_even ? 'lg:order-2 lg:pl-40' : 'lg:order-1 lg:pr-40'; ?>">
 							<h2 class="text-title-h2 lg:text-2xl text-left mb-6"><?php the_sub_field('title'); ?></h2>
 							<h3 class="text-title-h3 lg:text-base mb-4 lg:mb-7"><strong><?php the_sub_field('subtitle'); ?></strong></h3>
 

@@ -1,4 +1,4 @@
-<section class="section-perfect-for-content pb-0 flex flex-col gap-40 my-20">
+<section class="section-perfect-for-content pb-0 flex flex-col gap-12 lg:gap:24 my-20">
 	<?php
 	if (have_rows('offers')):
 		$i = 0;
@@ -19,12 +19,11 @@
 				<?php endif; ?>
 
 				<div class="theme-container !px-0 mx-auto">
-					<div class="block lg:hidden min-h-60 -mt-1"></div>
 					<div class="theme-grid"></div>
 					<div
 						class="card-perfect-for grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 pb-14 lg:pb-0 <?php echo esc_attr($fade_class); ?>">
 						<div
-							class="card-perfect-for-content col-span-2 lg:col-span-5 py-7 my-auto lg:pb-14 px-9 lg:px-28 self-end order-2 <?php echo ($i === 1) ? 'lg:order-2' : 'lg:order-1'; ?>">
+							class="card-perfect-for-content col-span-2 lg:col-span-5 my-auto lg:pb-14 px-9 lg:px-28 self-end order-2 <?php echo ($i === 1) ? 'lg:order-2' : 'lg:order-1'; ?>">
 
 							<h2 class="text-title-h2 mb-4 lg:mb-7 uppercase"><?php the_sub_field('title'); ?></h2>
 							<h3 class="text-title-h3 mb-4 lg:mb-7"><?php the_sub_field('subtitle'); ?></h3>
