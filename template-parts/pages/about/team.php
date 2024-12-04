@@ -21,7 +21,7 @@
 			<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
 		</div>
 		<div class="theme-grid">
-			<div class="col-span-2 lg:col-span-10 lg:col-start-2 px-8 py-7 xl:px-28 xl:py-16 fade-in">
+			<div class="col-span-2 lg:col-span-10 lg:col-start-2 px-8 py-16 lg:pt-24 xl:px-28 fade-in">
 				<?php
 				if (have_rows('team_list')):
 					$counter = 0;

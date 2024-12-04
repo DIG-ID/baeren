@@ -1,4 +1,4 @@
-<section class="section-philosophie py-20 lg:py-40">
+<section class="section-philosophie py-20 lg:pb-48">
 	<div class="theme-container">
 		<div class="flex flex-col items-center justify-center invisible fade-in--noscroll md:mx-32 lg:mx-64">
 			<h2 class="text-title-h2"><?php the_field('philosophie_title'); ?></h2>
