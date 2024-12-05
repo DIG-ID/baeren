@@ -25,6 +25,8 @@ function baeren_theme_setup() {
 
 	add_image_size( 'zimmer-image', 1400, 770, array( 'center', 'center' ) );
 
+	add_image_size( 'zimmer-thumbnail', 1400, 300, array( 'center', 'center' ) );
+
 	add_image_size( 'long-term-image', 975, 650, array( 'center', 'center' ) );
 
 	add_image_size( 'teaser-image-thumbnail-vertical', 406, 860, array( 'center', 'center' ) );
