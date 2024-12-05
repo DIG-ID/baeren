@@ -31,7 +31,7 @@ if ( $rooms_query->have_posts() ) :
 							endif;
 							?>
 						</div>
-						<a href="<?php esc_url( $room_link ); ?>" class="room__item--link">
+						<a href="<?php echo esc_url( $room_link ); ?>" class="room__item--link">
 							<?php esc_html_e( 'zu den Zimmern', 'baeren' ); ?>
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none">
 								<path d="M1 0.785156L8.37584 4.99992L1 9.21469M11.5369 0.785156L18.9128 4.99992L11.5369 9.21469"/>
@@ -61,7 +61,7 @@ if ( $rooms_query->have_posts() ) :
 							endif;
 							?>
 						</div>
-						<a href="<?php esc_url( $room_link ); ?>" class="room__item--link">
+						<a href="<?php echo esc_url( $room_link ); ?>" class="room__item--link">
 							<?php esc_html_e( 'zu den Zimmern', 'baeren' ); ?>
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none">
 								<path d="M1 0.785156L8.37584 4.99992L1 9.21469M11.5369 0.785156L18.9128 4.99992L11.5369 9.21469"/>
