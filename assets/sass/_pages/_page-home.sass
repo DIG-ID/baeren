@@ -34,7 +34,6 @@
         @apply z-10 translate-x-[150%]
       &:nth-child(5)
         @apply z-0 translate-x-[200%]
-        
 
 .section-room-teaser
   &--wrapper
@@ -53,7 +52,8 @@
 
 .section-services
   .service-box
-    @apply h-svh flex flex-col justify-center items-center transition-[width] duration-[.8s] ease-in-out w-1/3 p-10 relative
+    @apply flex flex-col justify-center items-center transition-[width] duration-[.8s] ease-in-out w-1/3 p-10 relative
+    height: calc( 100svh - 150px )
     &::after
       content: ''
       z-index: 1

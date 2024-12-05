@@ -1,6 +1,6 @@
 <section class="section-team py-20 lg:py-40">
 	<div class="theme-container">
-		<h2 class="text-title text-center mb-6 fade-in uppercase"><?php the_field('team_title'); ?></h2>
+		<h2 class="text-title-h2 text-center text-brown-shade-4 mb-6 fade-in uppercase"><?php the_field('team_title'); ?></h2>
 		<div class="mt-6 mb-12 mx-auto">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/dark-separator.svg"
 				alt="decorative separator">

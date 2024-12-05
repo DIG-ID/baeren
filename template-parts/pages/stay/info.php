@@ -1,19 +1,38 @@
-<section class="section-zimmer-teaser bg-white pt-32 pb-28">
-	<div class="theme-container theme-grid">
-        <div class="col-span-2 md:col-span-6 xl:col-span-6 col-start-1 md:col-start-1 xl:col-start-4 text-center">
-            <h2 class="text-title-h2 uppercase invisible fade-in--noscroll"><?php the_field( 'info_title' ); ?></h2>
-            <p class="text-description mt-[68px] mb-[72px] invisible fade-in--noscroll"><?php the_field( 'info_text' ); ?></p>
-            <?php
-            $ilink = get_field( 'info_button' );
-            if ( $ilink ) :
-                $link_url    = $ilink['url'];
-                $link_title  = $ilink['title'];
-                $link_target = $ilink['target'] ? $ilink['target'] : '_self';
-                ?>
-                <a class="btn__moreinfo font-poppins font-light text-[16px] leading-[22.4px] tracking-[1.28px] invisible fade-in--noscroll" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-                <?php
-            endif;
-            ?>
-        </div>
-    </div>
+<section class="section-info py-40 flex justify-center items-center">
+	<div class="max-w-2xl flex flex-col justify-around items-center text-center">
+		<h2 class="font-sans text-4xl tracking-widest uppercase mb-16"><?php the_field( 'informations_title' ); ?></h2>
+		<p class="font-sans text-xl tracking-wide mb-16"><?php the_field( 'informations_description' ); ?></p>
+		<div class="info-buttons flex gap-x-10">
+			<?php
+			$mainlink = get_field( 'informations_button_main' );
+			if ( $mainlink ) :
+				$link_url    = $mainlink['url'];
+				$link_title  = $mainlink['title'];
+				$link_target = $mainlink['target'] ? $mainlink['target'] : '_self';
+				?>
+				<a class="section-info--button section-info--button-main" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+					<?php echo esc_html( $link_title ); ?>
+					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
+						<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
+					</svg>
+					</a>
+				<?php
+			endif;
+			$seclink = get_field( 'informations_button_secondary' );
+			if ( $seclink ) :
+				$link_url    = $seclink['url'];
+				$link_title  = $seclink['title'];
+				$link_target = $seclink['target'] ? $seclink['target'] : '_self';
+				?>
+				<a class="section-info--button section-info--button-secondary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+					<?php echo esc_html( $link_title ); ?>
+					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
+						<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
+					</svg>
+					</a>
+				<?php
+			endif;
+			?>
+		</div>
+	</div>
 </section>

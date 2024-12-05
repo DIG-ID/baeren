@@ -1,7 +1,7 @@
-<section class="section-philosophie py-20 lg:pb-48">
+<section class="section-philosophie py-20 lg:pb-48 bg-brown-shade-1">
 	<div class="theme-container">
 		<div class="flex flex-col items-center justify-center invisible fade-in--noscroll md:mx-32 lg:mx-64">
-			<h2 class="text-title-h2"><?php the_field('philosophie_title'); ?></h2>
+			<h2 class="text-title-h2 text-brown-shade-4"><?php the_field('philosophie_title'); ?></h2>
 			<div class="mt-6 mb-12 mx-auto">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/dark-separator.svg"
 					alt="decorative separator">

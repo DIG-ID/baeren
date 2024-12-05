@@ -5,7 +5,6 @@
 				<?php do_action( 'breadcrumbs' ); ?>
 			</div>
 		</div>
-
 		<?php
 		$gallery = get_field( 'gallery' );
 		if ( $gallery ) :
@@ -22,7 +21,6 @@
 					endforeach;
 					?>
 					</div>
-					
 				</div>
 				<div class="swiper-button-next zimmerSwiper-button-next -right-3 hidden xl:block"></div>
 				<div class="swiper-button-prev zimmerSwiper-button-prev -left-3 hidden xl:block"></div>
@@ -30,7 +28,6 @@
 			<?php
 		endif;
 		?>
-	
 	</div>
 </section>
 <div class="separator">

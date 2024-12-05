@@ -3,6 +3,8 @@
     @apply grid pt-[1px] mt-[-1px]
     > *
       grid-area: 1 / 1
+    &:last-of-type
+      @apply border-b border-b-[#34302d4d]
     &:hover
       .room__item--clone
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
@@ -14,7 +16,7 @@
       &::before
         width: calc(100% - 5px)
         height: 1px
-        background: rgba(10, 30, 37, .28)
+        background: rgba(52, 48, 45, 0.3)
         position: absolute
         content: ""
         top: 0

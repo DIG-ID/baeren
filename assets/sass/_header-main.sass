@@ -1,9 +1,5 @@
-.home #header-main
-    transition: background-color 0.3s ease
-    @apply bg-transparent
-
 #header-main
-    @apply fixed bg-brown-shade-4
+    @apply fixed
     // Button open close in the header
     .menu-toggle
         @apply flex items-center gap-x-4
@@ -185,6 +181,13 @@
             a
                 @apply font-poppins font-normal text-base text-brown-shade-4 tracking-[1.6px] uppercase hover:text-brown-shade-3 hover:tracking-[0.07rem]
                 transition: color .2s, letter-spacing .4s ease-out
+
+#header-main
+    transition: background-color 0.3s ease
+    @apply bg-transparent
+
+#header-main.sticky
+    @apply bg-brown-shade-4
 
 @media ( min-width: 1280px )
     #main-menu
