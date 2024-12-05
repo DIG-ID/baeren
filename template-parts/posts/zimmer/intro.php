@@ -1,4 +1,4 @@
-<section class="single-zimmer-header  text-brown-shade-1 pt-28 lg:pt-64">
+<section class="single-zimmer-header text-brown-shade-1 pt-28 lg:pt-64">
 	<div class="theme-container relative">
 		<div class="flex flex-col w-full text-center">
 			<div class="page-header--breadcrumbs mb-14 invisible fade-in--noscroll">
@@ -16,7 +16,7 @@
 					foreach ( $gallery as $gallery_id ) :
 						?>
 						<div class="swiper-slide">
-							<?php echo wp_get_attachment_image( $gallery_id, 'zimmer-image', false, array( 'class' => 'w-full object-cover rounded-[20px] max-h-[700px]' ) ); ?>
+							<?php echo wp_get_attachment_image( $gallery_id, 'zimmer-image', false, array( 'class' => 'w-full object-cover max-h-[700px]' ) ); ?>
 						</div>
 						<?php 
 					endforeach;
@@ -33,3 +33,6 @@
 	
 	</div>
 </section>
+<div class="separator">
+	<span class="separator__diamond separator__diamond--red"></span>
+</div>

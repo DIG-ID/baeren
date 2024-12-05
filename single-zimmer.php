@@ -7,9 +7,8 @@ if ( have_posts() ) :
 			do_action( 'before_post_content' );
 				get_template_part( 'template-parts/posts/zimmer/intro' );
 				get_template_part( 'template-parts/posts/zimmer/description' );
-				get_template_part( 'template-parts/posts/zimmer/amenities' );
-				//get_template_part( 'template-parts/components/testimonials' );
-				//get_template_part( 'template-parts/posts/zimmer/advantages' );
+				get_template_part( 'template-parts/posts/zimmer/related' );
+				get_template_part( 'template-parts/posts/zimmer/informations' );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );
 	endwhile;

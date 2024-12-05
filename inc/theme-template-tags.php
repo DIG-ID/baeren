@@ -52,28 +52,24 @@ function theme_room_features() {
 		echo '<ul class="features">';
 		while ( have_rows( 'features' ) ) :
 			the_row();
-			?>
-			<li id="feature-item">
-				<?php
-				$fields = [
-					'bed'      => __( 'Bett:', 'baeren' ),
-					'size'     => __( 'Fläche:', 'baeren' ),
-					'capacity' => __( 'Belegung:', 'baeren' ),
-					'view'     => __( 'Aussicht:', 'baeren' ),
-				];
-				foreach ( $fields as $field_key => $label ) :
-					$field_value = get_sub_field( $field_key );
-					if ( $field_value ) :
-						?>
+			$fields = [
+				'bed'      => __( 'Bett:', 'baeren' ),
+				'size'     => __( 'Fläche:', 'baeren' ),
+				'capacity' => __( 'Belegung:', 'baeren' ),
+				'view'     => __( 'Aussicht:', 'baeren' ),
+			];
+			foreach ( $fields as $field_key => $label ) :
+				$field_value = get_sub_field( $field_key );
+				if ( $field_value ) :
+					?>
+					<li id="feature-item" class="font-poppins font-normal text-sm text-brown-shade-4 uppercase">
 						<p class="font-poppins font-normal text-sm text-brown-shade-4 tracking-[0.14px]">
 							<span class="font-bold"><?php echo $label; ?></span> <?php echo esc_html( $field_value ); ?>
 						</p>
-						<?php
-					endif;
-				endforeach;
-				?>
-			</li>
-			<?php
+					</li>
+					<?php
+				endif;
+			endforeach;
 		endwhile;
 		echo '</ul>';
 	endif;
@@ -89,26 +85,22 @@ function theme_stay_room_features() {
 		echo '<ul class="features">';
 		while ( have_rows( 'features' ) ) :
 			the_row();
-			?>
-			<li id="feature-item" class="font-poppins font-normal text-sm text-brown-shade-4">
-				<?php
-				$fields = [
-					'bed'      => __( 'Bett:', 'baeren' ),
-					'size'     => __( 'Fläche:', 'baeren' ),
-					'capacity' => __( 'Belegung:', 'baeren' ),
-					'view'     => __( 'Aussicht:', 'baeren' ),
-				];
-				foreach ( $fields as $field_key => $label ) :
-					$field_value = get_sub_field( $field_key );
-					if ( $field_value ) :
-						?>
+			$fields = [
+				'bed'      => __( 'Bett:', 'baeren' ),
+				'size'     => __( 'Fläche:', 'baeren' ),
+				'capacity' => __( 'Belegung:', 'baeren' ),
+				'view'     => __( 'Aussicht:', 'baeren' ),
+			];
+			foreach ( $fields as $field_key => $label ) :
+				$field_value = get_sub_field( $field_key );
+				if ( $field_value ) :
+					?>
+					<li id="feature-item" class="font-poppins font-normal text-sm text-brown-shade-4">
 						<span class="font-bold"><?php echo $label; ?></span> <?php echo esc_html( $field_value ); ?>
-						<?php
-					endif;
-				endforeach;
-				?>
-			</li>
-			<?php
+					</li>
+					<?php
+				endif;
+			endforeach;
 		endwhile;
 		echo '</ul>';
 	endif;

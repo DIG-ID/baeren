@@ -1,6 +1,6 @@
 .single-zimmer
   .single-zimmer-header
-    background: linear-gradient(180deg, $brown-shade-4 0%, $brown-shade-4 90%, $brown-shade-1 90%)
+    background: linear-gradient(180deg, $brown-shade-4 0%, $brown-shade-4 70%, white 70%)
   .section-zimmer-description
     .zimmerSwiperThumbs
       //@apply w-full
@@ -13,14 +13,17 @@
   .section-amenities-lists
     @apply xl:flex justify-between
     .amenities-list
-      @apply max-w-[219px] mb-8
+      @apply max-w-[300px]
       li
-        @apply  font-poppins font-normal text-sm text-brown-shade-4 tracking-[0.14px] relative ml-4
+        @apply  font-poppins font-normal text-sm text-brown-shade-4 tracking-[0.14px] relative ml-5 mb-4
         &:last-of-type
           @apply mb-0
         &::before
-          @apply absolute -left-4 inline-block
-          content: '•'
+          @apply absolute -left-5 inline-block text-brown-shade-2
+          content: '◆'
+
+  .features
+    @apply flex gap-x-4 mb-4
 
 .swiper-button-next
   //right: -50px

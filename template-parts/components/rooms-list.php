@@ -6,6 +6,7 @@ $args = array(
 	'orderby'        => 'date',
 	'order'          => 'ASC',
 	'posts_per_page' => -1,
+	'post__not_in'   => array( get_the_ID() ),
 );
 
 $rooms_query = new WP_Query( $args );

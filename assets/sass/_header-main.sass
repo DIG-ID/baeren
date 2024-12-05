@@ -53,8 +53,9 @@
             a
                 @apply px-[10px] py-0
         .wpml-ls-statics-shortcode_actions
-            @apply border-none px-0 py-12
+            @apply border-none px-0 py-12 flex justify-center
             ul
+                @apply border-t border-b border-brown-shade-4 py-6
                 .wpml-ls-current-language
                     .wpml-ls-link
                         font-weight: 700 !important
@@ -62,7 +63,7 @@
                     @apply border-x-2 border-brown-shade-2
                 .wpml-ls-item
                     .wpml-ls-link
-                        @apply font-utopia font-light text-[20px] text-brown-shade-2 tracking-[0.4px] leading-[20px] uppercase transition-all duration-500 ease-out xl:flex
+                        @apply font-poppins font-normal text-base text-brown-shade-4 tracking-[0.4px] leading-[20px] uppercase transition-all duration-500 ease-out xl:flex
     // Mega menu bg
     .menu-bg
         clip-path: rect(0% at 4% 4%)
@@ -81,9 +82,10 @@
             transition: color .2s, letter-spacing .4s ease-out
     .current-menu-item
         a
-            @apply text-brown-shade-1 tracking-[0.07rem]
+            @apply text-brown-shade-3 tracking-[0.07rem]
     &.main-menu-top-level > .menu-item > a
-        @apply inline-block min-w-[185px] 
+        @apply inline-block min-w-[185px]
+    // Mega Menu
     &.main-menu-top-level
         @apply flex-col items-start
         .second-level
@@ -101,18 +103,19 @@
             .sub-menu
                 @apply invisible opacity-0 absolute left-[165%] top-0 mt-0 ml-5 xl:min-w-72 transition-all ease-out translate-x-16 duration-500
                 .menu-item:nth-child(1)
-                        @apply mt-2 text-nowrap 
+                    @apply mt-2 text-nowrap 
                 .menu-item:not(.menu-label)
                     @apply text-left mt-3
+                    // Items sub menu
                     a
-                        @apply font-poppins text-[16px] tracking-[0.32px] font-light text-brown-shade-5 normal-case hover:text-brown-shade-3 hover:tracking-[0.07rem]
-                        transition: color .2s, letter-spacing .4s ease-out
+                        @apply font-poppins text-[16px] tracking-[0.32px] font-light text-brown-shade-5 hover:text-brown-shade-3 hover:tracking-[0.07rem]
+                        transition: color .2s, letter-spacing .4s ease-out uppercase
                         &::after
                             @apply absolute transition-all duration-500 ease-out -translate-x-8 top-1/2 -translate-y-1/2 opacity-0
                             content: ""
                             width: 29px
                             height: 8px
-                            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="29" height="8" viewBox="0 0 29 8" fill="none"><path d="M28.3536 4.35355C28.5488 4.15829 28.5488 3.84171 28.3536 3.64645L25.1716 0.464466C24.9763 0.269204 24.6597 0.269204 24.4645 0.464466C24.2692 0.659728 24.2692 0.976311 24.4645 1.17157L27.2929 4L24.4645 6.82843C24.2692 7.02369 24.2692 7.34027 24.4645 7.53553C24.6597 7.7308 24.9763 7.7308 25.1716 7.53553L28.3536 4.35355ZM0 4.5H28V3.5H0V4.5Z" fill="%23453D3B"/></svg>')
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='10' viewBox='0 0 19 10' fill='none'%3E%3Cpath d='M1 1L8 5L1 9M11 1L18 5L11 9' stroke='%23333333'/%3E%3C/svg%3E")
                             background-repeat: no-repeat
                             background-size: contain
                             margin-left: 10px
@@ -122,15 +125,16 @@
                                 @apply translate-x-0 opacity-100
                 .menu-label
                     @apply text-left mt-3
+                    // Items sub Label
                     a
-                        @apply font-poppins text-[22px] tracking-[0.22px] font-normal text-brown-shade-4 normal-case hover:text-brown-shade-3 hover:tracking-[0.07rem]
+                        @apply font-utopia text-[26px] font-normal text-brown-shade-4 normal-case tracking-normal hover:text-brown-shade-3 hover:tracking-[0.07rem]
                         transition: color .2s, letter-spacing .4s ease-out
                         &::after
                             @apply absolute transition-all duration-500 ease-out -translate-x-8 top-1/2 -translate-y-1/2 opacity-0
                             content: ""
                             width: 29px
                             height: 8px
-                            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="29" height="8" viewBox="0 0 29 8" fill="none"><path d="M28.3536 4.35355C28.5488 4.15829 28.5488 3.84171 28.3536 3.64645L25.1716 0.464466C24.9763 0.269204 24.6597 0.269204 24.4645 0.464466C24.2692 0.659728 24.2692 0.976311 24.4645 1.17157L27.2929 4L24.4645 6.82843C24.2692 7.02369 24.2692 7.34027 24.4645 7.53553C24.6597 7.7308 24.9763 7.7308 25.1716 7.53553L28.3536 4.35355ZM0 4.5H28V3.5H0V4.5Z" fill="%23453D3B"/></svg>')
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='10' viewBox='0 0 19 10' fill='none'%3E%3Cpath d='M1 1L8 5L1 9M11 1L18 5L11 9' stroke='%23333333'/%3E%3C/svg%3E")
                             background-repeat: no-repeat
                             background-size: contain
                             margin-left: 10px
@@ -177,8 +181,9 @@
             @apply text-center
             &:not(:nth-child(1))
                 @apply mt-5
+            // Secondary menu item
             a
-                @apply font-utopia font-light text-[20px] text-brown-shade-4 tracking-[0.4px] hover:text-brown-shade-3 hover:tracking-[0.07rem]
+                @apply font-poppins font-normal text-base text-brown-shade-4 tracking-[1.6px] uppercase hover:text-brown-shade-3 hover:tracking-[0.07rem]
                 transition: color .2s, letter-spacing .4s ease-out
 
 @media ( min-width: 1280px )
@@ -192,10 +197,18 @@
     /* Variables */
     $font-size: 16px
     $font-weight: 500
-    $background-color-first-level: #0E324A
-    $background-color-second-level: #3E6C8A
+    $background-color-first-level: #E7DBD9
+    $background-color-second-level: #F5F0EF
     $hover-color: white
 
+
+    #header-main.menu-open
+        .menu-toggle
+            &__text
+                @apply text-brown-shade-4
+            &__bars
+                .bar
+                    @apply bg-white
     /* General styles */
     ul
         list-style: none
@@ -240,11 +253,11 @@
             /* List items in the first level menu */
             li
                 width: 100%
-                background: #0E324A
+                background: #E7DBD9
 
                 /* Hover effect for first level menu items */
                 &:hover
-                    background: #0E324A
+                    background: #E7DBD9
 
                 a
                     &:hover
@@ -265,15 +278,15 @@
 
                 /* List items in the second level menu */
                 li
-                    background: #3E6C8A
+                    background: #F5F0EF
 
                     /* Hover effect for second level menu items */
                     &:hover
-                        background: #3E6C8A
+                        background: #F5F0EF
 
                     a
                         &:hover
-                            color: $hover-color
+                            color: #F5F0EF
                         
                 /* Back menu link style */
                 li.back__menu
@@ -288,7 +301,7 @@
                         position: absolute
                         width: 29px
                         height: 8px
-                        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="29" height="8" viewBox="0 0 29 8" fill="none"><path d="M0.646446 3.64644C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82842L1.70711 4L4.53553 1.17157C4.7308 0.976309 4.7308 0.659726 4.53553 0.464464C4.34027 0.269202 4.02369 0.269202 3.82843 0.464464L0.646446 3.64644ZM29 3.5L1 3.5L1 4.5L29 4.5L29 3.5Z" fill="%23DAE2ED"/></svg>')
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='10' viewBox='0 0 19 10' fill='none'%3E%3Cpath d='M18 9L11 5L18 1M8 9L1 5L8 1' stroke='%23333333'/%3E%3C/svg%3E")
                         background-repeat: no-repeat
                         background-size: contain
                         left: 0
@@ -309,7 +322,7 @@
                         position: absolute
                         width: 29px
                         height: 8px
-                        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="29" height="8" viewBox="0 0 29 8" fill="none"><path d="M28.3536 4.35355C28.5488 4.15829 28.5488 3.84171 28.3536 3.64645L25.1716 0.464466C24.9763 0.269204 24.6597 0.269204 24.4645 0.464466C24.2692 0.659728 24.2692 0.976311 24.4645 1.17157L27.2929 4L24.4645 6.82843C24.2692 7.02369 24.2692 7.34027 24.4645 7.53553C24.6597 7.7308 24.9763 7.7308 25.1716 7.53553L28.3536 4.35355ZM0 4.5H28V3.5H0V4.5Z" fill="%2380A8C4"/></svg>')
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='10' viewBox='0 0 19 10' fill='none'%3E%3Cpath d='M1 1L8 5L1 9M11 1L18 5L11 9' stroke='%23333333'/%3E%3C/svg%3E")
                         background-repeat: no-repeat
                         background-size: contain
                         margin-left: 10px
@@ -331,7 +344,7 @@
                     position: absolute
                     width: 10px
                     height: 10px
-                    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><path d="M8.35355 4.35355C8.54882 4.15829 8.54882 3.84171 8.35355 3.64645L5.17157 0.464467C4.97631 0.269204 4.65973 0.269204 4.46447 0.464466C4.2692 0.659729 4.2692 0.976311 4.46447 1.17157L7.29289 4L4.46447 6.82843C4.2692 7.02369 4.2692 7.34027 4.46447 7.53553C4.65973 7.7308 4.97631 7.7308 5.17157 7.53553L8.35355 4.35355ZM-4.37114e-08 4.5L8 4.5L8 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="%233E6C8A"/></svg>')
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='10' viewBox='0 0 19 10' fill='none'%3E%3Cpath d='M1 1L8 5L1 9M11 1L18 5L11 9' stroke='%23333333'/%3E%3C/svg%3E")
                     background-repeat: no-repeat
                     background-size: contain
                     margin-left: 10px
