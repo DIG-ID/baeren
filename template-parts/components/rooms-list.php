@@ -45,7 +45,7 @@ if ( $rooms_query->have_posts() ) :
 				<div class="room__item--bg">
 					<?php
 					if ( has_post_thumbnail() ) :
-						echo wp_get_attachment_image( get_the_ID(), 'zimmer-thumbnail', false, array( 'class' => 'w-full h-full object-cover' ) );
+						the_post_thumbnail( 'zimmer-thumbnail', array( 'class' => 'w-full h-full object-cover' ) );
 					else :
 						echo '<img src="https://picsum.photos/1920/600?random" alt="" class="w-full max-w-full h-full object-cover">';
 					endif;

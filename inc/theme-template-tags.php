@@ -62,7 +62,7 @@ function theme_room_features() {
 				$field_value = get_sub_field( $field_key );
 				if ( $field_value ) :
 					?>
-					<li id="feature-item" class="font-poppins font-normal text-sm text-brown-shade-4 uppercase">
+					<li id="feature-item" class="font-poppins font-normal text-xs text-brown-shade-4 uppercase">
 						<p class="font-poppins font-normal text-sm text-brown-shade-4 tracking-[0.14px]">
 							<span class="font-bold"><?php echo $label; ?></span> <?php echo esc_html( $field_value ); ?>
 						</p>
