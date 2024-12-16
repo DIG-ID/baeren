@@ -3,14 +3,14 @@
 		<div class="theme-grid">
 			<div class="col-span-6 flex flex-col justify-between">
 				<div>
-					<p class="text-subtitle text-brown-shade-3 mb-6"><?php the_field( 'intro_subtitle' ); ?></p>
-					<h2 class="text-title-h2 mb-4"><?php the_field( 'intro_title' ); ?></h2>
-					<p class="text-body"><?php the_field( 'intro_description' ); ?></p>
+					<p class="text-subtitle text-brown-shade-3 mb-6"><?php the_field( 'highlights_subtitle' ); ?></p>
+					<h2 class="text-title-h2 mb-4"><?php the_field( 'highlights_title' ); ?></h2>
+					<p class="text-body"><?php the_field( 'highlights_description' ); ?></p>
 				</div>
 				<?php
-				if ( have_rows( 'intro_highlights' ) ) :
+				if ( have_rows( 'highlights_highlights' ) ) :
 					echo '<ul class="highlights-items">';
-					while ( have_rows( 'intro_highlights' ) ) :
+					while ( have_rows( 'highlights_highlights' ) ) :
 						the_row();
 						echo '<li>' . get_sub_field( 'title' ) . ' </li>';
 					endwhile;
@@ -20,10 +20,10 @@
 			</div>
 			<div class="col-span-6 flex justify-end">
 				<?php
-				if ( have_rows( 'intro_highlights' ) ) :
+				if ( have_rows( 'highlights_highlights' ) ) :
 					$i = 1;
 					echo '<div class="intro-images-wrapper relative w-[578px] h-[578px]">';
-					while ( have_rows( 'intro_highlights' ) ) :
+					while ( have_rows( 'highlights_highlights' ) ) :
 						the_row();
 						?>
 						<figure class="intro-image intro-image-<?php echo esc_attr( $i ); ?> bg-brown-shade-2 w-[578px] h-[578px] rounded-full flex justify-center items-center overflow-hidden absolute left-0 top-0 z-40">
