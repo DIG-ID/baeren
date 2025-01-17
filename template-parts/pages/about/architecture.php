@@ -1,6 +1,5 @@
 <section class="section-architecture bg-brown-shade-2 pb-20 lg:pb-24 pt-24 relative">
-<span
-class="diamond diamond--dark-brown absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full"></span>
+ <span class="diamond diamond--dark-brown absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full"></span>
 	<div class="relative pb-20">
 		<?php if (have_rows('architecture_slides')):
 			$counter = 1; // Initialize counter to 1

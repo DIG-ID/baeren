@@ -6,6 +6,10 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class( 'relative' ); ?>>
+	<?php
+	$header_template = get_field( 'intro_template' );
+	$header_template = ( 'secondary' === $header_template ) ? 'page-header__secondary' : '';
+	?>
+	<body <?php body_class( 'relative ' . $header_template ); ?>>
 		<?php do_action( 'wp_body_open' ); ?>
 		<?php get_template_part( 'template-parts/header', 'main' ); ?>

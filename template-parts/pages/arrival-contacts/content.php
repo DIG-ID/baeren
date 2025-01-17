@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--brown-shade-3"></span>
+</div>
 <section class="section-arrival-contact-content py-28 lg:pb-16 -mt-6">
 	<div class="theme-container lg:!px-48">
 		<div class="relative text-title-h3 text-center mx-auto border-b border-brown-shade-3 max-w-[15.8rem] pb-7">

@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--brown-shade-2"></span>
+</div>
 <section class="section-306-tour-content pb-16 lg:pb-28">
 	<div class="theme-container">
 		<div class="theme-grid">

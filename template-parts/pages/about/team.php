@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--brown-shade-3"></span>
+</div>
 <section class="section-team py-20 lg:py-40">
 	<div class="theme-container">
 		<h2 class="text-title-h2 text-center text-brown-shade-4 mb-6 fade-in uppercase"><?php the_field('team_title'); ?></h2>

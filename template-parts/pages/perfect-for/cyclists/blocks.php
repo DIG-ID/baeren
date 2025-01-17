@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--orange"></span>
+</div>
 <section class="section-cyclists-blocks relative -mt-12 py-12">
 <div class="bg-white absolute w-full h-full left-0 top-0 bottom-0 flex justify-center items-center -z-[1]">
 		<svg width="1438" height="1359" viewBox="0 0 1438 1359" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">

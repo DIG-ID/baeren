@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--orange"></span>
+</div>
 <section class="section-perfect-for-content pb-0 flex flex-col gap-12 lg:gap:24 my-20">
 	<?php
 	if (have_rows('offers')):
@@ -25,8 +28,8 @@
 						<div
 							class="card-perfect-for-content col-span-2 lg:col-span-5 my-auto lg:pb-14 px-9 lg:px-28 self-end order-2 <?php echo ($i === 1) ? 'lg:order-2' : 'lg:order-1'; ?>">
 
-							<h2 class="text-title-h2 mb-4 lg:mb-7 uppercase"><?php the_sub_field('title'); ?></h2>
-							<h3 class="text-title-h3 mb-4 lg:mb-7"><?php the_sub_field('subtitle'); ?></h3>
+							<h2 class="text-title-h2 text-brown-shade-4 mb-4 lg:mb-7 uppercase"><?php the_sub_field('title'); ?></h2>
+							<h3 class="text-title-h3 text-brown-shade-4 mb-4 lg:mb-7"><?php the_sub_field('subtitle'); ?></h3>
 							<div class="text-body mb-12"><?php the_sub_field('description'); ?></div>
 
 							<?php

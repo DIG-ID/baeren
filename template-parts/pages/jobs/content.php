@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--brown-shade-2"></span>
+</div>
 <section class="section-jobs-content p-16 lg:p-28">
     <?php
     if (have_rows('jobs')):

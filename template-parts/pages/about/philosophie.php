@@ -1,4 +1,5 @@
-<section class="section-philosophie py-20 lg:pb-48 bg-brown-shade-1">
+<section class="section-philosophie py-20 lg:py-32 bg-brown-shade-1 relative">
+	<span class="diamond diamond--brown absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full"></span>
 	<div class="theme-container">
 		<div class="flex flex-col items-center justify-center invisible fade-in--noscroll md:mx-32 lg:mx-64">
 			<h2 class="text-title-h2 text-brown-shade-4"><?php the_field('philosophie_title'); ?></h2>

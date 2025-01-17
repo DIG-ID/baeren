@@ -1,14 +1,3 @@
-<?php
-$is_secondary_header = is_page_template([
-	'page-templates/page-impressum.php',
-	'page-templates/page-conditions.php',
-	'page-templates/page-data-policy.php',
-	'page-templates/page-360-tour.php',
-	'page-templates/page-partners.php',
-	'page-templates/page-jobs.php',
-]);
-?>
-
 <header id="header-main" class="header-main absolute top-0 left-0 w-full z-[999] overflow-hidden" itemscope itemtype="http://schema.org/WebSite">
 
 	<nav class="navbar relative overflow-hidden" role="navigation" aria-label="<?php esc_attr_e( 'Main menu', 'baeren' ); ?>">
@@ -28,9 +17,10 @@ $is_secondary_header = is_page_template([
 			</div>
 			<div class="col-span-1 col-start-2 flex justify-center items-center order-2">
 				<div class="site-branding">
-				<a rel="home" href="<?php echo esc_url(home_url('/')); ?>"
-						title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"
-						class="navbar-brand custom-logo-link"><?php $is_secondary_header ? do_action('dark_theme_logo') : do_action('theme_logo'); ?></a>
+					<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+					title="<?php echo esc_attr( get_bloginfo( 'name', 'display') ); ?>" itemprop="url"
+					class="navbar-brand custom-logo-link"><?php do_action( 'theme_logo' ); ?>
+					</a>
 				</div>
 			</div>
 			<div class="col-span-1 hidden xl:flex justify-end items-center gap-x-8 order-3">
@@ -47,7 +37,7 @@ $is_secondary_header = is_page_template([
 				endif;
 				?>
 			</div>
-		</div>
+		</div><!-- .header hamburguer menu logo booking btn -->
 		<div class="menu-app px-6 md:px-8 xl:px-16 py-6 md:py-8 xl:py-3 border-y-[0.5px] border-brown-shade-1 border-opacity-80 hidden xl:block">
 			<?php
 			wp_nav_menu(
@@ -61,7 +51,7 @@ $is_secondary_header = is_page_template([
 				)
 			);
 			?>
-		</div>
+		</div><!-- .header navigation -->
 
 		<div id="menu-wrapper" class="menu-wrapper w-full top-0 left-0 bottom-0 hidden fixed">
 			<div class="menu-bg"></div>

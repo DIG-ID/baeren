@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--red"></span>
+</div>
 <section class="section-information-content relative xl:pt-0 xl:pb-0">
 	<div class="absolute top-[-11.5rem] left-[2rem] lg:top-[-18rem] lg:left-[6rem]">
 		<svg  class="w-[41px] h-[88px] lg:w-[86px] lg:h-[184px]"  viewBox="0 0 41 88" fill="none" xmlns="http://www.w3.org/2000/svg">

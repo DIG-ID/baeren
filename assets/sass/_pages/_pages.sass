@@ -21,6 +21,8 @@
 @import page-jobs
 @import page-history
 @import page-stay
+@import 404
+
 
 .page-template-default
   .section-page-content-wrapper
@@ -66,3 +68,47 @@
 
     img
       @apply mb-6
+
+
+.page-header__secondary
+  #header-main
+    @apply bg-brown-shade-1
+    .header-wrapper
+      @apply bg-brown-shade-1 text-brown-shade-4
+      .btn-header--booking
+        @apply bg-brown-shade-4 text-brown-shade-1
+        svg
+          path
+            @apply stroke-brown-shade-1
+        &:hover
+          @apply bg-brown-shade-3
+      .wpml-ls-statics-shortcode_actions
+        ul
+          .wpml-ls-native
+            @apply text-brown-shade-3
+          .wpml-ls-first-item
+            border-left: 2px solid $brown-shade-4
+            padding-left: 10px
+            .wpml-ls-native
+              @apply text-brown-shade-4
+    .menu-toggle
+      .menu-toggle__text
+        @apply text-brown-shade-4
+      .menu-toggle__bars
+        .bar
+          @apply bg-brown-shade-4
+    .navbar
+      .menu-app
+        border-top: 0.5px solid $brown-shade-4
+        border-bottom: 0.5px solid $brown-shade-4
+        .main-menu-container
+          #main-menu
+            .menu-item
+              a
+                @apply text-brown-shade-4
+            .current-menu-item
+              a
+                color: $brown-shade-3
+                @apply text-brown-shade-3
+  .page-header
+    @apply bg-brown-shade-1 text-brown-shade-4

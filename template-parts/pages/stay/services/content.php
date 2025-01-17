@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--red"></span>
+</div>
 <section class="section-services-content pb-0 flex flex-col gap-12 lg:gap-40 my-20">
 	<?php if (have_rows('services')): ?>
 		<?php $i = 1; ?>

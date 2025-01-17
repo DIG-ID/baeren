@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--brown-shade-2"></span>
+</div>
 <section class="section-page-content py-28 overflow-hidden">
 	<div class="theme-container">
 		<div class="theme-grid">

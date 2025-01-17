@@ -2,27 +2,24 @@
 get_header();
 do_action( 'before_main_content' );
 ?>
-<section class="page-header bg-brown-shade-4 text-brown-shade-1 pt-28 lg:pt-64 pb-0 lg:-mb-[70px]">
+<section class="text-brown-shade-4 flex flex-col items-center h-full">
 	<div class="theme-container">
-		<div class="flex flex-col w-full text-center">
-			<div class="page-header--title">
-				<h1 class="font-utopia font-light text-5xl xl:text-[250px] text-brown-shade-2 py-5 lg:py-10 invisible"><?php echo esc_html__( '404', 'baeren' ) ?></h1>
+		<div class="notfound-content flex flex-col items-center w-full text-center">
+			<h1 class="font-utopia font-light text-brown-shade-4 text-8xl xl:text-[250px] mb-6 xl:mb-0"><?php esc_html_e( '404', 'baeren' ) ?></h1>
+			<svg class="page-header--separator__light mb-8" width="254" height="14" viewBox="0 0 254 14" fill="none" xmlns="http://www.w3.org/2000/svg" >
+				<rect x="125.75" y="1" width="8" height="8" transform="rotate(45 125.75 1)" stroke="#8E827B"/>
+				<path d="M0.75 7H101.25" stroke="#8E827B"/>
+				<path d="M152.75 7H253.25" stroke="#8E827B"/>
+			</svg>
+			<div class="max-w-[600px] mx-auto flex flex-col gap-y-8">
+				<h2 class="font-poppins text-lg lx:text-4xl text-brown-shade-4 tracking-widest uppercase"><?php esc_html_e( 'Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.', 'baeren' ); ?></h2>
+				<p class="font-poppins text-base xl:text-xl text-brown-shade-4"><?php esc_html_e( 'Looks like you’re floating the wrong way. Don\'t worry, we\'ll help you get back on track.', 'baeren' ); ?></p>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn-custom btn-custom--double-arrows self-center"><?php esc_html_e( 'zurück zur Startseite', 'baeren' ); ?></a>
 			</div>
+
 		</div>
 	</div>
 </section>
-<section class="section-error-404 not-found bg-brown-shade-3 text-brown-shade-1 pt-32 pb-48">
-	<div class="theme-container text-center">
-            <h3 class="text-title-h3 !font-light text-brown-shade-2 mb-12"><?php esc_html_e( 'Page not found', 'baeren' ) ?></h3>
-            <?php
-            $booking_url = get_field( 'booking_url', 'options' );
-            if ( $booking_url ) :
-                ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn-internal btn-internal--shade-4 !py-3 !px-32 !font-light tracking-[0.2px]"><?php esc_html_e( 'Homepage', 'baeren' ); ?></a><?php
-            endif;
-            ?>
-    </div>
-</section>
-
 <?php
 do_action( 'after_main_content' );
 get_footer();

@@ -1,3 +1,6 @@
+<div class="separator">
+	<span class="separator__diamond separator__diamond--green"></span>
+</div>
 <section class="section-solothurn-content pb-0 flex flex-col gap-12 mb-24 -mt-6 ">
 	<?php
 	if (have_rows('child_pages')):
@@ -68,12 +71,4 @@
 		endwhile;
 	endif;
 	?>
-
-</section>
-<section class="section-page-teasers py-8 lg:py-32 xl:pt-36 bg-brown-shade-1">
-	<div class="theme-container">
-		<div class="theme-grid">
-			<?php get_template_part('template-parts/components/teaser-default'); ?>
-		</div>
-	</div>
 </section>
