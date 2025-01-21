@@ -28,7 +28,7 @@ if ( have_rows( 'teasers_boxes' ) ) :
 							</div>
 							<div class="col-span-4 flex flex-col justify-between px-6 md:px-12 py-9 md:py-16">
 								<div class="z-10">
-									<h2 class="font-serif text-3xl text-brown-shade-4 mb-4 md:mb-6"><?php the_sub_field( 'title' ); ?></h2>
+									<h2 class="font-utopia text-3xl text-brown-shade-4 mb-4 md:mb-6"><?php the_sub_field( 'title' ); ?></h2>
 									<p class="text-body text-brown-shade-4"><?php the_sub_field( 'text' ); ?></p>
 								</div>
 								<?php
@@ -38,7 +38,12 @@ if ( have_rows( 'teasers_boxes' ) ) :
 									$teasers_btn_title  = $teasers_btn['title'];
 									$teasers_btn_target = $teasers_btn['target'] ? $teasers_btn['target'] : '_self';
 									?>
-									<a class="btn-custom btn-custom--double-arrows self-start" href="<?php echo esc_url( $teasers_btn_url ); ?>" target="<?php echo esc_attr( $teasers_btn_target ); ?>"><?php echo esc_html( $teasers_btn_title ); ?></a>
+									<a class="btn btn--secondary z-10" href="<?php echo esc_url( $teasers_btn_url ); ?>" target="<?php echo esc_attr( $teasers_btn_target ); ?>">
+										<?php echo esc_html( $teasers_btn_title ); ?>
+										<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
+											<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
+										</svg>
+									</a>
 									<?php
 								endif;
 								?>

@@ -27,14 +27,9 @@
 							</a>
 							<div
 								class="card-event-content h-[175px] lg:h-[200px] flex flex-col justify-center gap-4 px-7 lg:px-12 pt-6 lg:pt-9 pb-6 lg:pb-14">
-								<a href="<?php echo esc_url(get_sub_field('link')); ?>"
-									class="flex gap-x-4 items-center  mb-4 lg:mb-0" target="_blank">
+								<a href="<?php echo esc_url(get_sub_field('link')); ?>" target="_blank">
 									<h2 class="text-title-h3 text-brown-shade-4 text-nowrap"><?php the_sub_field('title'); ?>
 									</h2>
-									<svg width="19" height="10" viewBox="0 0 19 10" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1L8 5L1 9M11 1L18 5L11 9" stroke="#34302D" />
-									</svg>
 								</a>
 								<p class="text-body text-brown-shade-4"><?php the_sub_field('description'); ?></p>
 							</div>

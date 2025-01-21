@@ -1,3 +1,5 @@
+
+
 .text-title
   @apply font-utopia font-light text-2xl md:text-4xl xl:text-5xl
   font-feature-settings: 'ss02' on
@@ -7,11 +9,15 @@
   font-feature-settings: 'ss02' on
 
 .text-title-h3
-  @apply font-poppins font-normal text-base md:text-xl tracking-[0.24px]
+  @apply font-poppins font-normal text-base md:text-xl tracking-[0.015rem] mb-0
   font-feature-settings: 'ss02' on
+  &--serif
+    @apply font-utopia font-normal text-3xl
+
+
 
 .text-description
-  @apply font-utopia font-light text-sm md:text-lg tracking-[-0.14px] xl:tracking-[-0.24px]
+  @apply font-utopia font-light text-sm md:text-lg tracking-[-0.14px] xl:tracking-[0.015rem]
   font-feature-settings: 'ss02' on
 
 .text-hero-title
@@ -29,9 +35,9 @@
     @apply font-poppins font-normal text-sm
 
 .text-body
-  @apply font-poppins font-normal text-sm tracking-[0.14px]
+  @apply font-poppins font-normal text-sm tracking-[0.009rem]
   &--serif
-    @apply font-utopia font-normal text-sm md:text-lg xl:text-2xl leading-[19px] lg:leading-[39px] tracking-[0.14px] lg:tracking-[0.24px] 
+    @apply font-utopia font-normal text-sm md:text-lg xl:text-2xl leading-[1.188rem] lg:leading-[2.438rem] tracking-[0.009rem] lg:tracking-[0.015rem] 
     font-feature-settings: 'ss02' on
   p
     @apply font-poppins font-normal text-sm tracking-[0.14px] mb-6

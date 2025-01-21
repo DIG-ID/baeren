@@ -34,8 +34,12 @@
 							$link_title = $blink['title'];
 							$link_target = $blink['target'] ? $blink['target'] : '_self';
 							?>
-							<a class="btn-custom--double-arrows font-light w-[13.18rem]" href="<?php echo esc_url($link_url); ?>"
-								target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+							<a class="btn btn--secondary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+								<?php echo esc_html($link_title); ?>
+								<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
+									<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
+								</svg>
+							</a>
 							<?php
 						endif;
 						?>

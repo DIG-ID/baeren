@@ -14,7 +14,12 @@ do_action( 'before_main_content' );
 			<div class="max-w-[600px] mx-auto flex flex-col gap-y-8">
 				<h2 class="font-poppins text-lg lx:text-4xl text-brown-shade-4 tracking-widest uppercase"><?php esc_html_e( 'Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.', 'baeren' ); ?></h2>
 				<p class="font-poppins text-base xl:text-xl text-brown-shade-4"><?php esc_html_e( 'Looks like you’re floating the wrong way. Don\'t worry, we\'ll help you get back on track.', 'baeren' ); ?></p>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn-custom btn-custom--double-arrows self-center"><?php esc_html_e( 'zurück zur Startseite', 'baeren' ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn--secondary">
+					<?php esc_html_e( 'zurück zur Startseite', 'baeren' ); ?>
+					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
+						<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
+					</svg>
+				</a>
 			</div>
 
 		</div>

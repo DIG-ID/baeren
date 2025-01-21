@@ -33,7 +33,7 @@
 								$link_title  = $ilink['title'];
 								$link_target = $ilink['target'] ? $ilink['target'] : '_self';
 								?>
-								<a class="btn-external btn-external--shade-1" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<a class="btn--external btn--external__shade-1" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 								<?php
 							endif;
 							?>

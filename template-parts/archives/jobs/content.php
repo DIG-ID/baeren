@@ -54,7 +54,7 @@
 						<article data-category="<?php echo esc_attr( isset( $args['slug'] ) ? $args['slug'] : '*' ); ?>" id="post-<?php the_ID(); ?>" <?php post_class( $post_card_classes ); ?> >
 							<div class="card-job-content  px-16 py-14 flex flex-col justify-between h-full">
 								<h2 class="text-title-h3 text-brown-shade-4"><?php the_title(); ?></h2>
-								<a href="<?php the_permalink(); ?>" class="card-job-btn btn btn-external btn-external--shade-1"><?php esc_html_e( 'Angebot anzeigen', 'baeren' ); ?></a>
+								<a href="<?php the_permalink(); ?>" class="card-job-btn btn btn--external btn--external__shade-1"><?php esc_html_e( 'Angebot anzeigen', 'baeren' ); ?></a>
 							</div>
 						</article>
 						<?php
