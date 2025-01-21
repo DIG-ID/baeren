@@ -10,7 +10,7 @@
 				if ( $blink ) :
 					?>
 					<div class="inline-block">
-						<a class="btn btn--primary self-start" href="<?php echo esc_url( $blink ); ?>" target="_blank">
+						<a class="btn btn--primary" href="<?php echo esc_url( $blink ); ?>" target="_blank">
 							<?php esc_html_e( 'Jetzt Buchen', 'baeren' ); ?>
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
 								<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
@@ -23,7 +23,7 @@
 					if ( $booking_url ) :
 						?>
 						<div class="inline-block">
-							<a href="<?php echo esc_url( $booking_url ); ?>" target="_blank" class="btn btn--primary self-start">
+							<a href="<?php echo esc_url( $booking_url ); ?>" target="_blank" class="btn btn--primary">
 								<?php esc_html_e( 'Jetzt Buchen', 'baeren' ); ?>
 								<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
 									<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>

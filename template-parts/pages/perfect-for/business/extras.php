@@ -18,10 +18,8 @@
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
 								?>
-								<a href="<?php echo esc_url($link_url); ?>"
-									class="flex gap-x-4 items-center mb-4 mt-16 lg:mb-0" target="_blank">
-									<h3 class="text-body text-brown-shade-4 hover:transform-scale">
-										<?php echo esc_html($link_title); ?></h3>
+								<a href="<?php echo esc_url($link_url); ?>"class="btn btn--external mb-4 mt-16 lg:mb-0" target="_blank">
+									<h3 class="text-body text-brown-shade-4 hover:transform-scale"><?php echo esc_html($link_title); ?></h3>
 									<svg class="" width="19" height="10" viewBox="0 0 19 10" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path d="M1 1L8 5L1 9M11 1L18 5L11 9" stroke="#34302D" />
