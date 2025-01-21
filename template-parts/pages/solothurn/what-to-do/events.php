@@ -1,9 +1,14 @@
 <section class="section-what-to-do-events">
-	<span class="diamond diamond--green !w-4 !h-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 invisible fade-in--noscroll z-10"></span>
-	<div class="overflow-hidden ml-6 lg:ml-20 -mt-40">
+	
+	<div class="overflow-hidden ml-6 lg:ml-40 -mt-40">
+		<div class="events-navigation relative py-6">
+			<div class="swiper-button-next event-swiper-button-next"></div>
+			<div class="swiper-button-prev event-swiper-button-prev"></div>
+		</div>
 		<?php
 		if (have_rows('events')):
 			?>
+			<span class="diamond diamond--green !w-4 !h-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 invisible fade-in--noscroll z-10"></span>
 			<div class="swiper eventSwiper invisible fade-in--noscroll">
 				<div class="invisible hidden swiper-wrapper lg:flex lg:visible">
 					<?php

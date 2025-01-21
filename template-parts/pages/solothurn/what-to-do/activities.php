@@ -13,7 +13,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="overflow-hidden ml-6 lg:ml-20">
+	<div class="overflow-hidden ml-6 lg:ml-40">
+		<div class="activites-navigation relative py-6">
+			<div class="swiper-button-next activites-swiper-button-next"></div>
+			<div class="swiper-button-prev activites-swiper-button-prev"></div>
+		</div>
 		<?php
 		if (have_rows('activities_list')):
 			?>
