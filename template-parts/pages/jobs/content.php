@@ -9,8 +9,8 @@
 			the_row();
 			?>
 			<div class="theme-container">
-				<div class="flex items-center lg:items-start flex-col gap-9 lg:flex-row lg:gap-28 justify-center invisible fade-in--noscroll">
-					<div class="text-body text-center lg:text-left mb-12 max-w-[36rem]"><?php the_sub_field('description'); ?></div>
+				<div class="flex items-center flex-col gap-9 lg:flex-row lg:gap-28 justify-center invisible fade-in--noscroll">
+					<div class="text-body text-center text-brown-shade-4 lg:text-left max-w-[36rem]"><?php the_sub_field('description'); ?></div>
 					<?php
 					$ilink = get_sub_field('link');
 					if ($ilink):
