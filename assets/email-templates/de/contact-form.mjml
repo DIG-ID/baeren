@@ -44,7 +44,7 @@
             <th align="left" style="font-weight: bold;">Nachricht</th>
           </tr>
           <tr>
-            <td>[your-message]</td>
+            <td>[nachricht]</td>
           </tr>
         </mj-table>
       </mj-column>
