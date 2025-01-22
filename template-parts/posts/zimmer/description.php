@@ -1,7 +1,7 @@
 <section class="section-zimmer-description py-24 fade-in">
 	<div class="theme-container">
 		<div class="theme-grid">
-			<div class="col-span-2 lg:col-span-5 order-2 lg:order-1">
+			<div class="col-span-2 lg:col-span-6 order-2 lg:order-1">
 				<h1 class="font-poppins font-normal text-[40px] text-brown-shade-4 leading-[54px] tracking-[4.8px] uppercase mb-10"><?php the_title(); ?></h1>
 				<?php do_action( 'room_features' ); ?>
 				<div class="text-body text-brown-shade-4 mb-14"><?php the_content(); ?></div>

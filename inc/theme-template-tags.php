@@ -49,7 +49,7 @@ add_action( 'after_post_content', 'theme_after_post_content' );
  */
 function theme_room_features() {
 	if ( have_rows( 'features' ) ) :
-		echo '<ul class="features">';
+		?><ul class="features"><?php
 		while ( have_rows( 'features' ) ) :
 			the_row();
 			$fields = [
@@ -71,7 +71,7 @@ function theme_room_features() {
 				endif;
 			endforeach;
 		endwhile;
-		echo '</ul>';
+		?></ul><?php
 	endif;
 }
 
@@ -82,7 +82,7 @@ add_action( 'room_features', 'theme_room_features' );
  */
 function theme_stay_room_features() {
 	if ( have_rows( 'features' ) ) :
-		echo '<ul class="features">';
+		?><ul class="features"><?php
 		while ( have_rows( 'features' ) ) :
 			the_row();
 			$fields = [
@@ -102,7 +102,7 @@ function theme_stay_room_features() {
 				endif;
 			endforeach;
 		endwhile;
-		echo '</ul>';
+		?></ul><?php
 	endif;
 }
 

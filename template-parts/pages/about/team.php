@@ -8,7 +8,7 @@
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/dark-separator.svg"
 				alt="decorative separator">
 		</div>
-		<div class="w-full relative">
+		<!--<div class="w-full relative">
 			<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
 			<?php
 			$img = get_field('team_image');
@@ -22,7 +22,7 @@
 			endif;
 			?>
 			<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
-		</div>
+		</div>-->
 		<div class="theme-grid">
 			<div class="col-span-2 lg:col-span-10 lg:col-start-2 px-8 py-16 lg:pt-24 xl:px-28 fade-in">
 				<?php

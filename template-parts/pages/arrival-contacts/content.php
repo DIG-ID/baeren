@@ -11,7 +11,7 @@
 			</div>
 		</div>
 		<div class="grid grid-cols-3 gap-6 pt-12">
-			<div class="arrival-by-auto grid grid-cols-3 col-span-3 overflow-hidden fade-in">
+			<div class="arrival-by-auto grid grid-cols-3 col-span-3 gap-6 overflow-hidden fade-in">
 				<div class="col-span-6 lg:col-span-1">
 					<?php
 					$bycar = get_field('arrival_by_auto_image');
@@ -21,7 +21,7 @@
 					?>
 				</div>
 				<div class="col-span-6 lg:col-span-2 py-10 lg:px-10">
-					<h2 class="text-title-h3  text-brown-shade-4 mb-6 uppercase">
+					<h2 class="text-title-h3 text-brown-shade-4 mb-2 uppercase">
 						<?php the_field('arrival_by_auto_title'); ?>
 					</h2>
 					<p class="text-body text-brown-shade-4"><?php the_field('arrival_by_auto_description'); ?></p>
@@ -36,7 +36,7 @@
 				endif;
 				?>
 				<div class="py-10">
-					<h2 class="text-title-h3 text-brown-shade-4 mb-6 uppercase">
+					<h2 class="text-title-h3 text-brown-shade-4 mb-2 uppercase">
 						<?php the_field('arrival_by_zug_title'); ?>
 					</h2>
 					<p class="text-body text-brown-shade-4"><?php the_field('arrival_by_zug_description'); ?></p>
@@ -51,7 +51,7 @@
 				endif;
 				?>
 				<div class="py-10">
-					<h2 class="text-title-h3 text-brown-shade-4 mb-6 uppercase">
+					<h2 class="text-title-h3 text-brown-shade-4 mb-2 uppercase">
 						<?php the_field('arrival_by_bus_title'); ?>
 					</h2>
 					<p class="text-body text-brown-shade-4"><?php the_field('arrival_by_bus_description'); ?></p>
@@ -66,7 +66,7 @@
 				endif;
 				?>
 				<div class="py-10">
-					<h2 class="text-title-h3 text-brown-shade-4 mb-6 uppercase">
+					<h2 class="text-title-h3 text-brown-shade-4 mb-2 uppercase">
 						<?php the_field('arrival_by_velo_title'); ?>
 					</h2>
 					<p class="text-body text-brown-shade-4"><?php the_field('arrival_by_velo_description'); ?></p>
