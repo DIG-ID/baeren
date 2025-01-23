@@ -11,7 +11,7 @@
     <!-- Logo Header -->
     <mj-section background-color="#F5F0EF" padding="60px 0">
       <mj-column>
-        <mj-image width="252px" src="https://baeren.yournewwebsite.ch/wp-content/uploads/complete-logo.svg"/>
+        <mj-image width="211px" src="https://baeren.yournewwebsite.ch/wp-content/uploads/hotel-baeren.png"/>
       </mj-column>
     </mj-section>
     <!-- Email Info  -->
