@@ -62,7 +62,7 @@
 				<?php
 				$bybus = get_field('arrival_by_velo_image');
 				if ($bybus):
-					echo wp_get_attachment_image($bybus, 'full', false, array('class' => 'w-full object-cover min-h-[225px]'));
+					echo wp_get_attachment_image($bybus, 'full', false, array('class' => 'w-full object-fit'));
 				endif;
 				?>
 				<div class="py-10">
