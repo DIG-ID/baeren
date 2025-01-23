@@ -9,6 +9,11 @@ window.addEventListener(
         slidesPerView: 1,
         spaceBetween: 24,
         grabCursor: true,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
