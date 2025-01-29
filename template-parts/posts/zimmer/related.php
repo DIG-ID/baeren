@@ -1,4 +1,4 @@
-<section class="section-zimmer-related bg-brown-shade-2 py-36">
+<section class="section-zimmer-related bg-brown-shade-2 lg:py-36">
 	<!--<div class="theme-container">
 		<div class="flex flex-col justify-center items-center mb-16">
 			<h2 class="font-poppins font-normal text-brown-shade-4 text-3xl uppercase tracking-[0.24rem] mb-12"><?php esc_html_e( 'Weitere Zimmer', 'baeren' ); ?></h2>
@@ -9,7 +9,7 @@
 			</svg>
 		</div>
 	</div>-->
-	<div class="theme-container">
+	<div class="theme-container !px-0 lg:!px-6">
 		<?php get_template_part( 'template-parts/components/rooms-list' ); ?>
 	</div>
 </section>

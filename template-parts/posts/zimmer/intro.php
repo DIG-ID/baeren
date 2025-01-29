@@ -1,7 +1,7 @@
 <section class="single-zimmer-header text-brown-shade-1 pt-28 lg:pt-64">
 	<div class="theme-container relative">
 		<div class="flex flex-col w-full text-center">
-			<div class="page-header--breadcrumbs mb-14 invisible fade-in--noscroll">
+			<div class="page-header--breadcrumbs mb-6 lg:mb-14 invisible fade-in--noscroll mx-auto">
 				<?php do_action( 'breadcrumbs' ); ?>
 			</div>
 		</div>
@@ -15,7 +15,7 @@
 					foreach ( $gallery as $gallery_id ) :
 						?>
 						<div class="swiper-slide">
-							<?php echo wp_get_attachment_image( $gallery_id, 'zimmer-image', false, array( 'class' => 'w-full object-cover max-h-[700px]' ) ); ?>
+							<?php echo wp_get_attachment_image( $gallery_id, 'zimmer-image', false, array( 'class' => 'w-full object-cover min-h-[250px] max-h-[700px]' ) ); ?>
 						</div>
 						<?php 
 					endforeach;

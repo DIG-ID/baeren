@@ -1,8 +1,8 @@
-<section class="section-info py-40 flex justify-center items-center">
+<section class="section-info py-32 lg:py-40 flex justify-center items-center px-6">
 	<div class="max-w-2xl flex flex-col justify-around items-center text-center">
-		<h2 class="font-sans text-4xl tracking-widest uppercase mb-16"><?php the_field( 'single_zimmer_information_title', 'options' ); ?></h2>
-		<p class="font-sans text-xl tracking-wide mb-16"><?php the_field( 'single_zimmer_information_description', 'options' ); ?></p>
-		<div class="info-buttons flex gap-x-10">
+		<h2 class="text-title-h2 uppercase mb-4 lg:mb-16"><?php the_field( 'single_zimmer_information_title', 'options' ); ?></h2>
+		<p class="text-description mb-8 lg:mb-16"><?php the_field( 'single_zimmer_information_description', 'options' ); ?></p>
+		<div class="info-buttons flex flex-col md:flex-row items-center justify-center gap-6">
 			<?php
 			$mainlink = get_field( 'single_zimmer_information_button_main', 'options' );
 			if ( $mainlink ) :
@@ -10,7 +10,7 @@
 				$link_title  = $mainlink['title'];
 				$link_target = $mainlink['target'] ? $mainlink['target'] : '_self';
 				?>
-				<a class="btn btn--primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+				<a class="btn btn--primary !self-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 					<?php echo esc_html( $link_title ); ?>
 					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
 						<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
@@ -24,7 +24,7 @@
 				$link_title  = $seclink['title'];
 				$link_target = $seclink['target'] ? $seclink['target'] : '_self';
 				?>
-				<a class="btn btn--secondary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+				<a class="btn btn--secondary !self-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 					<?php echo esc_html( $link_title ); ?>
 					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
 						<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>

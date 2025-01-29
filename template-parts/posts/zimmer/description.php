@@ -1,10 +1,10 @@
-<section class="section-zimmer-description py-24 fade-in">
+<section class="section-zimmer-description py-16 lg:py-24 fade-in">
 	<div class="theme-container">
 		<div class="theme-grid">
-			<div class="col-span-2 lg:col-span-6 order-2 lg:order-1">
-				<h1 class="font-poppins font-normal text-[40px] text-brown-shade-4 leading-[54px] tracking-[4.8px] uppercase mb-10"><?php the_title(); ?></h1>
+			<div class="col-span-2 lg:col-span-6 mb-10 lg:mb-0">
+				<h1 class="font-poppins font-normal text-4xl lg:text-[2.5rem] text-brown-shade-4 lg:leading-[3.375rem] tracking-[0.3rem] uppercase mb-6 lg:mb-10 max-w-sm"><?php the_title(); ?></h1>
 				<?php do_action( 'room_features' ); ?>
-				<div class="text-body text-brown-shade-4 mb-14"><?php the_content(); ?></div>
+				<div class="text-body text-brown-shade-4 mb-12 lg:mb-14"><?php the_content(); ?></div>
 				<?php
 				$blink = get_field( 'booking_link' );
 				if ( $blink ) :
@@ -35,7 +35,7 @@
 				endif;
 				?>
 			</div>
-			<div class="col-span-2 lg:col-span-4 lg:col-start-9 order-1 lg:order-2 pb-11 lg:pb-0 pt-5 xl:pt-0">
+			<div class="col-span-2 lg:col-span-4 lg:col-start-9 pb-11 lg:pb-0 pt-5 xl:pt-0">
 				<h2 class="font-poppins font-normal text-2xl text-brown-shade-4 tracking-[0.075rem] uppercase"><?php the_field( 'amenities_title' ); ?></h2>
 				<hr class="bg-brown-shade-4 my-6">
 				<ul class="section-amenities-lists">
