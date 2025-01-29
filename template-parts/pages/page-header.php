@@ -17,7 +17,7 @@ endif;
 				<?php
 				$page_header_title = get_field( 'intro_title' );
 				if ( $page_header_title ) :
-					?><h1 class="page-header--title max-w-[840px] mx-auto py-4"><?php echo $page_header_title; ?></h1><?php
+					?><h1 class="page-header--title"><?php echo $page_header_title; ?></h1><?php
 				endif;
 				?>
 			</div>
