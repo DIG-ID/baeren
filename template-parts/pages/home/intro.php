@@ -1,15 +1,15 @@
 <section class="section-intro text-brown-shade-4 w-full h-full min-h-svh flex justify-center items-center">
 	<div class="theme-container">
 		<div class="theme-grid">
-			<div class="col-span-6 flex flex-col justify-between">
+			<div class="col-span-2 md:col-span-6 lg:col-span-6 flex flex-col justify-between">
 				<div>
-					<p class="text-subtitle text-brown-shade-3 mb-6"><?php the_field( 'highlights_subtitle' ); ?></p>
+					<p class="text-subtitle text-brown-shade-3 mb-4 lg:mb-6"><?php the_field( 'highlights_subtitle' ); ?></p>
 					<h2 class="text-title-h2 mb-4"><?php the_field( 'highlights_title' ); ?></h2>
 					<p class="text-body"><?php the_field( 'highlights_description' ); ?></p>
 				</div>
 				<?php
 				if ( have_rows( 'highlights_highlights' ) ) :
-					echo '<ul class="highlights-items">';
+					echo '<ul class="highlights-items highlights-items--desktop">';
 					while ( have_rows( 'highlights_highlights' ) ) :
 						the_row();
 						echo '<li>' . get_sub_field( 'title' ) . ' </li>';
@@ -18,15 +18,15 @@
 				endif;
 				?>
 			</div>
-			<div class="col-span-6 flex justify-end">
+			<div class="col-span-2 md:col-span-6 lg:col-span-6 flex justify-end">
 				<?php
 				if ( have_rows( 'highlights_highlights' ) ) :
 					$i = 1;
-					echo '<div class="intro-images-wrapper relative w-[578px] h-[578px]">';
+					echo '<div class="intro-images-wrapper relative w-[256px] h-[256px] lg:w-[578px] lg:h-[578px]">';
 					while ( have_rows( 'highlights_highlights' ) ) :
 						the_row();
 						?>
-						<figure class="intro-image intro-image-<?php echo esc_attr( $i ); ?> bg-brown-shade-2 w-[578px] h-[578px] rounded-full flex justify-center items-center overflow-hidden absolute left-0 top-0 z-40">
+						<figure class="intro-image intro-image-<?php echo esc_attr( $i ); ?> bg-brown-shade-2 w-[256px] h-[256px] lg:w-[578px] lg:h-[578px] rounded-full flex justify-center items-center overflow-hidden absolute left-0 top-0 z-40">
 							<?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'full', false, array( 'class' => 'max-w-full w-full h-full object-cover' ) ); ?>
 						</figure>
 						<?php
@@ -53,6 +53,18 @@
 						</figure>
 					</div>
 					<?php
+				endif;
+				?>
+			</div>
+			<div class="col-span-2">
+				<?php
+				if ( have_rows( 'highlights_highlights' ) ) :
+					echo '<ul class="highlights-items highlights-items--mobile">';
+					while ( have_rows( 'highlights_highlights' ) ) :
+						the_row();
+						echo '<li>' . get_sub_field( 'title' ) . ' </li>';
+					endwhile;
+					echo '</ul>';
 				endif;
 				?>
 			</div>
