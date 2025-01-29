@@ -22,15 +22,14 @@
 				<?php endif; ?>
 
 				<div class="theme-container !px-0 mx-auto">
-					<div class="theme-grid"></div>
 					<div
-						class="card-perfect-for grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 pb-14 lg:pb-0 <?php echo esc_attr($fade_class); ?>">
+						class="card-perfect-for grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 pb-14 lg:pb-0 mx-6 <?php echo esc_attr($fade_class); ?>">
 						<div
 							class="card-perfect-for-content col-span-2 lg:col-span-5 my-auto lg:pb-14 px-9 lg:px-28 self-end order-2 <?php echo ($i === 1) ? 'lg:order-2' : 'lg:order-1'; ?>">
 
-							<h2 class="text-title-h2 text-brown-shade-4 mb-4 lg:mb-7 uppercase"><?php the_sub_field('title'); ?></h2>
+							<h2 class="text-title-h2 text-brown-shade-4 mt-6 lg:mt-0 mb-4 lg:mb-7 uppercase"><?php the_sub_field('title'); ?></h2>
 							<h3 class="text-title-h3 text-brown-shade-4 mb-4 lg:mb-7"><?php the_sub_field('subtitle'); ?></h3>
-							<div class="text-body mb-12"><?php the_sub_field('description'); ?></div>
+							<div class="text-body mb-6 lg:mb-12"><?php the_sub_field('description'); ?></div>
 
 							<?php
 							$ilink = get_sub_field('link');
@@ -39,7 +38,7 @@
 								$link_title = $ilink['title'];
 								$link_target = $ilink['target'] ? $ilink['target'] : '_self';
 								?>
-								<a class="btn btn--secondary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+								<a class="btn btn--secondary w-full justify-center" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
 									<?php echo esc_html($link_title); ?>
 									<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
 										<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>

@@ -28,7 +28,7 @@ if ( have_rows( 'teasers_boxes' ) ) :
 							</div>
 							<div class="col-span-4 flex flex-col justify-between px-6 md:px-10 xl:px-12 py-9 md:py-10 xl:py-16">
 								<div class="z-10">
-									<h2 class="font-utopia text-3xl text-brown-shade-4 mb-4 md:mb-6"><?php the_sub_field( 'title' ); ?></h2>
+									<h2 class="text-title-h3--serif text-brown-shade-4 mb-4 md:mb-6"><?php the_sub_field( 'title' ); ?></h2>
 									<p class="text-body text-brown-shade-4 mb-6 lg:mb-0 max-w-lg xl:max-w-full"><?php the_sub_field( 'text' ); ?></p>
 								</div>
 								<?php
