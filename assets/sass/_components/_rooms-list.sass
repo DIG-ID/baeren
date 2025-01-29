@@ -12,7 +12,7 @@
       @apply relative
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
     &--wrapper
-      @apply relative py-16 px-12 z-[2]
+      @apply relative py-12 lg:py-16 px-8 lg:px-12 z-[2]
       &::before
         width: calc(100% - 5px)
         height: 1px
@@ -34,17 +34,17 @@
         height: 100%
         opacity: 0.8
     &--details
-      @apply flex items-center justify-between
+      @apply flex flex-col lg:flex-row lg:items-center lg:justify-between
       h2
-        @apply font-poppins font-medium text-brown-shade-4 text-3xl tracking-[2.4px] uppercase
+        @apply font-poppins font-medium text-brown-shade-4 text-3xl tracking-[2.4px] uppercase mb-2
       ul.features
-        @apply columns-2
+        @apply columns-1 lg:columns-2
         li
-          @apply font-poppins text-xs text-brown-shade-4 uppercase tracking-wider
+          @apply font-poppins text-xs text-brown-shade-4 uppercase tracking-wider mb-[0.125rem]
           span
             @apply font-bold
       p
-        @apply font-poppins text-base text-brown-shade-4 leading-6 max-w-lg mt-8
+        @apply font-poppins text-sm sm:text-base text-brown-shade-4 leading-5 md:leading-6 max-w-lg mt-6 lg:mt-8 mb-6 lg:mb-0
       a
         @apply font-poppins font-light text-base text-brown-shade-4 tracking-[1.28px]
         svg
