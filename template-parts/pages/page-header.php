@@ -1,7 +1,7 @@
 <?php
 $intro_image_id = get_field( 'intro_image' );
 if ( $intro_image_id ) :
-	?><section class="page-header flex items-center bg-brown-shade-4 text-brown-shade-1 relative min-h-[100vh]" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $intro_image_id, 'full' ) ); ?>); background-size: cover; background-position: center;"><div class="absolute inset-0 bg-overlay"></div><!-- Overlay --><?php
+	?><section class="page-header flex items-center bg-brown-shade-4 text-brown-shade-1 relative min-h-[80vh] lg:min-h-[100vh]" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $intro_image_id, 'full' ) ); ?>); background-size: cover; background-position: center;"><div class="absolute inset-0 bg-overlay"></div><!-- Overlay --><?php
 else :
 	?>
 	<section class="page-header flex items-center bg-brown-shade-4 text-brown-shade-1 relative pt-28 lg:pt-64 pb-20 lg:pb-40" >
