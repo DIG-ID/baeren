@@ -1,6 +1,6 @@
 <section class="section-services bg-brown-shade-3 relative overflow-hidden">
-	<h2 class="text-subtitle text-brown-shade-1 absolute top-24 left-1/2 -translate-x-1/2 z-20"><?php the_field( 'services_title', 'options' ); ?></h2>
-	<div class="services-teaser flex">
+	<h2 class="text-subtitle text-brown-shade-1 absolute top-12 xl:top-14 left-1/2 -translate-x-1/2 z-20"><?php the_field( 'services_title', 'options' ); ?></h2>
+	<div class="services-teaser flex flex-col lg:flex-row">
 		<?php
 		if ( have_rows( 'services_list', 'options' ) ) :
 
@@ -15,7 +15,7 @@
 				?>
 
 				<?php ?>
-				<div class="service-box bg-no-repeat bg-center" style="background-image: url(<?php echo esc_url( $image ); ?>);">
+				<div class="service-box bg-no-repeat bg-center bg-cover lg:[background-size: initial;]" style="background-image: url(<?php echo esc_url( $image ); ?>);">
 					<div class="z-10">
 						<h2 class="font-poppins font-normal text-3xl text-white tracking-[2.56px] uppercase text-center mb-8"><?php the_sub_field( 'title' ); ?></h2>
 						<p class="font-poppins font-normal text-base text-white leading-7 tracking-[0.96px] text-center"><?php the_sub_field( 'description' ); ?></p>
