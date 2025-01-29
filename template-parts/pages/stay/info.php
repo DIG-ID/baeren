@@ -1,8 +1,8 @@
-<section class="section-info py-40 flex justify-center items-center">
+<section class="section-info py-32 lg:py-40 flex justify-center items-center px-6">
 	<div class="max-w-2xl flex flex-col justify-around items-center text-center">
-		<h2 class="font-sans text-4xl tracking-widest uppercase mb-16"><?php the_field( 'informations_title' ); ?></h2>
-		<p class="font-sans text-xl tracking-wide mb-16"><?php the_field( 'informations_description' ); ?></p>
-		<div class="info-buttons flex gap-x-10">
+		<h2 class="text-title-h2 uppercase mb-4 lg:mb-16"><?php the_field( 'informations_title' ); ?></h2>
+		<p class="text-description mb-16"><?php the_field( 'informations_description' ); ?></p>
+		<div class="info-buttons flex gap-x-4 lg:gap-x-6">
 			<?php
 			$mainlink = get_field( 'informations_button_main' );
 			if ( $mainlink ) :

@@ -20,7 +20,7 @@ if ( have_rows( 'teasers_boxes' ) ) :
 								<?php
 								$teasers_image = get_sub_field( 'image' );
 								if ( $teasers_image ) :
-									echo wp_get_attachment_image( $teasers_image, 'full', false, array( 'class' => 'w-full h-full object-cover' ) );
+									echo wp_get_attachment_image( $teasers_image, 'full', false, array( 'class' => 'w-full max-h-[300px] lg:max-h-full h-full object-cover' ) );
 								else :
 									echo '<img class="w-full h-full object-cover" src="https://picsum.photos/600/400?random=1" alt="">';
 								endif;

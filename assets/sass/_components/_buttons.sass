@@ -37,6 +37,13 @@
       svg
         path
           @apply stroke-brown-shade-3
+  &--transparent
+    @apply bg-transparent text-brown-shade-1 border border-brown-shade-1
+    svg
+      path
+        @apply stroke-brown-shade-1
+    &:hover
+      @apply bg-brown-shade-4
   &--header
     @apply font-poppins text-base py-2 px-4 font-normal  border whitespace-nowrap break-keep transition-all duration-300 ease-in-out relative flex items-center gap-x-2 text-brown-shade-4 border-brown-shade-1 bg-brown-shade-1 uppercase
     svg
