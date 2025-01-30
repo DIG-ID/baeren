@@ -1,7 +1,7 @@
 <div class="separator">
 	<span class="separator__diamond separator__diamond--green"></span>
 </div>
-<section class="section-solothurn-content pb-0 flex flex-col gap-12 mb-24 -mt-6 ">
+<section class="section-solothurn-content pb-0 flex flex-col gap-12 mb-24 ">
 	<?php
 	if (have_rows('child_pages')):
 		$i = 1;
@@ -21,15 +21,14 @@
 				<?php endif; ?>
 
 				<div class="theme-container !px-0 mx-auto">
-					<div class="theme-grid"></div>
 					<div
-						class="relative card-solothurn grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 pb-14 lg:pb-0 <?php echo esc_attr($fade_class); ?>">
+						class="relative card-solothurn grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 pb-10 lg:pb-0 px-6 <?php echo esc_attr($fade_class); ?>">
 						<div
 							class="card-solothurn-content col-span-2 lg:col-span-5 py-7 my-auto lg:pb-14 px-9 lg:px-28 self-end order-2 <?php echo ($i === 1) ? 'lg:order-1' : 'lg:order-2'; ?>">
 
 							<h2 class="text-title-h2 !text-2xl mb-4 lg:mb-7"><?php the_sub_field('title'); ?></h2>
 							<h3 class="text-title-h3 mb-4 lg:mb-7"><?php the_sub_field('subtitle'); ?></h3>
-							<div class="text-body mb-12"><?php the_sub_field('description'); ?></div>
+							<div class="text-body mb-6 lg:mb-12"><?php the_sub_field('description'); ?></div>
 
 							<?php
 							$ilink = get_sub_field('link');
@@ -49,6 +48,9 @@
 							if ($i % 2 === 0): ?>
 								<div class="absolute bg-white w-12 h-12 bottom-[0.65rem] right-1/2 translate-x-1/2 lg:translate-x-0 lg:bottom-1/2 lg:right-[-0.85rem] translate-y-1/2 z-10">
 									<span class="diamond diamond--white !w-4 !h-4 absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2"></span>
+								</div><?php else : ?>
+									<div class="absolute bg-brown-shade-1 w-12 h-12 bottom-[0.65rem] right-1/2 translate-x-1/2 lg:translate-x-0 lg:bottom-1/2 lg:right-[-0.85rem] translate-y-1/2 z-10">
+									<span class="diamond diamond--light-brown !w-4 !h-4 absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2"></span>
 								</div>
 							<?php endif; ?>
 						</div>
