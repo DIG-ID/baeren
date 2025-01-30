@@ -4,7 +4,7 @@
 			<div class="room-content bg-white z-20 px-12 py-12 lg:py-16 flex flex-col justify-between lg:h-2/3 -mt-8">
 				<div>
 					<h2 class="text-subtitle text-brown-shade-3 mb-4 lg:mb-6"><?php the_field( 'rooms_title' ); ?></h2>
-					<p class="text-body !text-xl !leading-relaxed text-brown-shade-4 mb-4"><?php the_field( 'rooms_description' ); ?></p>
+					<p class="text-body lg:!text-xl xl:!leading-relaxed text-brown-shade-4 mb-4"><?php the_field( 'rooms_description' ); ?></p>
 				</div>
 				<?php
 				$room_btn = get_field( 'rooms_link' );
