@@ -9,7 +9,7 @@
 				</div>
 				<?php
 				if ( have_rows( 'highlights_highlights' ) ) :
-					echo '<ul class="highlights-items highlights-items--desktop">';
+					echo '<ul class="highlights-items">';
 					while ( have_rows( 'highlights_highlights' ) ) :
 						the_row();
 						echo '<li>' . get_sub_field( 'title' ) . ' </li>';
@@ -18,19 +18,29 @@
 				endif;
 				?>
 			</div>
-			<div class="col-span-2 md:col-span-6 lg:col-span-6 flex justify-end">
+			<div class="col-span-2 md:col-span-6 lg:col-span-6 flex justify-center lg:justify-end pt-10">
 				<?php
+				$imge_title = [];
+				if ( have_rows( 'highlights_highlights' ) ) :
+					while ( have_rows( 'highlights_highlights' ) ) :
+						the_row();
+						$imge_title[] =  get_sub_field( 'title' );
+					endwhile;
+				endif;
 				if ( have_rows( 'highlights_highlights' ) ) :
 					$i = 1;
-					echo '<div class="intro-images-wrapper relative w-[256px] h-[256px] lg:w-[578px] lg:h-[578px]">';
+					$counter = 0;
+					echo '<div class="intro-images-wrapper relative w-[350px] h-[350px] lg:w-[578px] lg:h-[578px]">';
 					while ( have_rows( 'highlights_highlights' ) ) :
 						the_row();
 						?>
-						<figure class="intro-image intro-image-<?php echo esc_attr( $i ); ?> bg-brown-shade-2 w-[256px] h-[256px] lg:w-[578px] lg:h-[578px] rounded-full flex justify-center items-center overflow-hidden absolute left-0 top-0 z-40">
+						<figure class="intro-image intro-image-<?php echo esc_attr( $i ); ?> bg-brown-shade-2 w-[350px] h-[350px] lg:w-[578px] lg:h-[578px] rounded-full flex justify-center items-center overflow-hidden absolute left-0 top-0 z-40">
 							<?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'full', false, array( 'class' => 'max-w-full w-full h-full object-cover' ) ); ?>
+							<figcaption class="bg-brown-shade-4 bg-opacity-55 bg-blend-overlay text-brown-shade-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex lg:hidden lg:invisible justify-center items-center"><span class="font-poppins font-normal text-base text-brown-shade-1 tracking-[2.56px] uppercase text-center px-6"><?php echo esc_html( $imge_title[$counter] ); ?></span></figcaption>
 						</figure>
 						<?php
 						$i++;
+						$counter++;
 					endwhile;
 					echo '</div>';
 				else :
@@ -53,18 +63,6 @@
 						</figure>
 					</div>
 					<?php
-				endif;
-				?>
-			</div>
-			<div class="col-span-2">
-				<?php
-				if ( have_rows( 'highlights_highlights' ) ) :
-					echo '<ul class="highlights-items highlights-items--mobile">';
-					while ( have_rows( 'highlights_highlights' ) ) :
-						the_row();
-						echo '<li>' . get_sub_field( 'title' ) . ' </li>';
-					endwhile;
-					echo '</ul>';
 				endif;
 				?>
 			</div>

@@ -19,11 +19,7 @@
 
 .section-intro
   .highlights-items
-    @apply flex flex-col gap-y-4
-    &--desktop
-      @apply hidden invisible lg:flex lg:visible
-    &--mobile
-      @apply flex flex-row visible lg:hidden lg:invisible 
+    @apply hidden invisible lg:flex lg:flex-col lg:gap-y-4 lg:visible
     li
       @apply font-poppins font-normal text-base text-brown-shade-3 tracking-[2.56px] uppercase whitespace-nowrap break-keep 
   .intro-images-wrapper
