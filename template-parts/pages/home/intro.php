@@ -3,7 +3,7 @@
 		<div class="theme-grid">
 			<div class="col-span-2 md:col-span-6 lg:col-span-6 flex flex-col justify-between">
 				<div>
-					<p class="text-subtitle text-brown-shade-3 mb-4 lg:mb-6"><?php the_field( 'highlights_subtitle' ); ?></p>
+					<p class="text-subtitle text-brown-shade-3 mb-4 lg:mb-6 hidden invisible md:visible md:block"><?php the_field( 'highlights_subtitle' ); ?></p>
 					<h2 class="text-title-h2 mb-4"><?php the_field( 'highlights_title' ); ?></h2>
 					<p class="text-body"><?php the_field( 'highlights_description' ); ?></p>
 				</div>
@@ -30,11 +30,11 @@
 				if ( have_rows( 'highlights_highlights' ) ) :
 					$i = 1;
 					$counter = 0;
-					echo '<div class="intro-images-wrapper relative w-[350px] h-[350px] lg:w-[578px] lg:h-[578px]">';
+					echo '<div class="intro-images-wrapper relative w-[280px] h-[280px] lg:w-[578px] lg:h-[578px]">';
 					while ( have_rows( 'highlights_highlights' ) ) :
 						the_row();
 						?>
-						<figure class="intro-image intro-image-<?php echo esc_attr( $i ); ?> bg-brown-shade-2 w-[350px] h-[350px] lg:w-[578px] lg:h-[578px] rounded-full flex justify-center items-center overflow-hidden absolute left-0 top-0 z-40">
+						<figure class="intro-image intro-image-<?php echo esc_attr( $i ); ?> bg-brown-shade-2 w-[280px] h-[280px] lg:w-[578px] lg:h-[578px] rounded-full flex justify-center items-center overflow-hidden absolute left-0 top-0 z-40">
 							<?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'full', false, array( 'class' => 'max-w-full w-full h-full object-cover' ) ); ?>
 							<figcaption class="bg-brown-shade-4 bg-opacity-55 bg-blend-overlay text-brown-shade-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex lg:hidden lg:invisible justify-center items-center"><span class="font-poppins font-normal text-base text-brown-shade-1 tracking-[2.56px] uppercase text-center px-6"><?php echo esc_html( $imge_title[$counter] ); ?></span></figcaption>
 						</figure>
