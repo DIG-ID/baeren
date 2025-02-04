@@ -1,7 +1,7 @@
 <section class="section-room-teaser bg-brown-shade-1 pt-0 pb-20 lg:py-36 relative overflow-hidden">
 	<div class="theme-container !px-0 lg:!px-6">
 		<div class="section-room-teaser--wrapper">
-			<div class="room-content bg-white z-20 px-12 py-12 lg:py-16 flex flex-col justify-between lg:h-2/3 -mt-8">
+			<div class="room-content bg-white z-20 p-8 md:px-12 md:py-12 lg:py-16 flex flex-col justify-between lg:h-2/3 -mt-8">
 				<div>
 					<h2 class="text-subtitle text-brown-shade-3 mb-4 lg:mb-6"><?php the_field( 'rooms_title' ); ?></h2>
 					<p class="text-body lg:!text-xl xl:!leading-relaxed text-brown-shade-4 mb-4"><?php the_field( 'rooms_description' ); ?></p>
