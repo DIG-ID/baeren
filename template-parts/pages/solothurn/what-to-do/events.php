@@ -31,7 +31,7 @@
 								?>
 							</a>
 							<div
-								class="card-event-content h-[175px] lg:h-[200px] flex flex-col justify-center gap-4 px-7 lg:px-12 pt-6 lg:pt-9 pb-6 lg:pb-14">
+								class="card-event-content h-[initial] lg:h-[200px] flex flex-col justify-center gap-4 px-7 lg:px-12 pt-6 lg:pt-9 pb-6 lg:pb-14">
 								<a href="<?php echo esc_url(get_sub_field('link')); ?>" target="_blank">
 									<h2 class="text-title-h3 text-brown-shade-4 text-nowrap"><?php the_sub_field('title'); ?>
 									</h2>
@@ -64,7 +64,7 @@
 								?>
 							</a>
 							<div
-								class="card-event-content h-[175px] lg:h-[200px] flex flex-col justify-center gap-4 px-7 lg:px-12 pt-6 lg:pt-9 pb-6 lg:pb-14">
+								class="card-event-content h-[initial] lg:h-[200px] flex flex-col justify-center gap-4 px-7 lg:px-12 pt-6 lg:pt-9 pb-6 lg:pb-14">
 								<a href="<?php echo esc_url(get_sub_field('link')); ?>"
 									class="flex gap-x-4 items-center  mb-4 lg:mb-0" target="_blank">
 									<h2 class="text-title-h3 text-brown-shade-4 text-nowrap"><?php the_sub_field('title'); ?>

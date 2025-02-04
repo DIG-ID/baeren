@@ -5,7 +5,7 @@
 			$activities = get_field('activities');
 			if ($activities):
 				?>
-				<div class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in h-[60vh]">
+				<div class="col-span-2 md:col-span-6 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in h-[60vh]">
 					<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
 					<div class=" bg-brown-shade-4 h-full overflow-hidden">
 						<?php
@@ -18,7 +18,7 @@
 					<div class="absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center ">
 						<div
 							class="lg:w-[840px] text-white flex flex-col justify-center items-center py-9 px-9 lg:py-20 lg:px-9">
-							<h2 class="text-title-h2 !text-2xl text-center mb-9 lg:max-w-[645px]">
+							<h2 class="text-title-h2 text-center mb-9 lg:max-w-[645px]">
 								<?php the_field('activities_hero_title'); ?>
 							</h2>
 							<p class="text-body text-blu-shade-5 text-center lg:max-w-[410px]">
@@ -42,7 +42,7 @@
 				while (have_rows('activities_list')):
 					the_row();
 					?>
-					<div class="col-span-2 lg:col-span-12 flex flex-col lg:flex-row  mb-6 lg:mb-20 bg-white fade-in">
+					<div class="col-span-2 md:col-span-6 lg:col-span-12 flex flex-col lg:flex-row  mb-6 lg:mb-20 bg-white fade-in">
 						<div class="activity-img-container">
 							<?php
 							$img = get_sub_field('image');

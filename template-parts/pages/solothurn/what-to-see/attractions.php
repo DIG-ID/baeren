@@ -1,3 +1,6 @@
+<div class="separator lg:hidden lg:invisible">
+	<span class="separator__diamond separator__diamond--green"></span>
+</div>
 <section class="section-what-to-see-content">
 	<div class="theme-container">
 		<div class="theme-grid pb-12">
@@ -6,8 +9,8 @@
 			if ($attractions):
 				?>
 				<div
-					class="col-span-2 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in--noscroll mt-20 lg:-mt-28 h-[60vh]">
-					<span class="diamond diamond--green !w-4 !h-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"></span>
+					class="col-span-2 md:col-span-6 lg:col-span-12 relative mb-6 lg:mb-20 invisible fade-in--noscroll mt-20 lg:-mt-28 h-[60vh]">
+					<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"></span>
 					<div class="bg-brown-shade-4 h-full overflow-hidden">
 						<?php
 						$attractions_image = get_field('attractions_hero_image');
@@ -19,7 +22,7 @@
 					<div class="absolute top-0 lg:top-0 left-0 bottom-0 right-0 flex justify-center items-center">
 						<div
 							class="text-white lg:w-[840px] flex flex-col justify-center items-center py-9 px-9 lg:py-20 lg:px-9">
-							<h2 class="text-title-h2 !text-2xl text-center mb-6 lg:mb-9 lg:max-w-[645px]">
+							<h2 class="text-title-h2 text-center mb-6 lg:mb-9 lg:max-w-[645px]">
 								<?php the_field('attractions_hero_title'); ?>
 							</h2>
 							<p class="text-body text-blu-shade-5 text-center lg:max-w-[410px]">
@@ -43,7 +46,7 @@
 				while (have_rows('attractions_list')):
 					the_row();
 					?>
-					<div class="col-span-2 lg:col-span-12 flex flex-col lg:flex-row  mb-6 lg:mb-20 bg-white fade-in ">
+					<div class="col-span-2 md:col-span-6 lg:col-span-12 flex flex-col lg:flex-row  mb-6 lg:mb-20 bg-white fade-in ">
 						<div class="attraction-img-container">
 							<?php
 							$img = get_sub_field('image');

@@ -1,13 +1,13 @@
 <section class="section-what-to-do-activities bg-brown-shade-1 pt-28 lg:pt-40 pb-28 lg:pb-40 ">
 	<div class="theme-container mb-28 lg:mb-40">
 		<div class="theme-grid">
-			<div class="col-span-2 lg:col-span-12 flex flex-col justify-center items-center mx-20">
-				<h2 class="text-title-h2 text-center text-brown-shade-4 mb-6 fade-in"><?php the_field('activities_title'); ?></h2>
+			<div class="col-span-2 md:col-span-6 lg:col-span-12 flex flex-col justify-center items-center md:mx-auto">
+				<h2 class="text-title-h2 text-center text-brown-shade-4 lg:mb-6 fade-in"><?php the_field('activities_title'); ?></h2>
 				<div class="my-6 mx-auto">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/dark-separator.svg"
 						alt="decorative separator">
 				</div>
-				<p class="text-description text-center text-brown-shade-4 max-w-[635px] fade-in">
+				<p class="text-body--serif text-center text-brown-shade-4 md:max-w-[635px] fade-in">
 					<?php the_field('activities_description'); ?>
 				</p>
 			</div>
@@ -43,7 +43,7 @@
 								?>
 							</a>
 							<div
-								class="card-activities-content h-[300px] lg:h-[200px] flex flex-col justify-center gap-4 px-7 lg:px-12 pt-6 lg:pt-9 pb-6 lg:pb-14">
+								class="card-activities-content h-[initial] lg:h-[200px] flex flex-col justify-center gap-4 px-7 lg:px-12 pt-6 lg:pt-9 pb-6 lg:pb-14">
 								<a href="<?php echo esc_url(get_sub_field('link')); ?>" target="_blank">
 									<h2 class="text-title-h3 text-brown-shade-4"><?php the_sub_field('title'); ?></h2>
 								</a>
@@ -75,7 +75,7 @@
 								?>
 							</a>
 							<div
-								class="card-activities-content h-[300px] lg:h-[200px] flex flex-col justify-center gap-4 px-7 lg:px-12 pt-6 lg:pt-9 pb-6 lg:pb-14">
+								class="card-activities-content h-[initial] lg:h-[200px] flex flex-col justify-center gap-4 px-7 lg:px-12 pt-6 lg:pt-9 pb-6 lg:pb-14">
 								<a href="<?php echo esc_url(get_sub_field('link')); ?>"
 									class="flex gap-x-4 items-center mb-4 lg:mb-0" target="_blank">
 									<h2 class="text-title-h3 text-brown-shade-4"><?php the_sub_field('title'); ?></h2>

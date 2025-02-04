@@ -1,7 +1,7 @@
 <div class="separator">
 	<span class="separator__diamond separator__diamond--green"></span>
 </div>
-<section class="section-solothurn-content pb-0 flex flex-col gap-12 mb-24 ">
+<section class="section-solothurn-content pb-0 flex flex-col gap-12 mb-24">
 	<?php
 	if (have_rows('child_pages')):
 		$i = 1;
@@ -20,7 +20,7 @@
 				<span class="diamond diamond--brown absolute left-1/2 -translate-x-1/2 bottom-[-0.75rem] z-10"></span>
 				<?php endif; ?>
 
-				<div class="theme-container !px-0 mx-auto">
+				<div class="theme-container !px-0 mx-auto lg:py-8" >
 					<div
 						class="relative card-solothurn grid grid-cols-2 lg:grid-cols-12 col-span-2 lg:col-span-12 gap-x-6 pb-10 lg:pb-0 px-6 <?php echo esc_attr($fade_class); ?>">
 						<div

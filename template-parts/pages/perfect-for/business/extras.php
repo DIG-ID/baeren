@@ -1,4 +1,4 @@
-<section class="section-business-blocks bg-brown-shade-1 -mt-10 pb-14 lg:pb-0 pt-16 lg:pt-28 xl:pt-40">
+<section class="section-business-blocks bg-brown-shade-1 -mt-10 pb-6 lg:pb-0 pt-16 lg:pt-28 xl:pt-40">
 	<div class="theme-container">
 		<div class="theme-grid">
 			<?php
@@ -6,7 +6,7 @@
 				while (have_rows('extras')):
 					the_row();
 					?>
-					<div class="col-span-2 lg:col-span-12 flex flex-col justify-between lg:flex-row  mb-32 lg:mb-20 bg-white fade-in">
+					<div class="col-span-2 lg:col-span-12 flex flex-col justify-between lg:flex-row mb-11 lg:mb-20 bg-white fade-in">
 						<div class="flex flex-col justify-center lg:ml-28 px-8 pt-6 pb-14 lg:px-0 lg:py-0 order-2 lg:order-1">
 							<h2 class="text-title-h3--serif text-brown-shade-4 mb-4 md:mb-6"><?php the_sub_field('title'); ?></h2>
 							<p class="text-body text-brown-shade-4 lg:max-w-[433px]"><?php the_sub_field('description'); ?>
