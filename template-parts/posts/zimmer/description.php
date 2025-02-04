@@ -2,7 +2,7 @@
 	<div class="theme-container">
 		<div class="theme-grid">
 			<div class="col-span-2 lg:col-span-6 mb-10 lg:mb-0">
-				<h1 class="font-poppins font-normal text-4xl lg:text-[2.5rem] text-brown-shade-4 lg:leading-[3.375rem] tracking-[0.3rem] uppercase mb-6 lg:mb-10 max-w-sm"><?php the_title(); ?></h1>
+				<h1 class="font-poppins font-normal text-4xl lg:text-[2.5rem] text-brown-shade-4 lg:leading-[3.375rem] tracking-[0.3rem] uppercase mb-6 lg:mb-10 max-w-md"><?php the_title(); ?></h1>
 				<?php do_action( 'room_features' ); ?>
 				<div class="text-body text-brown-shade-4 mb-12 lg:mb-14"><?php the_content(); ?></div>
 				<?php
