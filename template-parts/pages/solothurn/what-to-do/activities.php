@@ -14,7 +14,7 @@
 		</div>
 	</div>
 	<div class="overflow-hidden ml-6 lg:ml-40">
-		<div class="activites-navigation relative py-6">
+		<div class="activites-navigation relative py-6 hidden invisible lg:visible lg:block">
 			<div class="swiper-button-next activites-swiper-button-next"></div>
 			<div class="swiper-button-prev activites-swiper-button-prev"></div>
 		</div>

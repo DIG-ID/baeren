@@ -1,7 +1,7 @@
 <section class="section-what-to-do-events">
 	
 	<div class="overflow-hidden ml-6 lg:ml-40 -mt-40">
-		<div class="events-navigation relative py-6">
+		<div class="events-navigation relative py-6 hidden invisible lg:visible lg:block">
 			<div class="swiper-button-next event-swiper-button-next"></div>
 			<div class="swiper-button-prev event-swiper-button-prev"></div>
 		</div>
