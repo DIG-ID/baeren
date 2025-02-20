@@ -1,6 +1,6 @@
 <footer class="footer-main bg-blue-shade-1">
-	<section class="grid grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 lg:max-w-2xl mx-auto pt-20 pb-24 lg:py-36 px-6">
-		<div class="col-span-2 lg:col-span-3 flex justify-center items-center mb-10 lg:mb-14">
+	<section class="grid grid-cols-2 lg:grid-cols-2 gap-x-6 lg:gap-x-8 lg:max-w-lg mx-auto pt-20 pb-24 lg:py-36 px-6">
+		<div class="col-span-2 lg:col-span-2 flex justify-center items-center mb-10 lg:mb-14">
 			<div class="site-branding">
 				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url" class="navbar-brand custom-logo-link"><?php do_action( 'footer_theme_logo' ); ?></a>
 			</div>
@@ -20,14 +20,14 @@
 			endif;
 			?>
 		</div>
-		<div class="col-span-2 lg:col-span-1 text-center mt-10 lg:mt-0 flex justify-center lg:block" style="mix-blend-mode: multiply;">
+		<!--<div class="col-span-2 lg:col-span-1 text-center mt-10 lg:mt-0 flex justify-center lg:block" style="mix-blend-mode: multiply;">
 			<?php
 			$partner_logo = get_field( 'footer_partner_logo', 'options' );
 			if ( $partner_logo ) :
 				echo wp_get_attachment_image( $partner_logo, 'full', false, array( 'class' => 'max-w-full object-cover' ) );
 			endif;
 			?>
-		</div>
+		</div>-->
 	</section>
 	<section class="footer-bunchen bg-blue-shade-2 text-brown-shade-4 pt-20 pb-16 lg:py-32">
 		<div class="theme-container">
