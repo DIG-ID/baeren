@@ -99,6 +99,10 @@ window.addEventListener(
       var zimmerSwiper = new Swiper(".zimmerSwiper", {
         slidesPerView: 1,
         loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         navigation: {
           nextEl: ".zimmerSwiper-button-next",
           prevEl: ".zimmerSwiper-button-prev",
