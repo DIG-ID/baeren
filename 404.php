@@ -11,7 +11,7 @@ do_action( 'before_main_content' );
 				<path d="M0.75 7H101.25" stroke="#8E827B"/>
 				<path d="M152.75 7H253.25" stroke="#8E827B"/>
 			</svg>
-			<div class="max-w-[600px] mx-auto flex flex-col gap-y-8">
+			<div class="max-w-[600px] mx-auto flex flex-col justify-center items-center gap-y-8">
 				<h2 class="font-poppins text-lg lx:text-4xl text-brown-shade-4 tracking-widest uppercase"><?php esc_html_e( 'Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.', 'baeren' ); ?></h2>
 				<p class="font-poppins text-base xl:text-xl text-brown-shade-4"><?php esc_html_e( 'Sieht aus, als würdest du in die falsche Richtung treiben. Keine Sorge, wir helfen dir, wieder auf Kurs zu kommen.', 'baeren' ); ?></p>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn--secondary self-center">
