@@ -92,7 +92,7 @@
         .menu-item:not(:nth-child(1))
             @apply xl:mt-11
         .menu-item
-            @apply text-left mt-6
+            @apply text-left mt-4 lg:mt-6
             a
                 @apply font-utopia text-[20px] xl:text-[30px] tracking-[3.2px] font-light text-brown-shade-4 normal-case hover:text-brown-shade-3 hover:tracking-[0.07rem]
                 transition: color .2s, letter-spacing .4s ease-out
@@ -176,10 +176,10 @@
         .menu-item
             @apply text-center
             &:not(:nth-child(1))
-                @apply mt-5
+                @apply mt-2 md:mt-4 lg:mt-5
             // Secondary menu item
             a
-                @apply font-poppins font-normal text-base text-brown-shade-4 tracking-[1.6px] uppercase hover:text-brown-shade-3 hover:tracking-[0.07rem]
+                @apply font-poppins font-normal text-sm lg:text-base text-brown-shade-4 lg:tracking-[0.1rem] uppercase hover:text-brown-shade-3 hover:tracking-[0.07rem]
                 transition: color .2s, letter-spacing .4s ease-out
 
 #header-main
@@ -358,10 +358,10 @@
             .menu-item
                 text-align: left !important
             .menu-item:not(:nth-child(1))
-                margin-top: 1rem !important
+                @apply mt-0 lg:!mt-4
         
         .secondary-menu-top-level
-            @apply pt-8 px-8
+            @apply lg:pt-8 px-8
         
         .copyright-menu-top-level
             @apply p-8

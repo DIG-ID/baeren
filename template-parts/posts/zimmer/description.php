@@ -37,7 +37,6 @@
 			</div>
 			<div class="col-span-2 lg:col-span-4 lg:col-start-9 pb-11 lg:pb-0 pt-5 xl:pt-0">
 				<h2 class="font-poppins font-normal text-2xl text-brown-shade-4 tracking-[0.075rem] uppercase"><?php the_field( 'amenities_title' ); ?></h2>
-				<hr class="bg-brown-shade-4 my-6">
 				<ul class="section-amenities-lists">
 					<li>
 						<?php
