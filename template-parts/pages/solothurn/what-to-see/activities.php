@@ -64,6 +64,22 @@
 						<div class="flex flex-col justify-center lg:ml-28 px-8 pt-6 pb-14 lg:px-0 lg:py-0">
 							<h2 class="text-title-h3 text-brown-shade-4 mb-6"><?php the_sub_field('title'); ?></h2>
 							<p class="text-body text-brown-shade-4 lg:max-w-[433px]"><?php the_sub_field('description'); ?></p>
+							<?php
+							$tlink = get_sub_field('link');
+							if ($tlink):
+								$link_url = $tlink['url'];
+								$link_title = $tlink['title'];
+								$link_target = $tlink['target'] ? $tlink['target'] : '_self';
+								?>
+								<a class="btn btn--external mt-6 w-full justify-between lg:justify-start" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+									<span class="whitespace-normal"><?php echo esc_html($link_title); ?></span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
+										<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
+									</svg>
+								</a>
+								<?php
+							endif;
+							?>
 						</div>
 					</div>
 					<?php

@@ -71,15 +71,18 @@
 							<p class="text-body text-brown-shade-4 lg:max-w-[433px]"><?php the_sub_field('description'); ?>
 							</p>
 							<?php
-							$link = get_sub_field('link');
-							if ($link):
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
+							$tlink = get_sub_field('link');
+							if ($tlink):
+								$link_url = $tlink['url'];
+								$link_title = $tlink['title'];
+								$link_target = $tlink['target'] ? $tlink['target'] : '_self';
 								?>
-								<a class="btn btn--external mt-6 w-full justify-between lg:justify-start"
-									href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><span
-										class="whitespace-normal"><?php echo esc_html($link_title); ?></span></a>
+								<a class="btn btn--external mt-6 w-full justify-between lg:justify-start" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+									<span class="whitespace-normal"><?php echo esc_html($link_title); ?></span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
+										<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
+									</svg>
+								</a>
 								<?php
 							endif;
 							?>
