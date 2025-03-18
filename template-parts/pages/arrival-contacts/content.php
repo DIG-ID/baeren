@@ -101,7 +101,7 @@
 				?>
 				<p class="text-body--serif text-brown-shade-4 mb-4 lg:mb-8">
 					<?php esc_html_e('Telefon:', 'baeren'); ?> <a class="inline-block"
-						href="tel:<?php echo esc_url($phone); ?>"><?php echo esc_html($phone); ?></a>
+						href="tel:<?php echo esc_attr($phone); ?>"><?php echo esc_html($phone); ?></a>
 				</p>
 				<?php
 			endif;
