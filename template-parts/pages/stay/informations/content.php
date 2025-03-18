@@ -12,50 +12,16 @@
 	<div class="theme-container">
 		<div class="flex flex-col flex-wrap gap-6 h-auto mt-16 lg:mt-36 xl:h-[1160px] invisible fade-in--noscroll">
 			<?php
-			$reception = get_field('reception');
-			if ($reception):
-				?>
-				<div class="informations-card border-b border-[#636363] py-7 pr-14 order-1 lg:mx-36">
-					<h2 class="text-title-h3 mb-4 lg:mb-7 uppercase !font-medium"><?php the_field('reception_title'); ?></h2>
-					<div class="text-body"><?php the_field('reception_description'); ?></div>
-				</div>
-				<?php
-			endif;
-			$checkIn = get_field('check_in');
-			if ($checkIn):
-				?>
-				<div class="informations-card border-b border-[#636363] py-7 pr-14 order-1 lg:mx-36">
-					<h2 class="text-title-h3 mb-4 lg:mb-7 uppercase !font-medium"><?php the_field('check_in_title'); ?></h2>
-					<div class="text-body"><?php the_field('check_in_description'); ?></div>
-				</div>
-				<?php
-			endif;
-			$checkOut = get_field('check_out');
-			if ($checkOut):
-				?>
-				<div class="informations-card border-b border-[#636363] py-7 pr-14 order-1 lg:mx-36">
-					<h2 class="text-title-h3 mb-4 lg:mb-7 uppercase !font-medium"><?php the_field('check_out_title'); ?></h2>
-					<div class="text-body"><?php the_field('check_out_description'); ?></div>
-				</div>
-				<?php
-			endif;
-			$breakfast = get_field('breakfast');
-			if ($breakfast):
-				?>
-				<div class="informations-card border-b border-[#636363] py-7 pr-14 order-1 lg:mx-36">
-					<h2 class="text-title-h3 mb-4 lg:mb-7 uppercase !font-medium"><?php the_field('breakfast_title'); ?></h2>
-					<div class="text-body"><?php the_field('breakfast_description'); ?></div>
-				</div>
-				<?php
-			endif;
-			$animals = get_field('animals');
-			if ($animals):
-				?>
-				<div class="informations-card  border-b border-[#636363] py-7 pr-14 order-1 lg:mx-36">
-					<h2 class="text-title-h3 mb-4 lg:mb-7 uppercase !font-medium"><?php the_field('animals_title'); ?></h2>
-					<div class="text-body"><?php the_field('animals_description'); ?></div>
-				</div>
-				<?php
+			if ( have_rows('items') ) :
+				while( have_rows('items') ) : the_row();
+					?>
+					<div class="informations-card border-b border-[#636363] py-7 pr-14 order-1 lg:mx-36">
+						<h2 class="text-title-h3 mb-4 lg:mb-7 uppercase !font-medium"><?php the_sub_field('title'); ?></h2>
+						<div class="text-body"><?php the_sub_field('description'); ?></div>
+					</div>
+					<?php
+				// End loop.
+				endwhile;
 			endif;
 			?>
 		</div>

@@ -19,7 +19,7 @@
 								$link_target = $link['target'] ? $link['target'] : '_self';
 								?>
 								<a href="<?php echo esc_url($link_url); ?>"
-									class="btn btn--secondary mb-4 mt-6 lg:mb-0" target="_blank">
+									class="btn btn--secondary mb-4 mt-6 lg:mb-0" target="<?php echo esc_attr( $link_target ); ?>">
 									<h3 class="text-body text-brown-shade-4 hover:transform-scale">
 										<?php echo esc_html($link_title); ?></h3>
 									<svg class="" width="19" height="10" viewBox="0 0 19 10" fill="none"
