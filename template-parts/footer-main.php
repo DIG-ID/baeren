@@ -1,14 +1,14 @@
 <footer class="footer-main bg-blue-shade-1">
-	<section class="grid grid-cols-2 lg:grid-cols-2 gap-x-6 lg:gap-x-8 lg:max-w-lg mx-auto pt-20 pb-24 lg:py-36 px-6">
-		<div class="col-span-2 lg:col-span-2 flex justify-center items-center mb-10 lg:mb-14">
+	<section class="grid grid-cols-2 lg:grid-cols-6 gap-x-6 lg:gap-x-8 lg:max-w-2xl mx-auto pt-20 pb-24 lg:py-36 px-6">
+		<div class="col-span-2 lg:col-span-6 flex justify-center items-center mb-10 lg:mb-14">
 			<div class="site-branding">
 				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url" class="navbar-brand custom-logo-link"><?php do_action( 'footer_theme_logo' ); ?></a>
 			</div>
 		</div>
-		<div class="col-span-2 lg:col-span-1 flex lg:block flex-col justify-center items-center address mb-6">
+		<div class="col-span-2 lg:col-span-2 flex lg:block flex-col justify-center items-center address mb-6">
 			<p class="text-body text-brown-shade-4 text-center lg:text-left"><?php the_field( 'footer_address', 'options' ); ?></p>
 		</div>
-		<div class="col-span-2 lg:col-span-1 flex lg:block flex-col items-center contact">
+		<div class="col-span-2 lg:col-span-2 flex lg:block flex-col items-center contact mb-6">
 			<?php
 			$phone = get_field( 'footer_phone', 'options' );
 			if ( $phone ) :
@@ -19,6 +19,16 @@
 				?> <p class="text-body text-brown-shade-4"><a href="mailto:<?php echo antispambot( $email ); ?>"><?php echo antispambot( $email ); ?></a></p><?php
 			endif;
 			?>
+		</div>
+		<div class="col-span-2 lg:col-span-2 flex justify-center items-start">
+			 <!-- TrustYou Widget -->
+			<iframe src="https://api.trustyou.com/hotels/9587b006-19a2-4b2a-8fb0-709d76a6ffa1/trust_score.html?key=b323b050-5554-4fcf-b169-0a019fb9fe5d&size=m&scale=100"
+			scrolling="no"
+			height="56"
+			width="205"
+			style="border:none"></iframe>
+
+			<!-- /TrustYou Widget -->
 		</div>
 		<!--<div class="col-span-2 lg:col-span-1 text-center mt-10 lg:mt-0 flex justify-center lg:block" style="mix-blend-mode: multiply;">
 			<?php
