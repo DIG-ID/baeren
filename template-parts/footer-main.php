@@ -82,3 +82,20 @@
 		</div>
 	</section>
 </footer>
+<?php
+$booking_url = get_field( 'booking_url', 'options' );
+if ( $booking_url ) :
+	?>
+	<div class="fixed z-50 left-1/2 -translate-x-1/2 bottom-8 lg:hidden lg:invisible">
+		<div class="fixed-booking-button invisible">
+			<a href="<?php echo esc_url( $booking_url ); ?>" target="_blank" class="btn btn--primary mt-7 inline-block lg:hidden">
+				<?php esc_html_e( 'Jetzt Buchen', 'baeren' ); ?>
+				<svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
+					<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<?php
+endif;
+?>
