@@ -13,7 +13,7 @@
 						<span class="menu-toggle__text"><?php esc_html_e( 'Menu', 'baeren' ); ?></span>
 					</button>
 				</div>
-				<div class="hidden xl:block"><?php //do_action( 'wpml_add_language_selector' ); ?></div>
+				<div class="hidden xl:block"><?php do_action( 'wpml_add_language_selector' ); ?></div>
 			</div>
 			<div class="col-span-1 col-start-2 flex justify-center items-center order-2">
 				<div class="site-branding">
@@ -154,7 +154,7 @@
 						)
 					);
 					?>
-					<?php //do_action( 'wpml_add_language_selector' ); ?>
+					<?php do_action( 'wpml_add_language_selector' ); ?>
 					<?php
 					wp_nav_menu(
 						array(
