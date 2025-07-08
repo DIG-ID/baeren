@@ -31,6 +31,8 @@ function baeren_theme_setup() {
 
 	add_image_size( 'teaser-image-thumbnail-vertical', 406, 860, array( 'center', 'center' ) );
 
+	add_image_size( 'arrival-image', 544, 450, array( 'center', 'center' ) );
+
 }
 
 add_action( 'after_setup_theme', 'baeren_theme_setup' );

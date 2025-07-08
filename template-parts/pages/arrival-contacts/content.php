@@ -16,7 +16,7 @@
 					<?php
 					$bycar = get_field('arrival_by_auto_image');
 					if ($bycar):
-						echo wp_get_attachment_image($bycar, 'full', false, array('class' => 'w-full object-fit'));
+						echo wp_get_attachment_image($bycar, 'arrival-image', false, array('class' => 'w-full object-fit'));
 					endif;
 					?>
 				</div>
@@ -32,7 +32,7 @@
 				<?php
 				$byzug = get_field('arrival_by_zug_image');
 				if ($byzug):
-					echo wp_get_attachment_image($byzug, 'full', false, array('class' => 'w-full object-fit mb-6 lg:mb-0'));
+					echo wp_get_attachment_image($byzug, 'arrival-image', false, array('class' => 'w-full object-fit mb-6 lg:mb-0'));
 				endif;
 				?>
 				<div class="lg:py-10">
@@ -47,7 +47,7 @@
 				<?php
 				$bybus = get_field('arrival_by_bus_image');
 				if ($bybus):
-					echo wp_get_attachment_image($bybus, 'full', false, array('class' => 'w-full object-fit mb-6 lg:mb-0'));
+					echo wp_get_attachment_image($bybus, 'arrival-image', false, array('class' => 'w-full object-fit mb-6 lg:mb-0'));
 				endif;
 				?>
 				<div class="lg:py-10">
@@ -62,7 +62,7 @@
 				<?php
 				$bybus = get_field('arrival_by_velo_image');
 				if ($bybus):
-					echo wp_get_attachment_image($bybus, 'full', false, array('class' => 'w-full object-fit mb-6 lg:mb-0'));
+					echo wp_get_attachment_image($bybus, 'arrival-image', false, array('class' => 'w-full object-fit mb-6 lg:mb-0'));
 				endif;
 				?>
 				<div class="lg:py-10">
