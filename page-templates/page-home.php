@@ -10,6 +10,7 @@ if ( have_posts() ) :
 		do_action( 'before_main_content' );
 			get_template_part( 'template-parts/pages/home/hero' );
 			get_template_part( 'template-parts/pages/home/intro' );
+			get_template_part( 'template-parts/pages/home/banner' );	
 			get_template_part( 'template-parts/pages/home/rooms' );
 			get_template_part( 'template-parts/components/services' );
 			get_template_part( 'template-parts/components/teaser-default' );
