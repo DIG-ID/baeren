@@ -1,3 +1,4 @@
+<?php if (get_field('banner_show_section')): ?>
 <section class="section-cta bg-[#63584F] h-[500px] md:h-[262px] w-full relative overflow-hidden">
     <div class="w-full h-full">
         <div class="flex flex-col items-center text-center 
@@ -44,3 +45,4 @@
 <div class="separator">
     <span class="separator__diamond separator__diamond--brown-shade-2"></span>
 </div>
+<?php endif; ?>
