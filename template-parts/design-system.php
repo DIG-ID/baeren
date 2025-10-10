@@ -53,6 +53,7 @@
 			<path d="M0.828125 1L7.82812 5L0.828125 9M10.8281 1L17.8281 5L10.8281 9" stroke="#34302D"/>
 		</svg>
 	</a>
+	<a class="btn btn--external-2" href=""> button external 2</a>
 </section>
 
 <section class="design-system--element-container">
