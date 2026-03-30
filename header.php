@@ -18,6 +18,7 @@
 	$header_template = ( 'secondary' === $header_template ) ? 'page-header__secondary' : '';
 	?>
 	<body <?php body_class( 'relative ' . $header_template ); ?>>
+		<a class="skip-link" href="#main-content"><?php esc_html_e( 'Skip to main content', 'baeren' ); ?></a>
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N326TKPV"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

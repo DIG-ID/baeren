@@ -55,6 +55,15 @@ html.lenis body
   pointer-events: none
 
 
+.skip-link
+  @apply font-poppins font-light text-sm tracking-[0.08rem] text-brown-shade-4 bg-brown-shade-1 border border-brown-shade-4 px-5 py-4 transition-all duration-300 ease-in-out
+  position: absolute
+  top: -100%
+  left: 1rem
+  z-index: 9999
+  &:focus
+    top: 1rem
+
 .theme-container
   @apply px-6 mx-auto w-full lg:max-w-[1440px]
 
