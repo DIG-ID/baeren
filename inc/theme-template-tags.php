@@ -1,53 +1,53 @@
 <?php
 
 /**
- * This function open the main content.
+ * Opens the main content wrapper.
  */
-function theme_before_main_content() {
+function baeren_before_main_content() {
 	?>
 	<main id="main-content" class="main-content overflow-hidden mt-auto">
 	<?php
 }
 
-add_action( 'before_main_content', 'theme_before_main_content' );
+add_action( 'before_main_content', 'baeren_before_main_content' );
 
 /**
- * This function closes the main content.
+ * Closes the main content wrapper.
  */
-function theme_after_main_content() {
+function baeren_after_main_content() {
 	?>
 	</main><!-- #main-content-->
 	<?php
 }
 
-add_action( 'after_main_content', 'theme_after_main_content' );
+add_action( 'after_main_content', 'baeren_after_main_content' );
 
 /**
- * This function open the post content.
+ * Opens the post content wrapper.
  */
-function theme_before_post_content() {
+function baeren_before_post_content() {
 	?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 }
 
-add_action( 'before_post_content', 'theme_before_post_content' );
+add_action( 'before_post_content', 'baeren_before_post_content' );
 
 /**
- * This function closes the post content.
+ * Closes the post content wrapper.
  */
-function theme_after_post_content() {
+function baeren_after_post_content() {
 	?>
 	</article><!-- #article -->
 	<?php
 }
 
-add_action( 'after_post_content', 'theme_after_post_content' );
+add_action( 'after_post_content', 'baeren_after_post_content' );
 
 /**
- * This function gest the rooms features.
+ * Outputs the room features list (used on single room pages).
  */
-function theme_room_features() {
+function baeren_room_features() {
 	if ( have_rows( 'features' ) ) :
 		?><ul class="features"><?php
 		while ( have_rows( 'features' ) ) :
@@ -62,9 +62,9 @@ function theme_room_features() {
 				$field_value = get_sub_field( $field_key );
 				if ( $field_value ) :
 					?>
-					<li id="feature-item" class="font-poppins font-normal text-xs text-brown-shade-4 uppercase">
+					<li class="feature-item font-poppins font-normal text-xs text-brown-shade-4 uppercase">
 						<p class="font-poppins font-normal text-sm text-brown-shade-4 tracking-[0.14px]">
-							<span class="font-bold"><?php echo $label; ?></span> <?php echo esc_html( $field_value ); ?>
+							<span class="font-bold"><?php echo esc_html( $label ); ?></span> <?php echo esc_html( $field_value ); ?>
 						</p>
 					</li>
 					<?php
@@ -75,12 +75,12 @@ function theme_room_features() {
 	endif;
 }
 
-add_action( 'room_features', 'theme_room_features' );
+add_action( 'room_features', 'baeren_room_features' );
 
 /**
- * This function gest the rooms features from the Stay page.
+ * Outputs the room features list (used on the Stay page).
  */
-function theme_stay_room_features() {
+function baeren_stay_room_features() {
 	if ( have_rows( 'features' ) ) :
 		?><ul class="features"><?php
 		while ( have_rows( 'features' ) ) :
@@ -95,8 +95,8 @@ function theme_stay_room_features() {
 				$field_value = get_sub_field( $field_key );
 				if ( $field_value ) :
 					?>
-					<li id="feature-item" class="font-poppins font-normal text-sm text-brown-shade-4">
-						<span class="font-bold"><?php echo $label; ?></span> <?php echo esc_html( $field_value ); ?>
+					<li class="feature-item font-poppins font-normal text-sm text-brown-shade-4">
+						<span class="font-bold"><?php echo esc_html( $label ); ?></span> <?php echo esc_html( $field_value ); ?>
 					</li>
 					<?php
 				endif;
@@ -106,12 +106,12 @@ function theme_stay_room_features() {
 	endif;
 }
 
-add_action( 'stay_room_features', 'theme_stay_room_features' );
+add_action( 'stay_room_features', 'baeren_stay_room_features' );
 
 /**
- * This theme logo.
+ * Outputs the theme logo SVG (header).
  */
-function theme_logo() {
+function baeren_theme_logo() {
 	if ( get_field( 'intro_template' ) === 'secondary' || is_404() ) :
 		?>
 		<svg width="159" height="24" viewBox="0 0 159 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="theme-logo theme-logo--dark">
@@ -143,13 +143,15 @@ function theme_logo() {
 		</svg>
 		<?php
 	endif;
-
 }
 
-add_action( 'theme_logo', 'theme_logo' );
+add_action( 'theme_logo', 'baeren_theme_logo' );
 
 
-function footer_theme_logo() {
+/**
+ * Outputs the theme logo SVG (footer).
+ */
+function baeren_footer_theme_logo() {
 	?>
 	<svg width="159" height="83" viewBox="0 0 159 83" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M10.7928 74.0545H1.29514V82.7818H0V64.2363H1.29514V72.7454H10.7928V64.2363H12.0879V82.7818H10.7928V74.0545Z" fill="#333333"/>
@@ -170,30 +172,18 @@ function footer_theme_logo() {
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M74.7993 35.4038C74.6471 34.6334 74.0383 34.1711 73.4294 33.5548H73.2772C70.2331 31.0894 67.95 33.7089 67.95 33.7089C70.8419 30.1649 69.9287 27.2372 69.9287 27.2372V27.3913C69.7765 26.7749 69.7765 26.1586 69.472 25.8504C69.0154 25.08 68.2544 24.4636 67.4933 24.0014C65.5146 23.385 62.3183 26.3127 62.3183 26.3127C64.9058 23.0769 64.4492 20.4574 64.4492 20.3033C64.1448 19.2247 63.9925 18.1461 63.0793 17.2215C60.0351 14.6021 60.4918 19.6869 58.3608 21.0737C56.5343 22.1523 51.9681 20.1492 52.5769 23.2309C53.0336 24.6177 53.9468 25.3882 54.8601 26.3127C55.3167 26.6209 57.4476 27.8536 60.9484 27.2372C60.9484 27.2372 56.8388 28.624 56.5343 30.7812C56.5343 31.7057 56.5343 32.6303 57.1432 33.4007C57.4476 34.017 58.0564 34.3252 58.6653 34.9416C59.5785 35.5579 61.5572 36.4824 64.6014 35.8661C64.6014 35.8661 61.2528 36.7906 61.8616 40.4887C62.0138 41.4132 62.3183 42.3377 62.9271 42.8C65.5146 45.2654 67.3411 41.5673 69.472 40.0264C71.603 38.7937 75.7126 38.9478 74.7993 35.4038Z" fill="#D7903B"/>
 	</svg>
 
-
 	<?php
 }
 
-add_action( 'footer_theme_logo', 'footer_theme_logo' );
+add_action( 'footer_theme_logo', 'baeren_footer_theme_logo' );
 
 /**
- * This theme logo for mobile.
+ * Outputs Yoast breadcrumbs.
  */
-function theme_logo_mobile() {
-	?>
-	
-	<?php
-}
-
-add_action( 'theme_logo_mobile', 'theme_logo_mobile' );
-
-/**
- * Implement and customize Yoast Breadcrumbs.
- */
-function theme_breadcrumbs() {
+function baeren_breadcrumbs() {
 	if ( function_exists( 'yoast_breadcrumb' ) ) :
 		yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
 	endif;
 }
 
-add_action( 'breadcrumbs', 'theme_breadcrumbs' );
+add_action( 'breadcrumbs', 'baeren_breadcrumbs' );

@@ -68,36 +68,21 @@ function baeren_theme_footer_widgets_init() {
 
 add_action( 'widgets_init', 'baeren_theme_footer_widgets_init' );
 
-if ( ! function_exists( 'baeren_get_font_face_styles' ) ) :
-
-	/**
-	 * Get font face styles.
-	 * Called by functions dig_theme_enqueue_styles() and twentytwentytwo_editor_styles() above.
-	 */
-	function baeren_get_font_face_styles() {
-
-		return "
-				@import url('https://use.typekit.net/bmp1ccb.css');
-		";
-
-	}
-
-endif;
-
 if ( ! function_exists( 'baeren_preload_webfonts' ) ) :
 
 	/**
-	 * Preloads the main web font to improve performance.
+	 * Outputs early resource hints for the Adobe Fonts (Typekit) CDN.
 	 */
 	function baeren_preload_webfonts() {
 		?>
-		<link rel="preconnect" href="use.typekit.net" crossorigin>
+		<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+		<link rel="preload" href="https://use.typekit.net/bmp1ccb.css" as="style">
 		<?php
 	}
 
 endif;
 
-add_action( 'wp_head', 'baeren_preload_webfonts' );
+add_action( 'wp_head', 'baeren_preload_webfonts', 1 );
 
 /**
  * Enqueue styles and scripts
@@ -108,14 +93,10 @@ function baeren_theme_enqueue_styles() {
 	$the_theme     = wp_get_theme();
 	$theme_version = $the_theme->get( 'Version' );
 
-	// Register Theme main style.
-	wp_register_style( 'theme-styles', get_template_directory_uri() . '/dist/css/main.css', array(), $theme_version );
-	// Add styles inline.
-	wp_add_inline_style( 'theme-styles', baeren_get_font_face_styles() );
+	// Enqueue Adobe Fonts (Typekit) — loaded directly to avoid the @import render-blocking waterfall.
+	wp_enqueue_style( 'theme-fonts', 'https://use.typekit.net/bmp1ccb.css', array(), null );
 	// Enqueue theme stylesheet.
-	wp_enqueue_style( 'theme-styles' );
-	//https://use.typekit.net/evg0ous.css first loaded fonts library backup
-	//wp_enqueue_style( 'theme-fonts', 'https://use.typekit.net/buy6qwo.css', array(), $theme_version );
+	wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/dist/css/main.css', array( 'theme-fonts' ), $theme_version );
 
 	wp_enqueue_script( 'jquery', false, array(), $theme_version, true );
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/js/main.js', array( 'jquery' ), $theme_version, true );
@@ -164,10 +145,7 @@ require get_template_directory() . '/inc/theme-admin-settings.php';
 // The theme custom menu walker settings.
 require get_template_directory() . '/inc/theme-custom-menu-walker.php';
 
+// Performance optimizations.
+require get_template_directory() . '/inc/performance.php';
 
-function my_console_log(...$data) {
-	$json = json_encode($data);
-	add_action('shutdown', function() use ($json) {
-		echo "<script>console.log({$json})</script>";
-	});
-}
+

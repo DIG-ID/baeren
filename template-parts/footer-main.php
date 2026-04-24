@@ -12,7 +12,7 @@
 			<?php
 			$phone = get_field( 'footer_phone', 'options' );
 			if ( $phone ) :
-				?> <p class="text-body text-brown-shade-4"><a href="tel:<?php echo $phone; ?>"><?php esc_html_e( 'Phone', 'baeren' );?> <?php echo $phone; ?></a></p><?php
+				?> <p class="text-body text-brown-shade-4"><a href="tel:<?php echo esc_attr( $phone ); ?>"><?php esc_html_e( 'Phone', 'baeren' ); ?> <?php echo esc_html( $phone ); ?></a></p><?php
 			endif;
 			$email = get_field( 'footer_email', 'options' );
 			if ( $email ) :
@@ -23,7 +23,9 @@
 		<div class="col-span-2 lg:col-span-2 flex justify-center items-start">
 			 <!-- TrustYou Widget -->
 			<iframe src="https://api.trustyou.com/hotels/9587b006-19a2-4b2a-8fb0-709d76a6ffa1/trust_score.html?key=b323b050-5554-4fcf-b169-0a019fb9fe5d&size=m&scale=100"
+			title="<?php esc_attr_e( 'TrustYou Bewertung', 'baeren' ); ?>"
 			scrolling="no"
+			loading="lazy"
 			height="56"
 			width="205"
 			style="border:none"></iframe>
@@ -66,10 +68,10 @@
 		<div class="flex flex-col md:flex-row justify-center md:justify-between items-center py-4 max-w-7xl mx-auto px-6">
 			<p class="text-body text-center text-brown-shade-4 mb-0 order-2 md:order-1">
 			<?php
-				$y = date( 'Y' );
 				printf(
-					esc_html__( 'Urheberrecht &copy; %d Hotel Bären', 'baeren' ),
-					esc_html( $y )
+					/* translators: %d is the current year */
+					esc_html__( 'Urheberrecht © %d Hotel Bären', 'baeren' ),
+					absint( gmdate( 'Y' ) )
 				);
 				?>
 			</p>

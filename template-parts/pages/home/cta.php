@@ -9,7 +9,7 @@
 			if ( $blink ) :
 				$link_url    = $blink['url'];
 				$link_title  = $blink['title'];
-				$link_target = $blink['target'] ? $link['target'] : '_self';
+				$link_target = $blink['target'] ? $blink['target'] : '_self';
 				?>
 				<a class="btn btn--primary !self-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 					<?php echo esc_html( $link_title ); ?>

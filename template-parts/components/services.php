@@ -14,7 +14,6 @@
 				endif;
 				?>
 
-				<?php ?>
 				<div class="service-box bg-no-repeat bg-center bg-cover lg:[background-size: initial;]" style="background-image: url(<?php echo esc_url( $image ); ?>);">
 					<div class="z-10">
 						<h2 class="font-poppins font-normal text-3xl text-white tracking-[2.56px] uppercase text-center mb-8"><?php the_sub_field( 'title' ); ?></h2>
