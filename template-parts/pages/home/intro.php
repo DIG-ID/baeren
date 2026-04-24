@@ -3,8 +3,8 @@
 		<div class="theme-grid">
 			<div class="col-span-2 md:col-span-6 lg:col-span-6 flex flex-col justify-between">
 				<div>
-					<p class="text-subtitle text-brown-shade-3 mb-4 lg:mb-6 hidden invisible md:visible md:block"><?php echo esc_html( get_field( 'highlights_subtitle' ) ); ?></p>
-					<h2 class="text-title-h2 mb-4"><?php echo esc_html( get_field( 'highlights_title' ) ); ?></h2>
+					<p class="text-subtitle text-brown-shade-3 mb-4 lg:mb-6 hidden invisible md:visible md:block"><?php the_field( 'highlights_subtitle' ); ?></p>
+					<h2 class="text-title-h2 mb-4"><?php the_field( 'highlights_title' ); ?></h2>
 					<p class="text-body"><?php the_field( 'highlights_description' ); ?></p>
 				</div>
 				<?php
@@ -12,7 +12,7 @@
 					echo '<ul class="highlights-items">';
 					while ( have_rows( 'highlights_highlights' ) ) :
 						the_row();
-						echo '<li>' . esc_html( get_sub_field( 'title' ) ) . '</li>';
+						echo '<li>' . get_sub_field( 'title' ) . '</li>';
 					endwhile;
 					echo '</ul>';
 				endif;

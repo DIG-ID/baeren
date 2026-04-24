@@ -14,9 +14,9 @@
 		<div class="section-hero--content text-brown-shade-1 flex flex-col justify-center items-center mt-[72px] relative z-10">
 
 				<div class="flex flex-col items-center justify-center">
-					<p class="section-hero--title font-utopia font-normal text-base xl:text-2xl tracking-[0.24rem] invisible mb-4 lg:mb-8"><?php echo esc_html( get_field( 'hero_section_before_title' ) ); ?></p>
-					<h1 class="section-hero--title font-poppins font-extralight text-5xl xl:text-8xl tracking-normal uppercase invisible text-center"><?php echo esc_html( get_field( 'hero_section_title' ) ); ?></h1>
-					<p class="section-hero--title font-utopia font-normal text-base xl:text-2xl tracking-[0.24rem] invisible mt-2 lg:mt-4"><?php echo esc_html( get_field( 'hero_section_after_title' ) ); ?></p>
+					<p class="section-hero--title font-utopia font-normal text-base xl:text-2xl tracking-[0.24rem] invisible mb-4 lg:mb-8"><?php the_field( 'hero_section_before_title' ); ?></p>
+					<h1 class="section-hero--title font-poppins font-extralight text-5xl xl:text-8xl tracking-normal uppercase invisible text-center"><?php the_field( 'hero_section_title' ); ?></h1>
+					<p class="section-hero--title font-utopia font-normal text-base xl:text-2xl tracking-[0.24rem] invisible mt-2 lg:mt-4"><?php the_field( 'hero_section_after_title' ); ?></p>
 				</div>
 
 				<div class="w-full text-center pt-7">
