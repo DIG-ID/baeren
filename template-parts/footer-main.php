@@ -1,14 +1,14 @@
 <footer class="footer-main bg-blue-shade-1">
-	<section class="grid grid-cols-2 lg:grid-cols-6 gap-x-6 lg:gap-x-8 lg:max-w-2xl mx-auto pt-20 pb-24 lg:py-36 px-6">
-		<div class="col-span-2 lg:col-span-6 flex justify-center items-center mb-10 lg:mb-14">
+	<section class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 lg:max-w-[60rem] mx-auto pt-12 pb-24 xl:py-36 px-6">
+		<div class="col-span-2 lg:col-span-4 flex justify-center items-center mb-10 lg:mb-14">
 			<div class="site-branding">
 				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url" class="navbar-brand custom-logo-link"><?php do_action( 'footer_theme_logo' ); ?></a>
 			</div>
 		</div>
-		<div class="col-span-2 lg:col-span-2 flex lg:block flex-col justify-center items-center address mb-6">
+		<div class="col-span-2 lg:col-span-1 flex lg:block flex-col justify-center items-center address mb-6">
 			<p class="text-body text-brown-shade-4 text-center lg:text-left"><?php the_field( 'footer_address', 'options' ); ?></p>
 		</div>
-		<div class="col-span-2 lg:col-span-2 flex lg:block flex-col items-center contact mb-6">
+		<div class="col-span-2 lg:col-span-1 flex lg:block flex-col items-center contact mb-6">
 			<?php
 			$phone = get_field( 'footer_phone', 'options' );
 			if ( $phone ) :
@@ -20,9 +20,17 @@
 			endif;
 			?>
 		</div>
-		<div class="col-span-2 lg:col-span-2 flex justify-center items-start">
+		<div class="col-span-2 lg:col-span-1 text-center mt-10 lg:mt-0 flex justify-center lg:block mb-10 lg:mb-0" style="mix-blend-mode: multiply;">
+			<?php
+			$partner_logo = get_field( 'footer_partner_logo', 'options' );
+			if ( $partner_logo ) :
+				echo wp_get_attachment_image( $partner_logo, 'full', false, array( 'class' => 'max-w-[210px] lg:max-w-full lg:object-cover lg:mx-auto h-fit' ) );
+			endif;
+			?>
+		</div>
+		<div class="col-span-2 lg:col-span-1 flex justify-center items-start">
 			 <!-- TrustYou Widget -->
-			<iframe src="https://api.trustyou.com/hotels/9587b006-19a2-4b2a-8fb0-709d76a6ffa1/trust_score.html?key=b323b050-5554-4fcf-b169-0a019fb9fe5d&size=m&scale=100"
+			<iframe src="https://api.trustyou.com/hotels/9587b006-19a2-4b2a-8fb0-709d76a6ffa1/trust_score.html?key=fea3620e-535e-4416-b061-e8e662dcb219&size=m&scale=100"
 			title="<?php esc_attr_e( 'TrustYou Bewertung', 'baeren' ); ?>"
 			scrolling="no"
 			loading="lazy"
